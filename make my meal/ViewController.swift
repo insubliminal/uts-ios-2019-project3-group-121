@@ -12,7 +12,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var searchedItem = ""
     var relevantRecipes = [String]()
-    let recipes = ["Pizza", "Pasta", "Salad", "BBQ Chicken"]
+    let recipes = ["Pizza", "Pasta", "Salad", "BBQ Chicken", "Fruit Salad"]
+    var recipeSelected = ""
+    
     
     override func viewWillAppear(_ animated: Bool) {
         getRelevantItems()
@@ -30,8 +32,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.recipeImageView.image = UIImage(named: relevantRecipes[indexPath.row])
         cell.recipeName.text = relevantRecipes[indexPath.row]
-    
+        cell.recipeImageView.tag = indexPath.row;
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedRecipe = relevantRecipes[indexPath.row]
+        recipeSelected = selectedRecipe
+        print(recipeSelected)
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if recipeSelected == "Fruit Salad" {
+            return true
+        }
+        return false
     }
     
     func getRelevantItems() {
@@ -45,6 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 }
