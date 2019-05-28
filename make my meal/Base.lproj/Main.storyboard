@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9nd-oJ-cy3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9nd-oJ-cy3">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,6 +32,14 @@
                                 <state key="normal" title="Go"/>
                                 <connections>
                                     <action selector="goBtn:" destination="eHx-dQ-FeC" eventType="touchUpInside" id="W2g-RD-fjU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elh-GG-MDM">
+                                <rect key="frame" x="180" y="156" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <segue destination="wip-W6-xcs" kind="show" id="2CI-Bp-nja"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,7 +134,7 @@
         <!--View Controller-->
         <scene sceneID="2lC-rK-fE0">
             <objects>
-                <viewController id="xCn-8g-yuv" customClass="ViewController" customModule="MakeMyMeal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xCn-8g-yuv" customClass="ViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RKG-7w-Tr8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FruitSalad" translatesAutoresizingMaskIntoConstraints="NO" id="wmT-gT-Brx">
-                                <rect key="frame" x="16" y="163" width="378" height="183"/>
+                                <rect key="frame" x="16" y="163" width="378" height="183.00000000000011"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="183" id="5Lp-V4-1Le"/>
                                     <constraint firstAttribute="width" constant="378" id="R45-em-hST"/>
@@ -257,6 +265,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dO-ib-RCN" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="921.73913043478262" y="20.758928571428569"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="1yN-iT-DLv">
+            <objects>
+                <viewController id="wip-W6-xcs" customClass="CameraViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7er-Sf-l56">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kXe-wT-ipl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWw-nZ-3gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-765" y="708"/>
         </scene>
     </scenes>
     <resources>

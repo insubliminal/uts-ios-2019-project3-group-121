@@ -12,7 +12,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchTf: UITextField!
     
-    var searchedItem = ""
+    var searchedItems: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,9 @@ class SearchViewController: UIViewController {
     
     @IBAction func goBtn(_ sender: Any) {
         
-        searchedItem = searchTf.text!
+        //searchedItem = searchTf.text!
+        searchedItems.removeAll()
+        searchedItems.append(searchTf.text!)
         performSegue(withIdentifier: "toList", sender: self)
     }
     
@@ -32,7 +34,7 @@ class SearchViewController: UIViewController {
             
             let list = segue.destination as! ViewController
             
-            list.searchedItem = self.searchedItem
+            list.searchedItems = self.searchedItems
         }
     }
 

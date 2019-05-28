@@ -10,53 +10,85 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var searchedItem = ""
-    var relevantRecipes = [String]()
-    let recipes = ["Pizza", "Pasta", "Salad", "BBQ Chicken", "Fruit Salad"]
-    var recipeSelected = ""
     
+    var relevantRecipes = [String]()
+    var recipeSelected = ""
+    var recipeList: [Recipe] = []
+    var matchingRecipes: [Recipe] = []
+    var searchedItems: [String] = []
+
     
     override func viewWillAppear(_ animated: Bool) {
-        getRelevantItems()
+      
+        //Test data
+        let pizza = Recipe(name: "Pizza", description: "Meme", ingredients: ["Dough", "Cheese", "Milk"])
+        let pasta = Recipe(name: "Pasta", description: "Meme", ingredients: ["Pasta", "Cheese", "Butter"])
+        let salad = Recipe(name: "Salad", description: "Meme", ingredients: ["Lettuce", "Rocket", "Tomato"])
+        let fruitSalad = Recipe(name: "Fruit Salad", description: "Meme", ingredients: ["Apple", "Banana", "Orange"])
+        let bbqChicken = Recipe(name: "BBQ Chicken", description: "Meme", ingredients: ["Chicken", "BBQ Sauce", "Salt"])
+        //Add test data into table.
+        recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
+        matchingRecipes = []
+        getAllrecipesMatchingIngredients(searchedIngredients: searchedItems)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //return recipes.count
-        return relevantRecipes.count
+        return matchingRecipes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RecipeTableViewCell
         
-        cell.recipeImageView.image = UIImage(named: relevantRecipes[indexPath.row])
-        cell.recipeName.text = relevantRecipes[indexPath.row]
+        cell.recipeImageView.image = UIImage(named: matchingRecipes[indexPath.row].name )
+        cell.recipeName.text = matchingRecipes[indexPath.row].name
         cell.recipeImageView.tag = indexPath.row;
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedRecipe = relevantRecipes[indexPath.row]
-        recipeSelected = selectedRecipe
+        
+        let selectedRecipe = matchingRecipes[indexPath.row]
+        recipeSelected = selectedRecipe.name
         print(recipeSelected)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
         if recipeSelected == "Fruit Salad" {
             return true
         }
         return false
     }
     
-    func getRelevantItems() {
+    
+    func getAllrecipesMatchingIngredients(searchedIngredients: [String]) {
         
-        for item in recipes {
-            if searchedItem.contains(item) {
-                relevantRecipes.append(item)
+        for searchedIngredient in searchedIngredients {
+            for recipe in recipeList {
+                for ingredient in recipe.ingredients {
+                    if searchedIngredient.contains(ingredient) && !isInCurrentList(recipeToAdd: recipe) {
+                        
+                        matchingRecipes.append(recipe)
+                        //Break the loop; do not want to double add a recipe.
+                        break
+                    }
+                }
             }
         }
+    }
+    
+    func isInCurrentList(recipeToAdd: Recipe) -> Bool {
+        
+        for recipe in matchingRecipes {
+            
+            if recipeToAdd.name == recipe.name {
+                return true
+            }
+        }
+        return false
     }
     
     override func viewDidLoad() {
