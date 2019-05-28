@@ -16,6 +16,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     override func viewWillAppear(_ animated: Bool) {
        
+        identifiedIngredients = []
         // Startup of the camera:
         let captureSession = AVCaptureSession()
         captureSession.sessionPreset = .photo
@@ -46,9 +47,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             guard let results = finishedReq.results as? [VNClassificationObservation] else { return }
             guard let firstObservation = results.first else { return }
+            
             //print(firstObservation.identifier, firstObservation.confidence)
             
-            if (!firstObservation.confidence.isLessThanOrEqualTo(0.90)) {
+            if (!firstObservation.confidence.isLessThanOrEqualTo(0.80)) && !self.isInList(identifiedIngredient: firstObservation.identifier) {
                 print(firstObservation.identifier)
                 
                 self.identifiedIngredients.append(firstObservation.identifier)
@@ -58,8 +60,31 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
     
-    func isInList() {
+    func isInList(identifiedIngredient: String) -> Bool {
         
+        for ingredient in identifiedIngredients {
+            if identifiedIngredient == ingredient {
+                return true
+            }
+        }
+        return false
+    }
+    
+    @IBAction func getList(_ sender: Any) {
+        
+        print(identifiedIngredients)
+        
+        performSegue(withIdentifier: "toRecipes", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "toRecipes") {
+            
+            let list = segue.destination as! ViewController
+            
+            list.searchedItems = self.identifiedIngredients
+        }
     }
 }
 

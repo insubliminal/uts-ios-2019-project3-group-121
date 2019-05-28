@@ -21,14 +21,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewWillAppear(_ animated: Bool) {
       
         //Test data
-        let pizza = Recipe(name: "Pizza", description: "Meme", ingredients: ["Dough", "Cheese", "Milk"])
-        let pasta = Recipe(name: "Pasta", description: "Meme", ingredients: ["Pasta", "Cheese", "Butter"])
-        let salad = Recipe(name: "Salad", description: "Meme", ingredients: ["Lettuce", "Rocket", "Tomato"])
-        let fruitSalad = Recipe(name: "Fruit Salad", description: "Meme", ingredients: ["Apple", "Banana", "Orange"])
-        let bbqChicken = Recipe(name: "BBQ Chicken", description: "Meme", ingredients: ["Chicken", "BBQ Sauce", "Salt"])
+        let pizza = Recipe(name: "Pizza", description: "Meme", ingredients: ["dough", "cheese", "milk"])
+        let pasta = Recipe(name: "Pasta", description: "Meme", ingredients: ["pasta", "cheese", "butter"])
+        let salad = Recipe(name: "Salad", description: "Meme", ingredients: ["lettuce", "rocket", "tomato"])
+        let fruitSalad = Recipe(name: "Fruit Salad", description: "Meme", ingredients: ["apple", "banana", "orange"])
+        let bbqChicken = Recipe(name: "BBQ Chicken", description: "Meme", ingredients: ["chicken", "bbq sauce", "salt"])
         //Add test data into table.
         recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
-        matchingRecipes = []
+        //matchingRecipes = []
         getAllrecipesMatchingIngredients(searchedIngredients: searchedItems)
     }
     
