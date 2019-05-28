@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B18ADF3229D049300311E4F /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2B18ADF2229D049300311E4F /* Resnet50.mlmodel */; };
 		FB7EA0B0229CBD34003FE290 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7EA0AF229CBD34003FE290 /* CameraViewController.swift */; };
 		FB832738229501BD00E08849 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB832737229501BD00E08849 /* Recipe.swift */; };
-		FB959286229CBE0300ABEC7D /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FB959285229CBE0300ABEC7D /* Resnet50.mlmodel */; };
 		FB959288229CE6A000ABEC7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB959287229CE6A000ABEC7D /* Default-568h@2x.png */; };
 		FBBB92742294D708000EEDBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBB92732294D708000EEDBF /* AppDelegate.swift */; };
 		FBBB92762294D708000EEDBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBB92752294D708000EEDBF /* ViewController.swift */; };
@@ -22,9 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B18ADF2229D049300311E4F /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		FB7EA0AF229CBD34003FE290 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FB832737229501BD00E08849 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		FB959285229CBE0300ABEC7D /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		FB959287229CE6A000ABEC7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FBBB92702294D708000EEDBF /* make my meal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "make my meal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBB92732294D708000EEDBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +69,7 @@
 		FBBB92722294D708000EEDBF /* make my meal */ = {
 			isa = PBXGroup;
 			children = (
+				2B18ADF2229D049300311E4F /* Resnet50.mlmodel */,
 				FBBB92732294D708000EEDBF /* AppDelegate.swift */,
 				FBBB928C2294F303000EEDBF /* SearchViewController.swift */,
 				FBBB92752294D708000EEDBF /* ViewController.swift */,
@@ -77,7 +78,6 @@
 				FB7EA0AF229CBD34003FE290 /* CameraViewController.swift */,
 				FBBB92772294D708000EEDBF /* Main.storyboard */,
 				FBBB927D2294D70A000EEDBF /* Assets.xcassets */,
-				FB959285229CBE0300ABEC7D /* Resnet50.mlmodel */,
 				FBBB927F2294D70A000EEDBF /* LaunchScreen.storyboard */,
 				FBBB92822294D70A000EEDBF /* Info.plist */,
 				FBBB927A2294D708000EEDBF /* make_my_meal.xcdatamodeld */,
@@ -163,7 +163,7 @@
 				FB832738229501BD00E08849 /* Recipe.swift in Sources */,
 				FB7EA0B0229CBD34003FE290 /* CameraViewController.swift in Sources */,
 				FBBB92742294D708000EEDBF /* AppDelegate.swift in Sources */,
-				FB959286229CBE0300ABEC7D /* Resnet50.mlmodel in Sources */,
+				2B18ADF3229D049300311E4F /* Resnet50.mlmodel in Sources */,
 				FBBB92892294D823000EEDBF /* RecipeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
