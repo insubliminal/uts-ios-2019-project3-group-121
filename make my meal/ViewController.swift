@@ -23,9 +23,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //Test data
         let pizza = Recipe(name: "Pizza", description: "Meme", ingredients: ["dough", "cheese", "milk"])
         let pasta = Recipe(name: "Pasta", description: "Meme", ingredients: ["pasta", "cheese", "butter"])
-        let salad = Recipe(name: "Salad", description: "Meme", ingredients: ["lettuce", "rocket", "tomato"])
+        let salad = Recipe(name: "Salad", description: "Meme", ingredients: ["head cabbage", "rocket", "tomato"])
         let fruitSalad = Recipe(name: "Fruit Salad", description: "Meme", ingredients: ["apple", "banana", "orange"])
-        let bbqChicken = Recipe(name: "BBQ Chicken", description: "Meme", ingredients: ["chicken", "bbq sauce", "salt"])
+        let bbqChicken = Recipe(name: "BBQ Chicken", description: "Meme", ingredients: ["rotisserie", "bbq sauce", "saltshaker"])
         //Add test data into table.
         recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
         //matchingRecipes = []
