@@ -48,8 +48,9 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             guard let results = finishedReq.results as? [VNClassificationObservation] else { return }
             guard let firstObservation = results.first else { return }
             
-            //print(firstObservation.identifier, firstObservation.confidence)
             
+            
+            //If the Camera is 80% or more certain that it has detected an object and it isn't in the list to of ingredient, add it to the ingredients list
             if (!firstObservation.confidence.isLessThanOrEqualTo(0.80)) && !self.isInList(identifiedIngredient: firstObservation.identifier) {
                 print(firstObservation.identifier)
                 

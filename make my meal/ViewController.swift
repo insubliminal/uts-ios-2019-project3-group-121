@@ -10,9 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
     var relevantRecipes = [String]()
-    var recipeSelected = ""
+    var recipeChosenInTable = ""
     var recipeList: [Recipe] = []
     var matchingRecipes: [Recipe] = []
     var searchedItems: [String] = []
@@ -26,9 +25,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let salad = Recipe(name: "Salad", description: "Meme", ingredients: ["head cabbage", "rocket", "tomato"])
         let fruitSalad = Recipe(name: "Fruit Salad", description: "Meme", ingredients: ["apple", "banana", "orange"])
         let bbqChicken = Recipe(name: "BBQ Chicken", description: "Meme", ingredients: ["rotisserie", "bbq sauce", "saltshaker"])
+        
         //Add test data into table.
         recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
-        //matchingRecipes = []
+
         getAllrecipesMatchingIngredients(searchedIngredients: searchedItems)
     }
     
@@ -51,15 +51,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let selectedRecipe = matchingRecipes[indexPath.row]
-        recipeSelected = selectedRecipe.name
-        print(recipeSelected)
+        
+        recipeChosenInTable = selectedRecipe.name
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        if recipeSelected == "Fruit Salad" {
+        if recipeChosenInTable == "Fruit Salad" {
+            
             return true
         }
+        
         return false
     }
     
@@ -72,7 +74,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     if searchedIngredient.contains(ingredient) && !isInCurrentList(recipeToAdd: recipe) {
                         
                         matchingRecipes.append(recipe)
-                        //Break the loop; do not want to double add a recipe.
+                        //Break the loop; do not want to double add a recipe, so we go to the next recipe.
                         break
                     }
                 }

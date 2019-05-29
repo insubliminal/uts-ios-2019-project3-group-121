@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2C3890229E528D00B7A708 /* FavoriteRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C388E229E528D00B7A708 /* FavoriteRecipeTableViewCell.swift */; };
+		FB2C3891229E528D00B7A708 /* FavoriteRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C388F229E528D00B7A708 /* FavoriteRecipeViewController.swift */; };
 		FB7EA0B0229CBD34003FE290 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7EA0AF229CBD34003FE290 /* CameraViewController.swift */; };
 		FB832738229501BD00E08849 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB832737229501BD00E08849 /* Recipe.swift */; };
 		FB959288229CE6A000ABEC7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB959287229CE6A000ABEC7D /* Default-568h@2x.png */; };
 		FB95928A229DF8F200ABEC7D /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FB959289229DF8F200ABEC7D /* Resnet50.mlmodel */; };
-		FB959294229E3B5300ABEC7D /* FavoriteRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB959293229E3B5300ABEC7D /* FavoriteRecipeViewController.swift */; };
-		FB959296229E3B5A00ABEC7D /* FavoriteRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB959295229E3B5A00ABEC7D /* FavoriteRecipeTableViewCell.swift */; };
 		FBBB92742294D708000EEDBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBB92732294D708000EEDBF /* AppDelegate.swift */; };
 		FBBB92762294D708000EEDBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBB92752294D708000EEDBF /* ViewController.swift */; };
 		FBBB92792294D708000EEDBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBB92772294D708000EEDBF /* Main.storyboard */; };
@@ -24,12 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB2C388E229E528D00B7A708 /* FavoriteRecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeTableViewCell.swift; sourceTree = "<group>"; };
+		FB2C388F229E528D00B7A708 /* FavoriteRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeViewController.swift; sourceTree = "<group>"; };
 		FB7EA0AF229CBD34003FE290 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FB832737229501BD00E08849 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		FB959287229CE6A000ABEC7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB959289229DF8F200ABEC7D /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
-		FB959293229E3B5300ABEC7D /* FavoriteRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeViewController.swift; sourceTree = "<group>"; };
-		FB959295229E3B5A00ABEC7D /* FavoriteRecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeTableViewCell.swift; sourceTree = "<group>"; };
 		FBBB92702294D708000EEDBF /* make my meal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "make my meal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBB92732294D708000EEDBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBBB92752294D708000EEDBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,9 +73,9 @@
 		FBBB92722294D708000EEDBF /* make my meal */ = {
 			isa = PBXGroup;
 			children = (
-				FB959293229E3B5300ABEC7D /* FavoriteRecipeViewController.swift */,
-				FB959295229E3B5A00ABEC7D /* FavoriteRecipeTableViewCell.swift */,
 				FBBB92732294D708000EEDBF /* AppDelegate.swift */,
+				FB2C388E229E528D00B7A708 /* FavoriteRecipeTableViewCell.swift */,
+				FB2C388F229E528D00B7A708 /* FavoriteRecipeViewController.swift */,
 				FBBB928C2294F303000EEDBF /* SearchViewController.swift */,
 				FBBB92752294D708000EEDBF /* ViewController.swift */,
 				FB832737229501BD00E08849 /* Recipe.swift */,
@@ -164,13 +164,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBBB928D2294F303000EEDBF /* SearchViewController.swift in Sources */,
+				FB2C3890229E528D00B7A708 /* FavoriteRecipeTableViewCell.swift in Sources */,
 				FB95928A229DF8F200ABEC7D /* Resnet50.mlmodel in Sources */,
 				FBBB927C2294D708000EEDBF /* make_my_meal.xcdatamodeld in Sources */,
-				FB959296229E3B5A00ABEC7D /* FavoriteRecipeTableViewCell.swift in Sources */,
+				FB2C3891229E528D00B7A708 /* FavoriteRecipeViewController.swift in Sources */,
 				FBBB92762294D708000EEDBF /* ViewController.swift in Sources */,
 				FB832738229501BD00E08849 /* Recipe.swift in Sources */,
 				FB7EA0B0229CBD34003FE290 /* CameraViewController.swift in Sources */,
-				FB959294229E3B5300ABEC7D /* FavoriteRecipeViewController.swift in Sources */,
 				FBBB92742294D708000EEDBF /* AppDelegate.swift in Sources */,
 				FBBB92892294D823000EEDBF /* RecipeTableViewCell.swift in Sources */,
 			);
@@ -320,14 +320,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2CPLJACY8U;
+				DEVELOPMENT_TEAM = 3ZVYX3M5NR;
 				INFOPLIST_FILE = "make my meal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Greg.makemymeal;
+				PRODUCT_BUNDLE_IDENTIFIER = insub.makemymeal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -341,14 +341,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2CPLJACY8U;
+				DEVELOPMENT_TEAM = 3ZVYX3M5NR;
 				INFOPLIST_FILE = "make my meal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Greg.makemymeal;
+				PRODUCT_BUNDLE_IDENTIFIER = insub.makemymeal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
