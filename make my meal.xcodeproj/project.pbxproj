@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B010E54229FF02A00B064AE /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3B010E53229FF02A00B064AE /* Resnet50.mlmodel */; };
 		3B8DD5D7229FEE1D00A128A6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD5D6229FEE1D00A128A6 /* CameraViewController.swift */; };
 		3B8DD5D9229FEE3500A128A6 /* FavoriteRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD5D8229FEE3500A128A6 /* FavoriteRecipeTableViewCell.swift */; };
 		3B8DD5DB229FEE5600A128A6 /* FavoriteRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD5DA229FEE5600A128A6 /* FavoriteRecipeTableViewController.swift */; };
@@ -15,7 +16,6 @@
 		3B8DD5E3229FEF0100A128A6 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD5E2229FEF0100A128A6 /* RecipeDetailsViewController.swift */; };
 		3B8DD5E5229FEF1C00A128A6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD5E4229FEF1C00A128A6 /* SearchViewController.swift */; };
 		3B8DD5E8229FEF3800A128A6 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD5E7229FEF3800A128A6 /* Recipe.swift */; };
-		3B8DD5EB229FEF5500A128A6 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD5EA229FEF5500A128A6 /* Resnet50.mlmodel */; };
 		FB959288229CE6A000ABEC7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB959287229CE6A000ABEC7D /* Default-568h@2x.png */; };
 		FBBB92742294D708000EEDBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBB92732294D708000EEDBF /* AppDelegate.swift */; };
 		FBBB92792294D708000EEDBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBB92772294D708000EEDBF /* Main.storyboard */; };
@@ -25,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B010E53229FF02A00B064AE /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../.Trash/Resnet50.mlmodel; sourceTree = "<group>"; };
 		3B8DD5D6229FEE1D00A128A6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3B8DD5D8229FEE3500A128A6 /* FavoriteRecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeTableViewCell.swift; sourceTree = "<group>"; };
 		3B8DD5DA229FEE5600A128A6 /* FavoriteRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeTableViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		3B8DD5E2229FEF0100A128A6 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		3B8DD5E4229FEF1C00A128A6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3B8DD5E7229FEF3800A128A6 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		3B8DD5EA229FEF5500A128A6 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		FB959287229CE6A000ABEC7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FBBB92702294D708000EEDBF /* make my meal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "make my meal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBB92732294D708000EEDBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		3B8DD5E9229FEF4900A128A6 /* Core ML */ = {
 			isa = PBXGroup;
 			children = (
-				3B8DD5EA229FEF5500A128A6 /* Resnet50.mlmodel */,
+				3B010E53229FF02A00B064AE /* Resnet50.mlmodel */,
 			);
 			path = "Core ML";
 			sourceTree = "<group>";
@@ -191,7 +191,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B8DD5DD229FEE7400A128A6 /* MatchingRecipeListTableViewController.swift in Sources */,
-				3B8DD5EB229FEF5500A128A6 /* Resnet50.mlmodel in Sources */,
 				FBBB927C2294D708000EEDBF /* make_my_meal.xcdatamodeld in Sources */,
 				3B8DD5D9229FEE3500A128A6 /* FavoriteRecipeTableViewCell.swift in Sources */,
 				3B8DD5E5229FEF1C00A128A6 /* SearchViewController.swift in Sources */,
@@ -200,6 +199,7 @@
 				FBBB92742294D708000EEDBF /* AppDelegate.swift in Sources */,
 				3B8DD5DB229FEE5600A128A6 /* FavoriteRecipeTableViewController.swift in Sources */,
 				3B8DD5D7229FEE1D00A128A6 /* CameraViewController.swift in Sources */,
+				3B010E54229FF02A00B064AE /* Resnet50.mlmodel in Sources */,
 				3B8DD5E8229FEF3800A128A6 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
