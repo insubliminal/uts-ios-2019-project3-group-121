@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -259,61 +259,6 @@
             </objects>
             <point key="canvasLocation" x="448" y="-230"/>
         </scene>
-        <!--Recipes-->
-        <scene sceneID="Skc-ZP-8HD">
-            <objects>
-                <viewController id="bKD-JR-z4T" customClass="ViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Sa-En-Tnp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="236" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xwL-ck-pfe">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="1" indentationWidth="10" rowHeight="236" id="Dbb-jz-bqk">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="236"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dbb-jz-bqk" id="mQa-ih-8wI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="235.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Gw-FH-qMc">
-                                                    <rect key="frame" x="20" y="30" width="149" height="178"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6W-jT-pmS">
-                                                    <rect key="frame" x="177" y="30" width="128" height="178"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="bKD-JR-z4T" id="x1e-UO-goj"/>
-                                    <outlet property="delegate" destination="bKD-JR-z4T" id="mlT-hN-8E7"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="xwL-ck-pfe" firstAttribute="leading" secondItem="A64-b3-w1T" secondAttribute="leading" id="NTk-J7-8X1"/>
-                            <constraint firstItem="A64-b3-w1T" firstAttribute="bottom" secondItem="xwL-ck-pfe" secondAttribute="bottom" id="WKE-Td-BA4"/>
-                            <constraint firstItem="A64-b3-w1T" firstAttribute="trailing" secondItem="xwL-ck-pfe" secondAttribute="trailing" id="dl1-4r-Lnb"/>
-                            <constraint firstItem="xwL-ck-pfe" firstAttribute="top" secondItem="A64-b3-w1T" secondAttribute="top" id="hWU-IZ-dcW"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="A64-b3-w1T"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Recipes" id="zDw-Ka-TnD"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RqB-DJ-blJ" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1622" y="265"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="g4W-pz-Ez7">
             <objects>
@@ -438,14 +383,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-hE-qJX">
-                                <rect key="frame" x="269" y="94" width="91" height="37"/>
+                                <rect key="frame" x="290" y="109" width="70" height="22"/>
                                 <state key="normal" title="Button" image="Heart"/>
                                 <connections>
                                     <action selector="heartBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="wpD-Nk-oxw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-ZL-YXH">
-                                <rect key="frame" x="269" y="94" width="91" height="37"/>
+                                <rect key="frame" x="290" y="109" width="70" height="22"/>
                                 <state key="normal" title="Button" image="Heart-filled"/>
                                 <connections>
                                     <action selector="heartFilledBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="Guz-NK-eO4"/>
@@ -592,7 +537,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="recipeImageView" destination="Vuz-QL-WGy" id="VYF-i0-JaQ"/>
-                                    <outlet property="recipeNameLabel" destination="6FV-ZY-hTS" id="Q1F-Ki-ONX"/>
+                                    <outlet property="recipeName" destination="6FV-ZY-hTS" id="zkO-ar-Owd"/>
                                     <segue destination="twO-If-Jbs" kind="show" identifier="toDetails" id="8Ol-HT-x7G"/>
                                 </connections>
                             </tableViewCell>
@@ -677,8 +622,8 @@
     <resources>
         <image name="Clock" width="32" height="32"/>
         <image name="FruitSalad" width="625" height="416.5"/>
-        <image name="Heart" width="37.5" height="37.5"/>
-        <image name="Heart-filled" width="37.5" height="37.5"/>
+        <image name="Heart" width="50" height="50"/>
+        <image name="Heart-filled" width="50" height="50"/>
         <image name="List" width="215" height="373.5"/>
         <image name="Logo" width="173" height="198"/>
         <image name="Nutritional" width="128" height="128"/>
@@ -687,6 +632,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3Iw-NA-szQ"/>
-        <segue reference="za4-ys-P5f"/>
+        <segue reference="8Ol-HT-x7G"/>
     </inferredMetricsTieBreakers>
 </document>

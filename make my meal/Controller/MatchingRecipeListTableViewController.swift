@@ -46,6 +46,7 @@ class MatchingRecipeListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MatchingRecipeTableViewCell
         
         let recipe = matchingRecipes[indexPath.row]
@@ -82,6 +83,7 @@ class MatchingRecipeListTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         guard segue.identifier == "lol" else {return}
         
         let recipeDetailsViewController = segue.destination as! RecipeDetailsViewController

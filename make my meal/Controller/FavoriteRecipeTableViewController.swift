@@ -11,8 +11,6 @@ import CoreData
 
 class FavoriteRecipeTableViewController: UITableViewController {
     
-    
-    
     var favoriteRecipes: [String] = []
     
     override func viewDidLoad() {
@@ -28,6 +26,7 @@ class FavoriteRecipeTableViewController: UITableViewController {
         guard let results = try? context.fetch(request) else {return}
         for result in results as! [NSManagedObject] {
             if let recipeName = result.value(forKey: "name") as? String {
+                
                 favoriteRecipes.append(recipeName)
             }
             print(favoriteRecipes)
