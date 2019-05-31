@@ -19,7 +19,7 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var heartFilledBtn: UIButton!
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var recipeImageView: UIImageView!
-    
+    @IBOutlet weak var recipeDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +31,7 @@ class RecipeDetailsViewController: UIViewController {
         guard let recipe = recipeFromList else{return}
         recipeNameLabel.text = recipe.name
         recipeImageView.image = UIImage(named: recipe.name)
+        recipeDescription.text = recipe.description
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext

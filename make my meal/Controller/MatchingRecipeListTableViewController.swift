@@ -2,7 +2,7 @@
 //  MatchingRecipeListTableViewController.swift
 //  make my meal
 //
-//  Created by Gayun Kim on 30/5/19.
+//  Created by Insub Lim on 28/5/19.
 //  Copyright © 2019 Insub Lim. All rights reserved.
 //
 
@@ -25,11 +25,11 @@ class MatchingRecipeListTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         //Test data
-        let pizza = Recipe(name: "Pizza", description: "Meme", ingredients: ["dough", "cheese", "milk"])
-        let pasta = Recipe(name: "Pasta", description: "Meme", ingredients: ["pasta", "cheese", "butter"])
-        let salad = Recipe(name: "Salad", description: "Meme", ingredients: ["head cabbage", "rocket", "tomato"])
-        let fruitSalad = Recipe(name: "Fruit Salad", description: "Meme", ingredients: ["apple", "banana", "orange"])
-        let bbqChicken = Recipe(name: "BBQ Chicken", description: "Meme", ingredients: ["rotisserie", "bbq sauce", "saltshaker"])
+        let pizza = Recipe(name: "Pizza", description: "Step 1:\n\tMake dough\nStep 2:\n\tBake bread", ingredients: ["dough", "cheese", "milk"])
+        let pasta = Recipe(name: "Pasta", description: "Step 1:\n\tBoil water\nStep 2:\n\tCook Tomato", ingredients: ["pasta", "cheese", "butter"])
+        let salad = Recipe(name: "Salad", description: "Step 1:\n\tWash Ingredients\nStep 2:\n\tCut Tomatoes", ingredients: ["head cabbage", "rocket", "tomato"])
+        let fruitSalad = Recipe(name: "Fruit Salad", description: "Step 1:\n\tWash Fruits\nStep 2:\n\tCut Fruits to mouth-sized chunks", ingredients: ["apple", "banana", "orange"])
+        let bbqChicken = Recipe(name: "BBQ Chicken", description: "Step 1:\n\tCut up chicken\nStep 2:\n\tMarinate chicken", ingredients: ["rotisserie", "bbq sauce", "saltshaker"])
         
         //Add test data into table.
         recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
