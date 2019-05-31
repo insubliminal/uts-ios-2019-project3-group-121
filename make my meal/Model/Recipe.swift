@@ -21,6 +21,5 @@ class Recipe {
         self.description = description
         self.ingredients = ingredients
     }
-    //Why is my git posting as =
 }
 
