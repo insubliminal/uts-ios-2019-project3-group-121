@@ -10,7 +10,7 @@ import UIKit
 
 class MatchingRecipeListTableViewController: UITableViewController {
     
-    var relevantRecipes = [String]()
+    var relevantRecipes: [String] = []
     var recipeChosenInTable = ""
     var recipeList: [Recipe] = []
     var matchingRecipes: [Recipe] = []
@@ -83,8 +83,6 @@ class MatchingRecipeListTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        guard segue.identifier == "lol" else {return}
         
         let recipeDetailsViewController = segue.destination as! RecipeDetailsViewController
         

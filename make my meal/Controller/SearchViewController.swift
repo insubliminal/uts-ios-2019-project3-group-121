@@ -22,7 +22,6 @@ class SearchViewController: UIViewController {
     
     @IBAction func goBtn(_ sender: Any) {
         
-        //searchedItem = searchTf.text!
         searchedItems.removeAll()
         searchedItems.append(searchTf.text!)
         performSegue(withIdentifier: "toList", sender: self)

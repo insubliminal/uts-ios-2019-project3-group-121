@@ -257,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hrm-rL-HSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="-230"/>
+            <point key="canvasLocation" x="446" y="-164"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g4W-pz-Ez7">
@@ -459,7 +459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vtb-LI-w8f" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="-950"/>
+            <point key="canvasLocation" x="1935" y="-165"/>
         </scene>
         <!--Camera-->
         <scene sceneID="qsa-oZ-lA0">
@@ -488,13 +488,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qem-TB-c2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="-949"/>
+            <point key="canvasLocation" x="446" y="-983"/>
         </scene>
         <!--Favorite Recipe Table View Controller-->
         <scene sceneID="XWG-Ve-XQU">
             <objects>
                 <tableViewController id="ILL-RJ-wBg" customClass="FavoriteRecipeTableViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qQw-vW-YfG" customClass="Favorite">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qQw-vW-YfG" customClass="Favorite">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -506,21 +506,21 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteRecipeCell" rowHeight="200" id="dc3-Er-WC2" customClass="FavoriteRecipeTableViewCell" customModule="make_my_meal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="200"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteRecipeCell" rowHeight="170" id="dc3-Er-WC2" customClass="FavoriteRecipeTableViewCell" customModule="make_my_meal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="320" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dc3-Er-WC2" id="LEa-cO-0E3">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bo9-a0-b3d">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vuz-QL-WGy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="199.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="169.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FV-ZY-hTS">
-                                                    <rect key="frame" x="160" y="0.0" width="160" height="199.5"/>
+                                                    <rect key="frame" x="160" y="0.0" width="160" height="169.5"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -553,13 +553,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhz-Se-5hg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="-231"/>
+            <point key="canvasLocation" x="-336" y="646"/>
         </scene>
         <!--Matching Recipe List Table View Controller-->
         <scene sceneID="uXE-wF-dAB">
             <objects>
                 <tableViewController id="kli-SB-g8h" customClass="MatchingRecipeListTableViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TaH-BX-ufL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TaH-BX-ufL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -571,21 +571,21 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="8xg-vS-pwd" customClass="MatchingRecipeTableViewCell" customModule="make_my_meal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="200"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="170" id="8xg-vS-pwd" customClass="MatchingRecipeTableViewCell" customModule="make_my_meal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="320" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8xg-vS-pwd" id="1dL-mZ-PkD">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FOI-Qk-HyA">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lr4-Ge-Hfw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="199.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="169.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajz-ud-MpN">
-                                                    <rect key="frame" x="160" y="0.0" width="160" height="199.5"/>
+                                                    <rect key="frame" x="160" y="0.0" width="160" height="169.5"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -603,7 +603,7 @@
                                 <connections>
                                     <outlet property="recipeImageView" destination="lr4-Ge-Hfw" id="XS1-bu-e1x"/>
                                     <outlet property="recipeName" destination="ajz-ud-MpN" id="Gkm-FP-eKS"/>
-                                    <segue destination="twO-If-Jbs" kind="show" identifier="lol" id="za4-ys-P5f"/>
+                                    <segue destination="twO-If-Jbs" kind="show" identifier="toSelectedRecipe" id="za4-ys-P5f"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -616,7 +616,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTU-tU-tRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="-950"/>
+            <point key="canvasLocation" x="1191" y="-165"/>
         </scene>
     </scenes>
     <resources>
