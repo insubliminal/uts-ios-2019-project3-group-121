@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -236,6 +236,14 @@
                                     <action selector="goBtn:" destination="IVt-uB-H6g" eventType="touchUpInside" id="lTV-Di-ZwP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-Qy-ywq">
+                                <rect key="frame" x="145" y="197" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Test"/>
+                                <connections>
+                                    <action selector="testBtn:" destination="IVt-uB-H6g" eventType="touchUpInside" id="06Y-nk-vAx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -253,6 +261,7 @@
                     <connections>
                         <outlet property="searchTf" destination="87g-7c-dRF" id="shW-h3-kc2"/>
                         <segue destination="kli-SB-g8h" kind="show" identifier="toList" id="3Iw-NA-szQ"/>
+                        <segue destination="PNt-In-PwN" kind="show" identifier="toIngredients" id="hCe-64-CwT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hrm-rL-HSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -385,6 +394,54 @@
             </objects>
             <point key="canvasLocation" x="446" y="-983"/>
         </scene>
+        <!--Ingredients View Controller-->
+        <scene sceneID="6tW-Yc-JbE">
+            <objects>
+                <viewController id="PNt-In-PwN" customClass="IngredientsViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mFW-bL-SH9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo7-Rn-xTf">
+                                <rect key="frame" x="144" y="518" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="toRecipes:" destination="PNt-In-PwN" eventType="touchUpInside" id="GDp-LT-AYc"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cbX-rX-b0A">
+                                <rect key="frame" x="0.0" y="64" width="320" height="446"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientsCell" id="hBa-cw-CUL">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hBa-cw-CUL" id="rug-yh-Jwd">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PNt-In-PwN" id="o2A-HL-1KV"/>
+                                    <outlet property="delegate" destination="PNt-In-PwN" id="NUJ-qp-Ozy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xLP-Vh-zIL"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cbX-rX-b0A" id="CZh-Sp-Ymp"/>
+                        <segue destination="kli-SB-g8h" kind="show" identifier="toList" id="jI4-Ft-WFC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezY-Xe-Qdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1190.625" y="-983.45070422535207"/>
+        </scene>
         <!--Favorite Recipe Table View Controller-->
         <scene sceneID="XWG-Ve-XQU">
             <objects>
@@ -516,8 +573,8 @@
     </scenes>
     <resources>
         <image name="Clock" width="32" height="32"/>
-        <image name="Heart" width="37.5" height="37.5"/>
-        <image name="Heart-filled" width="37.5" height="37.5"/>
+        <image name="Heart" width="50" height="50"/>
+        <image name="Heart-filled" width="50" height="50"/>
         <image name="List" width="215" height="373.5"/>
         <image name="Logo" width="173" height="198"/>
         <image name="Nutritional" width="128" height="128"/>
@@ -526,6 +583,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3Iw-NA-szQ"/>
-        <segue reference="8Ol-HT-x7G"/>
+        <segue reference="za4-ys-P5f"/>
     </inferredMetricsTieBreakers>
 </document>

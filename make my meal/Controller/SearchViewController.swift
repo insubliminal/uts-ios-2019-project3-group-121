@@ -27,11 +27,24 @@ class SearchViewController: UIViewController {
         performSegue(withIdentifier: "toList", sender: self)
     }
     
+    @IBAction func testBtn(_ sender: Any) {
+        searchedItems.removeAll()
+        searchedItems.append(searchTf.text!)
+        performSegue(withIdentifier: "toIngredients", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "toList") {
             
             let list = segue.destination as! MatchingRecipeListTableViewController
+            
+            list.searchedItems = self.searchedItems
+        }
+        
+        if (segue.identifier == "toIngredients") {
+            
+            let list = segue.destination as! IngredientsViewController
             
             list.searchedItems = self.searchedItems
         }
