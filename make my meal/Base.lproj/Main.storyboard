@@ -148,27 +148,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSc-Ba-ABI">
-                                <rect key="frame" x="123" y="508" width="127" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="eEt-Oo-DQ4"/>
-                                </constraints>
-                                <state key="normal" title="Home" image="icons8-home-104"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recipe" translatesAutoresizingMaskIntoConstraints="NO" id="Lby-AI-cKO">
+                                <rect key="frame" x="55" y="161" width="210" height="250"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSc-Ba-ABI">
+                                <rect key="frame" x="136" y="508" width="49" height="40"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="Evw-8i-8DJ" kind="unwind" unwindAction="unwindToHomeViewWithSegue:" id="oAP-Yr-pFT"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recipe" translatesAutoresizingMaskIntoConstraints="NO" id="Lby-AI-cKO">
-                                <rect key="frame" x="55" y="161" width="210" height="250"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bSc-Ba-ABI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WUX-1D-80A" secondAttribute="leading" id="4T6-oR-Yb8"/>
-                            <constraint firstAttribute="bottom" secondItem="bSc-Ba-ABI" secondAttribute="bottom" constant="20" symbolic="YES" id="Aas-Yt-C19"/>
-                            <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="bSc-Ba-ABI" secondAttribute="trailing" constant="70" id="FzN-EV-M9D"/>
+                            <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="bSc-Ba-ABI" secondAttribute="trailing" constant="135" id="9e2-MC-3af"/>
                             <constraint firstItem="5cU-NU-n3O" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="16" id="IoS-8u-bP2"/>
+                            <constraint firstAttribute="bottom" secondItem="bSc-Ba-ABI" secondAttribute="bottom" constant="20" symbolic="YES" id="Kz2-kO-MHA"/>
                             <constraint firstItem="Lby-AI-cKO" firstAttribute="top" secondItem="5cU-NU-n3O" secondAttribute="bottom" constant="7" id="N1s-1i-iXq"/>
+                            <constraint firstItem="bSc-Ba-ABI" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="136" id="afm-CG-ecA"/>
                             <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="Lby-AI-cKO" secondAttribute="trailing" constant="55" id="qAd-6B-reu"/>
                             <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="5cU-NU-n3O" secondAttribute="trailing" constant="16" id="qWs-fo-3vR"/>
                             <constraint firstItem="Lby-AI-cKO" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="55" id="s4z-xu-lrU"/>
@@ -185,7 +183,6 @@
         <!--View Controller-->
         <scene sceneID="65G-EN-09K">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AWJ-H7-pGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ScanInstructions" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sHE-fd-ld7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4rU-8g-nc2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -227,6 +224,7 @@
                         <viewLayoutGuide key="safeArea" id="R0N-Vo-BVl"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWJ-H7-pGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="446.25" y="-1664.7887323943662"/>
         </scene>
@@ -708,7 +706,6 @@
         <image name="Logo" width="173" height="198"/>
         <image name="Recipe" width="141.5" height="250"/>
         <image name="Scan" width="222.5" height="121.5"/>
-        <image name="icons8-home-104" width="78" height="78"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ROc-Te-gPU"/>
