@@ -14,14 +14,14 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     var identifiedIngredients: [String] = []
     @IBOutlet weak var cameraView: UIView!
-
     @IBOutlet weak var feedbackLabel: UILabel!
+    var captureSession: AVCaptureSession!
     
     override func viewWillAppear(_ animated: Bool) {
         
         identifiedIngredients = []
         // Startup of the camera:
-        let captureSession = AVCaptureSession()
+        captureSession = AVCaptureSession()
         captureSession.sessionPreset = .photo
         
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
@@ -51,8 +51,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             guard let results = finishedReq.results as? [VNClassificationObservation] else { return }
             guard let firstObservation = results.first else { return }
-            
-            
             
             //If the Camera is 80% or more certain that it has detected an object and it isn't in the list to of ingredient, add it to the ingredients list
             if (!firstObservation.confidence.isLessThanOrEqualTo(0.80)) && !self.isInList(identifiedIngredient: firstObservation.identifier) {
@@ -93,6 +91,11 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             list.searchedItems = self.identifiedIngredients
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.captureSession.stopRunning()
     }
 }
 
