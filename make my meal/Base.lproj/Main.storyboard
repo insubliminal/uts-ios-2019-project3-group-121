@@ -294,32 +294,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u9-Vb-4BK">
-                                <rect key="frame" x="20" y="29" width="141" height="33"/>
+                                <rect key="frame" x="20" y="73" width="141" height="33"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l4o-Zg-GQY">
-                                <rect key="frame" x="20" y="74" width="280" height="220"/>
+                                <rect key="frame" x="20" y="118" width="280" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="3gd-tv-3sz"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIp-IY-hPQ">
-                                <rect key="frame" x="52" y="327" width="25.5" height="23"/>
+                                <rect key="frame" x="52" y="371" width="25.5" height="23"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-hE-qJX">
-                                <rect key="frame" x="266" y="31" width="91" height="37"/>
+                                <rect key="frame" x="266" y="75" width="91" height="37"/>
                                 <state key="normal" title="Button" image="Heart"/>
                                 <connections>
                                     <action selector="heartBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="wpD-Nk-oxw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-ZL-YXH">
-                                <rect key="frame" x="266" y="31" width="91" height="37"/>
+                                <rect key="frame" x="266" y="75" width="91" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="U0T-90-lBH"/>
                                 </constraints>
@@ -329,7 +329,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFT-aC-Qfi">
-                                <rect key="frame" x="20" y="361" width="280" height="157"/>
+                                <rect key="frame" x="20" y="405" width="280" height="113"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRH-FT-MEd">
                                         <rect key="frame" x="0.0" y="0.0" width="32.5" height="16.5"/>
@@ -346,7 +346,7 @@
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="bft-9S-dg6">
-                                <rect key="frame" x="20" y="327" width="24" height="23"/>
+                                <rect key="frame" x="20" y="371" width="24" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="LV1-RP-ih4"/>
                                     <constraint firstAttribute="width" constant="24" id="TVX-RR-rmb"/>
@@ -559,11 +559,6 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PUa-pD-lD1">
-                            <rect key="frame" x="0.0" y="242" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteRecipeCell" rowHeight="170" id="dc3-Er-WC2" customClass="FavoriteRecipeTableViewCell" customModule="make_my_meal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="320" height="170"/>
@@ -690,6 +685,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="B0X-Rf-LUv"/>
         <segue reference="4If-td-lcs"/>
-        <segue reference="za4-ys-P5f"/>
+        <segue reference="8Ol-HT-x7G"/>
     </inferredMetricsTieBreakers>
 </document>
