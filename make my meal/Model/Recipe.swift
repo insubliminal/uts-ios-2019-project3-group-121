@@ -14,12 +14,15 @@ class Recipe:Codable, Equatable {
     var name: String
     var description: String
     var ingredients: [String]
+    var time: String
     
-    init(name: String, description: String, ingredients: [String]) {
+    init(name: String, description: String, ingredients: [String], time: String) {
         
         self.name = name
         self.description = description
         self.ingredients = ingredients
+        self.time = time
+        
     }
     
     static func == (lhs: Recipe, rhs: Recipe) -> Bool{
