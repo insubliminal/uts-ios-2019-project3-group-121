@@ -13,13 +13,14 @@
         <!--Home-->
         <scene sceneID="2El-6f-DKP">
             <objects>
-                <viewController id="itB-3p-NGn" sceneMemberID="viewController">
+                <viewController id="itB-3p-NGn" customClass="HomeViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7vQ-gA-A0C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTM-8W-k1H">
-                                <rect key="frame" x="16" y="320" width="288" height="30"/>
+                                <rect key="frame" x="16" y="320" width="288" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Scan"/>
                                 <connections>
                                     <segue destination="wES-EQ-YsQ" kind="show" id="z4Y-XM-5z1"/>
@@ -29,21 +30,24 @@
                                 <rect key="frame" x="68" y="93" width="185" height="198"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4j-pU-mXK">
-                                <rect key="frame" x="16" y="414" width="288" height="30"/>
+                                <rect key="frame" x="16" y="414" width="288" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Manual Entry"/>
                                 <connections>
                                     <segue destination="IVt-uB-H6g" kind="show" id="C77-5b-qvh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xid-KO-3w6">
-                                <rect key="frame" x="16" y="366" width="288" height="30"/>
+                                <rect key="frame" x="16" y="367" width="288" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="How-to"/>
                                 <connections>
                                     <segue destination="sHE-fd-ld7" kind="show" id="w6m-gh-d4o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4s-xH-pBx">
-                                <rect key="frame" x="108" y="452" width="105" height="30"/>
+                                <rect key="frame" x="20" y="453" width="280" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Favorite Recipe"/>
                                 <connections>
                                     <segue destination="ILL-RJ-wBg" kind="show" id="gNt-jh-jWY"/>
@@ -54,19 +58,19 @@
                         <constraints>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="top" secondItem="fQ6-lc-9a1" secondAttribute="bottom" constant="29" id="Blj-hi-zDQ"/>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="centerX" secondItem="7vQ-gA-A0C" secondAttribute="centerX" id="C7W-Mw-SHz"/>
-                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="108" id="Fe5-gc-dgc"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="Z4s-xH-pBx" secondAttribute="trailing" constant="20" id="FN4-4V-gsJ"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="7vQ-gA-A0C" secondAttribute="leadingMargin" id="HC7-eJ-ZAo"/>
                             <constraint firstItem="xid-KO-3w6" firstAttribute="leading" secondItem="s4j-pU-mXK" secondAttribute="leading" id="HXf-6V-hyL"/>
-                            <constraint firstItem="s4j-pU-mXK" firstAttribute="top" secondItem="xid-KO-3w6" secondAttribute="bottom" constant="18" id="YAo-Cq-DsG"/>
+                            <constraint firstItem="s4j-pU-mXK" firstAttribute="top" secondItem="xid-KO-3w6" secondAttribute="bottom" constant="16" id="YAo-Cq-DsG"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="xid-KO-3w6" secondAttribute="leading" id="Zj6-Rm-5vw"/>
                             <constraint firstItem="Z4s-xH-pBx" firstAttribute="top" secondItem="s4j-pU-mXK" secondAttribute="bottom" constant="8" symbolic="YES" id="dG6-wh-O4Q"/>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="68" id="dLS-lw-0L5"/>
                             <constraint firstItem="xid-KO-3w6" firstAttribute="trailing" secondItem="s4j-pU-mXK" secondAttribute="trailing" id="dOB-ZB-RGd"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="trailing" secondItem="xid-KO-3w6" secondAttribute="trailing" id="g9V-LK-fvh"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="centerX" secondItem="fQ6-lc-9a1" secondAttribute="centerX" id="gSN-XS-Apd"/>
-                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="Z4s-xH-pBx" secondAttribute="trailing" constant="107" id="gec-tQ-noa"/>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="top" secondItem="mD6-lo-gyA" secondAttribute="top" constant="29" id="kV2-HX-m87"/>
                             <constraint firstItem="xid-KO-3w6" firstAttribute="top" secondItem="mTM-8W-k1H" secondAttribute="bottom" constant="16" id="su6-Ed-899"/>
+                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="20" id="x51-dV-Ohz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mD6-lo-gyA"/>
                     </view>
@@ -74,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9c0-QQ-WEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-334" y="-1302"/>
+            <point key="canvasLocation" x="-335.625" y="-1302.4647887323945"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5A9-mh-5Qm">
@@ -85,19 +89,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a recipe you like" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COM-bH-d6K">
-                                <rect key="frame" x="16" y="82" width="288" height="89.5"/>
+                                <rect key="frame" x="16" y="64" width="288" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="U6x-6g-l4R"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="List" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-5y-9e9">
-                                <rect key="frame" x="105" y="197" width="111" height="215"/>
+                                <rect key="frame" x="16" y="161" width="288" height="215"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="215" id="DvX-97-ofN"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJF-KP-nGg">
-                                <rect key="frame" x="16" y="420" width="288" height="30"/>
+                                <rect key="frame" x="16" y="508" width="288" height="40"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="C3I-yh-iFY" kind="show" id="KHy-cf-nhZ"/>
@@ -106,86 +114,98 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5DM-5y-9e9" firstAttribute="top" secondItem="COM-bH-d6K" secondAttribute="bottom" constant="25.5" id="BYj-Ii-dD4"/>
+                            <constraint firstAttribute="bottom" secondItem="YJF-KP-nGg" secondAttribute="bottom" constant="20" symbolic="YES" id="2qs-kR-j4Z"/>
+                            <constraint firstItem="5DM-5y-9e9" firstAttribute="trailing" secondItem="YJF-KP-nGg" secondAttribute="trailing" id="Hwx-wD-wHd"/>
                             <constraint firstItem="COM-bH-d6K" firstAttribute="leading" secondItem="8jd-EV-buc" secondAttribute="leading" constant="16" id="JOp-Ha-Cex"/>
+                            <constraint firstItem="5DM-5y-9e9" firstAttribute="leading" secondItem="YJF-KP-nGg" secondAttribute="leading" id="LKw-1E-NLo"/>
                             <constraint firstItem="YJF-KP-nGg" firstAttribute="leading" secondItem="COM-bH-d6K" secondAttribute="leading" id="Li5-Pi-dhi"/>
-                            <constraint firstItem="8jd-EV-buc" firstAttribute="trailing" secondItem="5DM-5y-9e9" secondAttribute="trailing" constant="104" id="QMe-hz-vBH"/>
-                            <constraint firstItem="COM-bH-d6K" firstAttribute="top" secondItem="8jd-EV-buc" secondAttribute="top" constant="18" id="WfM-7u-93t"/>
                             <constraint firstItem="8jd-EV-buc" firstAttribute="trailing" secondItem="COM-bH-d6K" secondAttribute="trailing" constant="16" id="fJa-ga-Phc"/>
+                            <constraint firstItem="5DM-5y-9e9" firstAttribute="top" secondItem="COM-bH-d6K" secondAttribute="bottom" constant="7" id="g4T-2P-HaA"/>
                             <constraint firstItem="YJF-KP-nGg" firstAttribute="trailing" secondItem="COM-bH-d6K" secondAttribute="trailing" id="j8a-a6-Kwb"/>
-                            <constraint firstItem="5DM-5y-9e9" firstAttribute="leading" secondItem="8jd-EV-buc" secondAttribute="leading" constant="105" id="nVg-xT-vaw"/>
-                            <constraint firstItem="YJF-KP-nGg" firstAttribute="top" secondItem="5DM-5y-9e9" secondAttribute="bottom" constant="8" symbolic="YES" id="qSy-Jo-pIy"/>
+                            <constraint firstItem="COM-bH-d6K" firstAttribute="top" secondItem="8jd-EV-buc" secondAttribute="top" id="poB-gc-K9B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8jd-EV-buc"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHt-a6-8ug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="-1664"/>
+            <point key="canvasLocation" x="1190.625" y="-1664.7887323943662"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="73D-PF-T3b">
             <objects>
-                <viewController storyboardIdentifier="RecipeIntructions" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C3I-yh-iFY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeIntructions" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C3I-yh-iFY" customClass="HomeViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yWq-PA-PjL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow the steps and enjoy!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cU-NU-n3O">
-                                <rect key="frame" x="16" y="87" width="288" height="89.5"/>
+                                <rect key="frame" x="16" y="64" width="288" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="4Yh-JV-jhQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recipe" translatesAutoresizingMaskIntoConstraints="NO" id="Lby-AI-cKO">
-                                <rect key="frame" x="71" y="209" width="178" height="330"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSc-Ba-ABI">
+                                <rect key="frame" x="123" y="508" width="127" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="330" id="k89-kl-4jq"/>
+                                    <constraint firstAttribute="height" constant="40" id="eEt-Oo-DQ4"/>
                                 </constraints>
+                                <state key="normal" title="Home" image="icons8-home-104"/>
+                                <connections>
+                                    <segue destination="Evw-8i-8DJ" kind="unwind" unwindAction="unwindToHomeViewWithSegue:" id="oAP-Yr-pFT"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recipe" translatesAutoresizingMaskIntoConstraints="NO" id="Lby-AI-cKO">
+                                <rect key="frame" x="55" y="161" width="210" height="250"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5cU-NU-n3O" firstAttribute="top" secondItem="WUX-1D-80A" secondAttribute="top" constant="23" id="4Bc-Mf-zJu"/>
-                            <constraint firstItem="Lby-AI-cKO" firstAttribute="top" secondItem="5cU-NU-n3O" secondAttribute="bottom" constant="32.5" id="5re-qy-hKY"/>
-                            <constraint firstItem="WUX-1D-80A" firstAttribute="bottom" secondItem="Lby-AI-cKO" secondAttribute="bottom" constant="29" id="878-2n-63i"/>
-                            <constraint firstItem="Lby-AI-cKO" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="71" id="D2Y-0l-IAk"/>
+                            <constraint firstItem="bSc-Ba-ABI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WUX-1D-80A" secondAttribute="leading" id="4T6-oR-Yb8"/>
+                            <constraint firstAttribute="bottom" secondItem="bSc-Ba-ABI" secondAttribute="bottom" constant="20" symbolic="YES" id="Aas-Yt-C19"/>
+                            <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="bSc-Ba-ABI" secondAttribute="trailing" constant="70" id="FzN-EV-M9D"/>
                             <constraint firstItem="5cU-NU-n3O" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="16" id="IoS-8u-bP2"/>
-                            <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="Lby-AI-cKO" secondAttribute="trailing" constant="71" id="Y07-Lj-Xyl"/>
+                            <constraint firstItem="Lby-AI-cKO" firstAttribute="top" secondItem="5cU-NU-n3O" secondAttribute="bottom" constant="7" id="N1s-1i-iXq"/>
+                            <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="Lby-AI-cKO" secondAttribute="trailing" constant="55" id="qAd-6B-reu"/>
                             <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="5cU-NU-n3O" secondAttribute="trailing" constant="16" id="qWs-fo-3vR"/>
+                            <constraint firstItem="Lby-AI-cKO" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="55" id="s4z-xu-lrU"/>
+                            <constraint firstItem="5cU-NU-n3O" firstAttribute="top" secondItem="WUX-1D-80A" secondAttribute="top" id="vfr-bi-v6A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WUX-1D-80A"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hoC-fm-mpw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Evw-8i-8DJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="-1664"/>
+            <point key="canvasLocation" x="1935" y="-1664.7887323943662"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="65G-EN-09K">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWJ-H7-pGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ScanInstructions" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sHE-fd-ld7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4rU-8g-nc2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scan" translatesAutoresizingMaskIntoConstraints="NO" id="Mdk-Wv-9Nf">
-                                <rect key="frame" x="52" y="247" width="217" height="121"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="217" id="geS-Gq-947"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="206" width="288" height="121"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan your ingredients with your camera" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm7-pJ-K1u">
-                                <rect key="frame" x="16" y="105" width="288" height="134"/>
+                                <rect key="frame" x="23" y="64" width="281" height="134"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUj-W1-zuZ">
-                                <rect key="frame" x="16" y="522" width="288" height="26"/>
+                                <rect key="frame" x="16" y="522" width="284" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="MBp-N3-Em6"/>
+                                    <constraint firstAttribute="height" constant="26" id="6dR-vh-bwq"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="qO8-1B-0f3" kind="show" id="PAH-xI-Gco"/>
@@ -194,22 +214,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Pm7-pJ-K1u" secondAttribute="trailing" constant="16" id="0ct-fa-6KS"/>
-                            <constraint firstItem="LUj-W1-zuZ" firstAttribute="trailing" secondItem="Pm7-pJ-K1u" secondAttribute="trailing" id="3j1-tC-cuX"/>
-                            <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="52" id="6lg-UK-aSR"/>
-                            <constraint firstItem="Pm7-pJ-K1u" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="16" id="XZD-6D-6FS"/>
-                            <constraint firstItem="Pm7-pJ-K1u" firstAttribute="top" secondItem="R0N-Vo-BVl" secondAttribute="top" constant="41" id="gTg-hl-z67"/>
-                            <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="top" secondItem="Pm7-pJ-K1u" secondAttribute="bottom" constant="8" id="jTJ-sn-3XL"/>
-                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Mdk-Wv-9Nf" secondAttribute="trailing" constant="51" id="s7W-ZF-mDt"/>
-                            <constraint firstAttribute="bottom" secondItem="LUj-W1-zuZ" secondAttribute="bottom" constant="20" symbolic="YES" id="sOo-Bx-nMv"/>
-                            <constraint firstItem="LUj-W1-zuZ" firstAttribute="leading" secondItem="Pm7-pJ-K1u" secondAttribute="leading" id="sS6-l8-kRM"/>
+                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Pm7-pJ-K1u" secondAttribute="trailing" constant="16" id="0gq-qf-gZU"/>
+                            <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="top" secondItem="Pm7-pJ-K1u" secondAttribute="bottom" constant="8" symbolic="YES" id="MY4-7g-kvk"/>
+                            <constraint firstItem="LUj-W1-zuZ" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="16" id="Njb-Nu-gF1"/>
+                            <constraint firstAttribute="bottom" secondItem="LUj-W1-zuZ" secondAttribute="bottom" constant="20" symbolic="YES" id="RC5-yB-8VB"/>
+                            <constraint firstItem="Pm7-pJ-K1u" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="23" id="fNk-M1-Bk3"/>
+                            <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="16" id="hXZ-FZ-6qM"/>
+                            <constraint firstItem="Pm7-pJ-K1u" firstAttribute="top" secondItem="R0N-Vo-BVl" secondAttribute="top" id="mKI-H0-BOD"/>
+                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Mdk-Wv-9Nf" secondAttribute="trailing" constant="16" id="rnb-6R-7EA"/>
+                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="LUj-W1-zuZ" secondAttribute="trailing" constant="20" id="uBd-J2-B9b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R0N-Vo-BVl"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AWJ-H7-pGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="-1664"/>
+            <point key="canvasLocation" x="446.25" y="-1664.7887323943662"/>
         </scene>
         <!--Manual Entry-->
         <scene sceneID="WPi-yD-XJX">
@@ -220,42 +239,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87g-7c-dRF">
-                                <rect key="frame" x="16" y="318" width="288" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="tbb-l4-QiK"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="269" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsI-Gy-7f2">
-                                <rect key="frame" x="16" y="356" width="288" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="63"/>
-                                <state key="normal" title="Go"/>
-                                <connections>
-                                    <action selector="goBtn:" destination="IVt-uB-H6g" eventType="touchUpInside" id="lTV-Di-ZwP"/>
-                                    <segue destination="pC6-mf-L88" kind="show" identifier="toIngredientsList" id="AsJ-zg-do1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-Qy-ywq">
-                                <rect key="frame" x="110" y="269" width="101" height="30"/>
+                                <rect key="frame" x="20" y="307" width="280" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Add Ingredient"/>
                                 <connections>
                                     <action selector="addIngredientBtn:" destination="IVt-uB-H6g" eventType="touchUpInside" id="4Lt-La-xnn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsI-Gy-7f2">
+                                <rect key="frame" x="16" y="347" width="288" height="81"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="63"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <segue destination="pC6-mf-L88" kind="show" id="1b5-8d-AOD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QsI-Gy-7f2" firstAttribute="leading" secondItem="87g-7c-dRF" secondAttribute="leading" id="1HP-HN-TeM"/>
-                            <constraint firstItem="bCy-Qy-ywq" firstAttribute="leading" secondItem="YJe-H7-pSn" secondAttribute="leading" constant="110" id="7vQ-af-jAC"/>
-                            <constraint firstItem="QsI-Gy-7f2" firstAttribute="top" secondItem="87g-7c-dRF" secondAttribute="bottom" constant="8" symbolic="YES" id="7x9-nb-U0r"/>
                             <constraint firstItem="87g-7c-dRF" firstAttribute="leading" secondItem="AHh-4Y-R0z" secondAttribute="leadingMargin" id="A7I-Ba-d1T"/>
-                            <constraint firstItem="YJe-H7-pSn" firstAttribute="trailing" secondItem="bCy-Qy-ywq" secondAttribute="trailing" constant="109" id="Cy3-xn-E0k"/>
+                            <constraint firstItem="YJe-H7-pSn" firstAttribute="trailing" secondItem="bCy-Qy-ywq" secondAttribute="trailing" constant="20" id="FkL-AZ-SZ0"/>
                             <constraint firstItem="87g-7c-dRF" firstAttribute="trailing" secondItem="AHh-4Y-R0z" secondAttribute="trailingMargin" id="MQY-hw-h8j"/>
-                            <constraint firstItem="bCy-Qy-ywq" firstAttribute="centerY" secondItem="AHh-4Y-R0z" secondAttribute="centerY" id="VzZ-ba-ew0"/>
-                            <constraint firstItem="QsI-Gy-7f2" firstAttribute="trailing" secondItem="87g-7c-dRF" secondAttribute="trailing" id="ath-4D-b5f"/>
-                            <constraint firstItem="87g-7c-dRF" firstAttribute="top" secondItem="YJe-H7-pSn" secondAttribute="top" constant="254" id="fqn-Xq-MQH"/>
+                            <constraint firstItem="87g-7c-dRF" firstAttribute="centerY" secondItem="AHh-4Y-R0z" secondAttribute="centerY" id="RdN-ze-14x"/>
+                            <constraint firstItem="QsI-Gy-7f2" firstAttribute="leading" secondItem="87g-7c-dRF" secondAttribute="leading" id="Sg3-J6-Vjq"/>
+                            <constraint firstItem="bCy-Qy-ywq" firstAttribute="top" secondItem="87g-7c-dRF" secondAttribute="bottom" constant="8" id="hv4-Y4-urI"/>
+                            <constraint firstItem="QsI-Gy-7f2" firstAttribute="trailing" secondItem="87g-7c-dRF" secondAttribute="trailing" id="mss-Bz-qIf"/>
+                            <constraint firstItem="bCy-Qy-ywq" firstAttribute="leading" secondItem="YJe-H7-pSn" secondAttribute="leading" constant="20" id="pJC-el-WVe"/>
+                            <constraint firstItem="87g-7c-dRF" firstAttribute="centerX" secondItem="AHh-4Y-R0z" secondAttribute="centerX" id="phx-kd-rQ7"/>
                             <constraint firstItem="YJe-H7-pSn" firstAttribute="bottom" secondItem="QsI-Gy-7f2" secondAttribute="bottom" constant="140" id="u6o-xW-fTV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YJe-H7-pSn"/>
@@ -267,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hrm-rL-HSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="446" y="-166"/>
+            <point key="canvasLocation" x="444.375" y="-166.90140845070422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g4W-pz-Ez7">
@@ -406,6 +422,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLl-Cp-bBM">
                                 <rect key="frame" x="143" y="503" width="34" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="getList:" destination="wES-EQ-YsQ" eventType="touchUpInside" id="dAp-5V-A8E"/>
@@ -456,6 +473,7 @@
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ta6-kv-jUW">
                             <rect key="frame" x="0.0" y="116" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                             <state key="normal" title="Next"/>
                             <connections>
                                 <action selector="nextBtn:" destination="pC6-mf-L88" eventType="touchUpInside" id="Kga-p1-snu"/>
@@ -503,7 +521,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Ingredient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqO-PW-pvM">
-                                <rect key="frame" x="97" y="20" width="126" height="22"/>
+                                <rect key="frame" x="97" y="64" width="126" height="22"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -515,7 +533,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD0-2r-eZ7">
-                                <rect key="frame" x="145" y="307" width="30" height="30"/>
+                                <rect key="frame" x="145" y="307" width="30" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addBtn:" destination="K0c-mb-wGT" eventType="touchUpInside" id="A0u-HP-FKU"/>
@@ -681,10 +700,10 @@
         <image name="Logo" width="173" height="198"/>
         <image name="Recipe" width="141.5" height="250"/>
         <image name="Scan" width="222.5" height="121.5"/>
+        <image name="icons8-home-104" width="78" height="78"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B0X-Rf-LUv"/>
-        <segue reference="4If-td-lcs"/>
+        <segue reference="1b5-8d-AOD"/>
         <segue reference="8Ol-HT-x7G"/>
     </inferredMetricsTieBreakers>
 </document>

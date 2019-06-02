@@ -59,17 +59,6 @@ class IngredientsTableViewController: UITableViewController {
         } 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == "toNewIngredient" else {return}
-//        let newIngredientViewController = segue.destination as! NewIngredientViewController
-//        newIngredientViewController.addedIngredients = addedIngredients
-        
-//        guard segue.identifier == "toRecipes" else {return}
-//        let matchingRecipeListTableViewController = segue.destination as! MatchingRecipeListTableViewController
-//        matchingRecipeListTableViewController.addedIngredients = addedIngredients
-    }
-    
-    
     @IBAction func nextBtn(_ sender: Any) {
         performSegue(withIdentifier: "toRecipes", sender: self)
     }
