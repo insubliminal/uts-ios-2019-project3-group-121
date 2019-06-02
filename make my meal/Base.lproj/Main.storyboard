@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -234,23 +234,26 @@
                                 <state key="normal" title="Go"/>
                                 <connections>
                                     <action selector="goBtn:" destination="IVt-uB-H6g" eventType="touchUpInside" id="lTV-Di-ZwP"/>
+                                    <segue destination="pC6-mf-L88" kind="show" identifier="toIngredientsList" id="AsJ-zg-do1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-Qy-ywq">
-                                <rect key="frame" x="145" y="197" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Test"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-Qy-ywq">
+                                <rect key="frame" x="110" y="269" width="101" height="30"/>
+                                <state key="normal" title="Add Ingredient"/>
                                 <connections>
-                                    <action selector="testBtn:" destination="IVt-uB-H6g" eventType="touchUpInside" id="06Y-nk-vAx"/>
+                                    <action selector="addIngredientBtn:" destination="IVt-uB-H6g" eventType="touchUpInside" id="4Lt-La-xnn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QsI-Gy-7f2" firstAttribute="leading" secondItem="87g-7c-dRF" secondAttribute="leading" id="1HP-HN-TeM"/>
+                            <constraint firstItem="bCy-Qy-ywq" firstAttribute="leading" secondItem="YJe-H7-pSn" secondAttribute="leading" constant="110" id="7vQ-af-jAC"/>
                             <constraint firstItem="QsI-Gy-7f2" firstAttribute="top" secondItem="87g-7c-dRF" secondAttribute="bottom" constant="8" symbolic="YES" id="7x9-nb-U0r"/>
                             <constraint firstItem="87g-7c-dRF" firstAttribute="leading" secondItem="AHh-4Y-R0z" secondAttribute="leadingMargin" id="A7I-Ba-d1T"/>
+                            <constraint firstItem="YJe-H7-pSn" firstAttribute="trailing" secondItem="bCy-Qy-ywq" secondAttribute="trailing" constant="109" id="Cy3-xn-E0k"/>
                             <constraint firstItem="87g-7c-dRF" firstAttribute="trailing" secondItem="AHh-4Y-R0z" secondAttribute="trailingMargin" id="MQY-hw-h8j"/>
+                            <constraint firstItem="bCy-Qy-ywq" firstAttribute="centerY" secondItem="AHh-4Y-R0z" secondAttribute="centerY" id="VzZ-ba-ew0"/>
                             <constraint firstItem="QsI-Gy-7f2" firstAttribute="trailing" secondItem="87g-7c-dRF" secondAttribute="trailing" id="ath-4D-b5f"/>
                             <constraint firstItem="87g-7c-dRF" firstAttribute="top" secondItem="YJe-H7-pSn" secondAttribute="top" constant="254" id="fqn-Xq-MQH"/>
                             <constraint firstItem="YJe-H7-pSn" firstAttribute="bottom" secondItem="QsI-Gy-7f2" secondAttribute="bottom" constant="140" id="u6o-xW-fTV"/>
@@ -260,13 +263,11 @@
                     <navigationItem key="navigationItem" title="Manual Entry" id="ch6-QC-KoH"/>
                     <connections>
                         <outlet property="searchTf" destination="87g-7c-dRF" id="shW-h3-kc2"/>
-                        <segue destination="kli-SB-g8h" kind="show" identifier="toList" id="3Iw-NA-szQ"/>
-                        <segue destination="PNt-In-PwN" kind="show" identifier="toIngredients" id="hCe-64-CwT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hrm-rL-HSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="231" y="-166"/>
+            <point key="canvasLocation" x="446" y="-166"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g4W-pz-Ez7">
@@ -293,32 +294,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u9-Vb-4BK">
-                                <rect key="frame" x="20" y="73" width="141" height="33"/>
+                                <rect key="frame" x="20" y="29" width="141" height="33"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l4o-Zg-GQY">
-                                <rect key="frame" x="20" y="118" width="280" height="220"/>
+                                <rect key="frame" x="20" y="74" width="280" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="3gd-tv-3sz"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIp-IY-hPQ">
-                                <rect key="frame" x="52" y="371" width="25.5" height="23"/>
+                                <rect key="frame" x="52" y="327" width="25.5" height="23"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-hE-qJX">
-                                <rect key="frame" x="253" y="62" width="104" height="50"/>
+                                <rect key="frame" x="266" y="31" width="91" height="37"/>
                                 <state key="normal" title="Button" image="Heart"/>
                                 <connections>
                                     <action selector="heartBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="wpD-Nk-oxw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-ZL-YXH">
-                                <rect key="frame" x="253" y="62" width="104" height="50"/>
+                                <rect key="frame" x="266" y="31" width="91" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="U0T-90-lBH"/>
                                 </constraints>
@@ -328,7 +329,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFT-aC-Qfi">
-                                <rect key="frame" x="20" y="405" width="280" height="113"/>
+                                <rect key="frame" x="20" y="361" width="280" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRH-FT-MEd">
                                         <rect key="frame" x="0.0" y="0.0" width="32.5" height="16.5"/>
@@ -345,7 +346,7 @@
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="bft-9S-dg6">
-                                <rect key="frame" x="20" y="371" width="24" height="23"/>
+                                <rect key="frame" x="20" y="327" width="24" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="LV1-RP-ih4"/>
                                     <constraint firstAttribute="width" constant="24" id="TVX-RR-rmb"/>
@@ -408,7 +409,7 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="getList:" destination="wES-EQ-YsQ" eventType="touchUpInside" id="dAp-5V-A8E"/>
-                                    <segue destination="kli-SB-g8h" kind="show" identifier="toRecipes" id="EC2-dT-5iK"/>
+                                    <segue destination="pC6-mf-L88" kind="show" identifier="toAddedIngredientsList" id="ROc-Te-gPU"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jMd-Ij-5I6">
@@ -437,53 +438,111 @@
             </objects>
             <point key="canvasLocation" x="444.375" y="-983.45070422535207"/>
         </scene>
-        <!--Ingredients View Controller-->
-        <scene sceneID="6tW-Yc-JbE">
+        <!--Ingredients Table View Controller-->
+        <scene sceneID="nFd-63-uZr">
             <objects>
-                <viewController id="PNt-In-PwN" customClass="IngredientsViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mFW-bL-SH9">
+                <tableViewController id="pC6-mf-L88" customClass="IngredientsTableViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IVo-kq-gAV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7A9-KE-UWm">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ta6-kv-jUW">
+                            <rect key="frame" x="0.0" y="116" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Next"/>
+                            <connections>
+                                <action selector="nextBtn:" destination="pC6-mf-L88" eventType="touchUpInside" id="Kga-p1-snu"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientsCell" id="V3D-rM-uQO">
+                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V3D-rM-uQO" id="FsF-fk-uQp">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pC6-mf-L88" id="1j0-Th-TyW"/>
+                            <outlet property="delegate" destination="pC6-mf-L88" id="8h2-tR-tFI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ujr-MA-Sn4">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="edit" id="YOg-e6-sRY"/>
+                            <barButtonItem systemItem="add" id="Xk9-ig-r7A">
+                                <connections>
+                                    <segue destination="K0c-mb-wGT" kind="show" identifier="toNewIngredient" id="B0X-Rf-LUv"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="kli-SB-g8h" kind="show" identifier="toRecipes" id="cFT-cF-rGW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Coc-nX-iCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1191" y="-983"/>
+        </scene>
+        <!--New Ingredient View Controller-->
+        <scene sceneID="TFp-iP-zuI">
+            <objects>
+                <viewController id="K0c-mb-wGT" customClass="NewIngredientViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KoH-Qx-d3Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo7-Rn-xTf">
-                                <rect key="frame" x="144" y="518" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Ingredient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqO-PW-pvM">
+                                <rect key="frame" x="97" y="20" width="126" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ma-Ra-Ccj">
+                                <rect key="frame" x="16" y="269" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD0-2r-eZ7">
+                                <rect key="frame" x="145" y="307" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="toRecipes:" destination="PNt-In-PwN" eventType="touchUpInside" id="GDp-LT-AYc"/>
+                                    <action selector="addBtn:" destination="K0c-mb-wGT" eventType="touchUpInside" id="A0u-HP-FKU"/>
+                                    <segue destination="pC6-mf-L88" kind="show" identifier="toBack" id="4If-td-lcs"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cbX-rX-b0A">
-                                <rect key="frame" x="0.0" y="64" width="320" height="446"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientsCell" id="hBa-cw-CUL">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hBa-cw-CUL" id="rug-yh-Jwd">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="PNt-In-PwN" id="o2A-HL-1KV"/>
-                                    <outlet property="delegate" destination="PNt-In-PwN" id="NUJ-qp-Ozy"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="xLP-Vh-zIL"/>
+                        <constraints>
+                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="centerY" secondItem="KoH-Qx-d3Q" secondAttribute="centerY" id="K0h-BJ-IYD"/>
+                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="leading" secondItem="KoH-Qx-d3Q" secondAttribute="leadingMargin" id="Mbf-gB-bFJ"/>
+                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="trailing" secondItem="KoH-Qx-d3Q" secondAttribute="trailingMargin" id="TcH-WY-vlO"/>
+                            <constraint firstItem="eqO-PW-pvM" firstAttribute="top" secondItem="Kd6-IT-u4t" secondAttribute="top" id="WbE-fM-mqQ"/>
+                            <constraint firstItem="WD0-2r-eZ7" firstAttribute="centerX" secondItem="eqO-PW-pvM" secondAttribute="centerX" id="mds-dl-HCr"/>
+                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="centerX" secondItem="WD0-2r-eZ7" secondAttribute="centerX" id="pOd-Yx-FHq"/>
+                            <constraint firstItem="WD0-2r-eZ7" firstAttribute="top" secondItem="2ma-Ra-Ccj" secondAttribute="bottom" constant="8" symbolic="YES" id="wV5-YU-qup"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kd6-IT-u4t"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="cbX-rX-b0A" id="CZh-Sp-Ymp"/>
-                        <segue destination="kli-SB-g8h" kind="show" identifier="toList" id="jI4-Ft-WFC"/>
+                        <outlet property="addBtn" destination="WD0-2r-eZ7" id="0ZI-IE-n14"/>
+                        <outlet property="newIngredientLabel" destination="2ma-Ra-Ccj" id="crK-8S-vVd"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ezY-Xe-Qdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kQ-ej-p4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190.625" y="-983.45070422535207"/>
+            <point key="canvasLocation" x="1935" y="-983.45070422535207"/>
         </scene>
         <!--Favorite Recipe Table View Controller-->
         <scene sceneID="XWG-Ve-XQU">
@@ -500,6 +559,11 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PUa-pD-lD1">
+                            <rect key="frame" x="0.0" y="242" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteRecipeCell" rowHeight="170" id="dc3-Er-WC2" customClass="FavoriteRecipeTableViewCell" customModule="make_my_meal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="320" height="170"/>
@@ -616,15 +680,16 @@
     </scenes>
     <resources>
         <image name="Clock" width="32" height="32"/>
-        <image name="Heart" width="50" height="50"/>
-        <image name="Heart-filled" width="50" height="50"/>
+        <image name="Heart" width="37.5" height="37.5"/>
+        <image name="Heart-filled" width="37.5" height="37.5"/>
         <image name="List" width="215" height="373.5"/>
         <image name="Logo" width="173" height="198"/>
         <image name="Recipe" width="141.5" height="250"/>
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EC2-dT-5iK"/>
+        <segue reference="B0X-Rf-LUv"/>
+        <segue reference="4If-td-lcs"/>
         <segue reference="za4-ys-P5f"/>
     </inferredMetricsTieBreakers>
 </document>

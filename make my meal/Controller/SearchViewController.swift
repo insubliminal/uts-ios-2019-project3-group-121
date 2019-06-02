@@ -12,7 +12,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchTf: UITextField!
     
-    var searchedItems: [String] = []
+    var addedIngredients: [String] = []
+    let dataStorage = DataRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,42 +23,27 @@ class SearchViewController: UIViewController {
     
     @IBAction func goBtn(_ sender: Any) {
         
-        searchedItems.removeAll()
-        searchedItems.append(searchTf.text!)
-        performSegue(withIdentifier: "toList", sender: self)
+        
+        
+//        searchedItems.removeAll()
+//        searchedItems.append(searchTf.text!)
+//        performSegue(withIdentifier: "toList", sender: self)
     }
     
-    @IBAction func testBtn(_ sender: Any) {
-        searchedItems.removeAll()
-        searchedItems.append(searchTf.text!)
-        performSegue(withIdentifier: "toIngredients", sender: self)
+
+    @IBAction func addIngredientBtn(_ sender: Any) {
+        addedIngredients.append(searchTf.text!)
+        try? dataStorage.saveIngredients(addedIngredients)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if (segue.identifier == "toList") {
-            
-            let list = segue.destination as! MatchingRecipeListTableViewController
-            
-            list.searchedItems = self.searchedItems
-        }
+//        if segue.identifier == "toIngredientsList" {
+//            let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
+//            
+//            ingredientsTableViewController.addedIngredients = addedIngredients
+//        }
         
-        if (segue.identifier == "toIngredients") {
-            
-            let list = segue.destination as! IngredientsViewController
-            
-            list.searchedItems = self.searchedItems
-        }
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

@@ -76,21 +76,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         return false
     }
     
-    @IBAction func getList(_ sender: Any) {
-        
-        print(identifiedIngredients)
-        
-//        performSegue(withIdentifier: "toRecipes", sender: self)
-    }
+    @IBAction func getList(_ sender: Any) {}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "toAddedIngredientsList" else {return}
         
-        if (segue.identifier == "toRecipes") {
-            
-            let list = segue.destination as! MatchingRecipeListTableViewController
-            
-            list.searchedItems = self.identifiedIngredients
-        }
+        let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
+        ingredientsTableViewController.addedIngredients = identifiedIngredients
     }
     
     override func viewWillDisappear(_ animated: Bool) {

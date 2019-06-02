@@ -10,17 +10,20 @@ import UIKit
 
 class MatchingRecipeListTableViewController: UITableViewController {
     
-    var relevantRecipes: [String] = []
-    var recipeChosenInTable = ""
+//    var relevantRecipes: [String] = []
+//    var recipeChosenInTable = ""
     var recipeList: [Recipe] = []
     var matchingRecipes: [Recipe] = []
-    var searchedItems: [String] = []
+    var addedIngredients: [String] = []
     var recipeToPass: Recipe?
+    let dataStorage = DataRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -34,7 +37,12 @@ class MatchingRecipeListTableViewController: UITableViewController {
         //Add test data into table.
         recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
         
-        getAllrecipesMatchingIngredients(searchedIngredients: searchedItems)
+        addedIngredients = try! dataStorage.loadIngredients()
+        
+        getAllrecipesMatchingIngredients(searchedIngredients: addedIngredients)
+        
+        print(addedIngredients)
+        print(matchingRecipes)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -60,8 +68,8 @@ class MatchingRecipeListTableViewController: UITableViewController {
         for searchedIngredient in searchedIngredients {
             for recipe in recipeList {
                 for ingredient in recipe.ingredients {
-                    if searchedIngredient.contains(ingredient) && !isInCurrentList(recipeToAdd: recipe) {
-                        
+                    if ingredient.contains(searchedIngredient) && !isInCurrentList(recipeToAdd: recipe) {
+
                         matchingRecipes.append(recipe)
                         //Break the loop; do not want to double add a recipe, so we go to the next recipe.
                         break
@@ -69,6 +77,7 @@ class MatchingRecipeListTableViewController: UITableViewController {
                 }
             }
         }
+
     }
     
     func isInCurrentList(recipeToAdd: Recipe) -> Bool {
