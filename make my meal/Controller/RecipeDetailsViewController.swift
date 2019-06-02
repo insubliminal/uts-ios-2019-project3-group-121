@@ -21,6 +21,8 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeDescription: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,7 @@ class RecipeDetailsViewController: UIViewController {
         recipeNameLabel.text = recipe.name
         recipeImageView.image = UIImage(named: recipe.name)
         recipeDescription.text = recipe.description
+        timeLabel.text = recipe.time 
         
         for recipe in favoriteRecipes {
             guard let recipeFromList = recipeFromList else {return}
