@@ -57,12 +57,11 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             //If the Camera is 80% or more certain that it has detected an object and it isn't in the list to of ingredient, add it to the ingredients list
             if (!firstObservation.confidence.isLessThanOrEqualTo(0.80)) && !self.isInList(identifiedIngredient: firstObservation.identifier) {
                 
-                let objectName = firstObservation.identifier
-                print(objectName)
+                print(firstObservation.identifier)
                 
-            self.identifiedIngredients.append(firstObservation.identifier)
+                self.identifiedIngredients.append(firstObservation.identifier)
                 
-                self.feedbackLabel.text = "Found: \(objectName)"
+                self.feedbackLabel.text = "Found: \(firstObservation.identifier)"
             }
             
         }
