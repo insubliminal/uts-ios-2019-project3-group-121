@@ -83,7 +83,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         print(identifiedIngredients)
         
-        performSegue(withIdentifier: "toRecipes", sender: self)
+//        performSegue(withIdentifier: "toRecipes", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
