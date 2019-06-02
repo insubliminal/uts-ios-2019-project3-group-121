@@ -13,6 +13,9 @@ import Vision
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     var identifiedIngredients: [String] = []
+    @IBOutlet weak var cameraView: UIView!
+
+    @IBOutlet weak var feedbackLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -31,7 +34,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         view.layer.addSublayer(previewLayer)
-        previewLayer.frame = view.frame
+        //Make the Camera fit to our storyboard view dimensions.
+        previewLayer.frame = cameraView.frame
         
         let dataOutput = AVCaptureVideoDataOutput()
         dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
@@ -52,9 +56,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             //If the Camera is 80% or more certain that it has detected an object and it isn't in the list to of ingredient, add it to the ingredients list
             if (!firstObservation.confidence.isLessThanOrEqualTo(0.80)) && !self.isInList(identifiedIngredient: firstObservation.identifier) {
-                print(firstObservation.identifier)
                 
-                self.identifiedIngredients.append(firstObservation.identifier)
+                let objectName = firstObservation.identifier
+                print(objectName)
+                
+            self.identifiedIngredients.append(firstObservation.identifier)
+                
+                self.feedbackLabel.text = "Found: \(objectName)"
             }
             
         }

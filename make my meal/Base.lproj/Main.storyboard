@@ -287,7 +287,6 @@
         <!--Recipe Details View Controller-->
         <scene sceneID="d98-OL-kQZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtb-LI-w8f" sceneMemberID="firstResponder"/>
                 <viewController id="twO-If-Jbs" customClass="RecipeDetailsViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cFa-CI-dl3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -312,14 +311,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-hE-qJX">
-                                <rect key="frame" x="266" y="75" width="91" height="37"/>
+                                <rect key="frame" x="253" y="62" width="104" height="50"/>
                                 <state key="normal" title="Button" image="Heart"/>
                                 <connections>
                                     <action selector="heartBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="wpD-Nk-oxw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-ZL-YXH">
-                                <rect key="frame" x="266" y="75" width="91" height="37"/>
+                                <rect key="frame" x="253" y="62" width="104" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="U0T-90-lBH"/>
                                 </constraints>
@@ -391,6 +390,7 @@
                         <outlet property="timeLabel" destination="WIp-IY-hPQ" id="QzK-sd-zFd"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtb-LI-w8f" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1935" y="-165.8450704225352"/>
         </scene>
@@ -405,23 +405,37 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLl-Cp-bBM">
                                 <rect key="frame" x="143" y="503" width="34" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="getList:" destination="wES-EQ-YsQ" eventType="touchUpInside" id="dAp-5V-A8E"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jMd-Ij-5I6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="382"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Searching..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7g-5o-QeD">
+                                <rect key="frame" x="16" y="474" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yuL-9c-QWE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="yOu-dS-2y7"/>
                     <connections>
+                        <outlet property="cameraView" destination="jMd-Ij-5I6" id="wM2-ZC-41q"/>
+                        <outlet property="feedbackLabel" destination="D7g-5o-QeD" id="9Hq-Tl-ffL"/>
                         <segue destination="kli-SB-g8h" kind="show" identifier="toRecipes " id="G5F-rX-3oW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qem-TB-c2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="446" y="-983"/>
+            <point key="canvasLocation" x="444.375" y="-983.45070422535207"/>
         </scene>
         <!--Ingredients View Controller-->
         <scene sceneID="6tW-Yc-JbE">
@@ -610,7 +624,7 @@
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Iw-NA-szQ"/>
+        <segue reference="G5F-rX-3oW"/>
         <segue reference="za4-ys-P5f"/>
     </inferredMetricsTieBreakers>
 </document>
