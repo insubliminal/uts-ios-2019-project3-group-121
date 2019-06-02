@@ -12,7 +12,8 @@ import CoreData
 class RecipeDetailsViewController: UIViewController {
     
     var recipeFromList: Recipe?
-    var recipeFromFavoriteList: String?
+    var favoriteRecipes: [Recipe] = []
+    let DataStorage = DataRepository()
     
     
     @IBOutlet weak var heartBtn: UIButton!
@@ -28,39 +29,32 @@ class RecipeDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        if let favoriteList = try? DataStorage.loadFavoriteRecipes() {
+            favoriteRecipes = favoriteList
+        }
+        
         guard let recipe = recipeFromList else{return}
         recipeNameLabel.text = recipe.name
         recipeImageView.image = UIImage(named: recipe.name)
         recipeDescription.text = recipe.description
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FavoriteRecipe")
-        request.returnsObjectsAsFaults = false
-        
-        guard let results = try? context.fetch(request) else {return}
-        for result in results as! [NSManagedObject] {
-            if let favoriterecipe = result.value(forKey: "name") as? String {
-                if recipeFromList?.name == favoriterecipe {
-                    heartBtn.isHidden = true
-                    heartFilledBtn.isHidden = false
-                    
-                }
+        for recipe in favoriteRecipes {
+            guard let recipeFromList = recipeFromList else {return}
+            if ( recipe == recipeFromList ) {
+                heartBtn.isHidden = true
+                heartFilledBtn.isHidden = false
             }
         }
+        
     }
     
     @IBAction func heartBtnPressed(_ sender: Any) {
         heartBtn.isHidden = true
         heartFilledBtn.isHidden = false
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let favoriteRecipe = NSEntityDescription.insertNewObject(forEntityName: "FavoriteRecipe", into: context)
-        favoriteRecipe.setValue(recipeFromList?.name, forKey: "name")
-        
-        try? context.save()
-        print("Saved")
+        guard let recipe = recipeFromList else {return}
+        favoriteRecipes.append(recipe)
+        try? DataStorage.saveFavoriteRecipes(favoriteRecipes)
         
     }
     
@@ -68,20 +62,9 @@ class RecipeDetailsViewController: UIViewController {
         heartFilledBtn.isHidden = true
         heartBtn.isHidden = false
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FavoriteRecipe")
-        request.returnsObjectsAsFaults = false
-        
-        guard let results = try? context.fetch(request) else {return}
-        for result in results as! [NSManagedObject] {
-            if let favoriteRecipeToRemove = result.value(forKey: "name") as? String {
-                if recipeFromList?.name == favoriteRecipeToRemove {
-                    context.delete(result)
-                }
-            }
-        }
-        try? context.save()
+        favoriteRecipes.removeLast()
+        try? DataStorage.saveFavoriteRecipes(favoriteRecipes)
+
     }
     
 }

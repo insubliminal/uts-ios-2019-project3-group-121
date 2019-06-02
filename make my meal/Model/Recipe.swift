@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Recipe {
+class Recipe:Codable, Equatable {
     
     var name: String
     var description: String
@@ -21,5 +21,15 @@ class Recipe {
         self.description = description
         self.ingredients = ingredients
     }
+    
+    static func == (lhs: Recipe, rhs: Recipe) -> Bool{
+        if ( lhs.name == rhs.name) {
+            return true
+        } else {
+            return false
+        }
+    }
+
 }
+
 
