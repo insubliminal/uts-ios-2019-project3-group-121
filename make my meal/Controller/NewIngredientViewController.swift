@@ -25,12 +25,6 @@ class NewIngredientViewController: UIViewController {
         }
         guard let newIngredient = newIngredientLabel.text else {return}
         addedIngredients.append(newIngredient)
-<<<<<<< HEAD
-        try? dataStorage.saveIngredients(addedIngredients)
-        
-        
-=======
->>>>>>> 75763f6f59c83098df27ff21e9c2bf22471d7953
     }
     
     @IBAction func cancelBtn(_ sender: Any) {

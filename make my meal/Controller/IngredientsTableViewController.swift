@@ -19,13 +19,7 @@ class IngredientsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-<<<<<<< HEAD
-        
-        if let savedIngredientsList = try? dataStorage.loadIngredients() {
-            addedIngredients = savedIngredientsList
-        }
-=======
->>>>>>> 75763f6f59c83098df27ff21e9c2bf22471d7953
+
         tableView.reloadData()
     }
 
