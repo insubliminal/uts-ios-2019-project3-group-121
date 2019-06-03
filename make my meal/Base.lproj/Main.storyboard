@@ -454,7 +454,7 @@
             </objects>
             <point key="canvasLocation" x="1935" y="-983"/>
         </scene>
-        <!--Ingredients Table View Controller-->
+        <!--Ingredients-->
         <scene sceneID="nFd-63-uZr">
             <objects>
                 <tableViewController id="pC6-mf-L88" customClass="IngredientsTableViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
@@ -462,15 +462,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7A9-KE-UWm">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ta6-kv-jUW">
-                            <rect key="frame" x="0.0" y="116" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                             <state key="normal" title="Next"/>
@@ -480,7 +473,7 @@
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientsCell" id="V3D-rM-uQO" customClass="IngredientsTableViewCell" customModule="make_my_meal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V3D-rM-uQO" id="FsF-fk-uQp" customClass="IngredientsTableViewCell" customModule="make_my_meal" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -510,13 +503,7 @@
                             <outlet property="delegate" destination="pC6-mf-L88" id="8h2-tR-tFI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ujr-MA-Sn4">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xk9-ig-r7A">
-                            <connections>
-                                <segue destination="K0c-mb-wGT" kind="presentation" identifier="toNewIngredient" id="B0X-Rf-LUv"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Ingredients" id="R7R-ex-DEN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Coc-nX-iCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -734,6 +721,6 @@
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8Ol-HT-x7G"/>
+        <segue reference="za4-ys-P5f"/>
     </inferredMetricsTieBreakers>
 </document>
