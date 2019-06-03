@@ -18,9 +18,6 @@ class NewIngredientViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
     
     @IBAction func addBtn(_ sender: Any) {
         if newIngredientLabel.text == "" {

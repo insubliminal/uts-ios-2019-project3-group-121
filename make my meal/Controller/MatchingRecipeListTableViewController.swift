@@ -37,9 +37,8 @@ class MatchingRecipeListTableViewController: UITableViewController {
         recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
         
         getAllrecipesMatchingIngredients(searchedIngredients: addedIngredients)
-        
-        print(addedIngredients)
-        print(matchingRecipes)
+        tableView.reloadData()
+
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
