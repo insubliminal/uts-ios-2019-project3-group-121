@@ -33,9 +33,9 @@ class SearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "toIngredients" else {return}
         
-        let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
+        let ingredientsViewController = segue.destination as! IngredientsViewController
         
-        ingredientsTableViewController.addedIngredients = addedIngredients
+        ingredientsViewController.addedIngredients = addedIngredients
         print(addedIngredients)
     }
     

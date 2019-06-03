@@ -39,9 +39,9 @@ class NewIngredientViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if pressedAdd {
-            let ingredientListTableViewController = segue.destination as! IngredientsTableViewController
+            let ingredientViewController = segue.destination as! IngredientsViewController
             
-            ingredientListTableViewController.addedIngredients = addedIngredients
+            ingredientViewController.addedIngredients = addedIngredients
         }
     }
     

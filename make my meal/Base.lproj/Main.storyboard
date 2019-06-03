@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <segue destination="pC6-mf-L88" kind="show" id="kPU-Sx-D43"/>
+                                    <segue destination="oZq-3L-z8S" kind="show" id="tsX-k4-dLM"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fQ6-lc-9a1">
@@ -45,9 +45,8 @@
                                     <segue destination="ILL-RJ-wBg" kind="show" id="gNt-jh-jWY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-nf-MHh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-nf-MHh">
                                 <rect key="frame" x="124" y="447" width="76" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="All Recipes"/>
                                 <connections>
@@ -57,17 +56,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="IWg-nf-MHh" firstAttribute="top" secondItem="Z4s-xH-pBx" secondAttribute="bottom" constant="10" id="5cf-Vx-GxI"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="7vQ-gA-A0C" secondAttribute="leadingMargin" id="JyC-h0-LU6"/>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="68" id="OTA-5V-lmm"/>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="centerX" secondItem="mTM-8W-k1H" secondAttribute="centerX" id="bHO-Ev-VgO"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="trailing" secondItem="xid-KO-3w6" secondAttribute="trailing" id="cqt-Ee-c6W"/>
                             <constraint firstItem="Z4s-xH-pBx" firstAttribute="top" secondItem="xid-KO-3w6" secondAttribute="bottom" constant="8" symbolic="YES" id="dF8-hS-nnm"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="xid-KO-3w6" secondAttribute="leading" id="fmK-Hd-sPT"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="IWg-nf-MHh" secondAttribute="trailing" constant="120" id="hfw-3a-VVV"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="top" secondItem="fQ6-lc-9a1" secondAttribute="bottom" constant="29" id="mYT-BQ-7gK"/>
                             <constraint firstItem="xid-KO-3w6" firstAttribute="top" secondItem="mTM-8W-k1H" secondAttribute="bottom" constant="16" id="nLk-fO-FDE"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="trailing" secondItem="7vQ-gA-A0C" secondAttribute="trailingMargin" id="oOp-Vz-0sQ"/>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="top" secondItem="mD6-lo-gyA" secondAttribute="top" constant="29" id="qfY-E0-tjF"/>
                             <constraint firstItem="xid-KO-3w6" firstAttribute="centerX" secondItem="Z4s-xH-pBx" secondAttribute="centerX" id="xXu-4T-PhD"/>
+                            <constraint firstItem="IWg-nf-MHh" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="124" id="yqL-MT-YBg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mD6-lo-gyA"/>
                     </view>
@@ -320,14 +322,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-hE-qJX">
-                                <rect key="frame" x="253" y="62" width="104" height="50"/>
+                                <rect key="frame" x="266" y="75" width="91" height="37"/>
                                 <state key="normal" title="Button" image="Heart"/>
                                 <connections>
                                     <action selector="heartBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="wpD-Nk-oxw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-ZL-YXH">
-                                <rect key="frame" x="253" y="62" width="104" height="50"/>
+                                <rect key="frame" x="266" y="75" width="91" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="U0T-90-lBH"/>
                                 </constraints>
@@ -476,9 +478,6 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                             <state key="normal" title="Next"/>
-                            <connections>
-                                <segue destination="kli-SB-g8h" kind="show" identifier="toRecipes" id="xcJ-Nh-Fsj"/>
-                            </connections>
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientsCell" id="V3D-rM-uQO" customClass="IngredientsTableViewCell" customModule="make_my_meal" customModuleProvider="target">
@@ -496,16 +495,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Ingredients" id="CwK-wE-rqD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HJW-fh-Xqf">
-                            <connections>
-                                <segue destination="K0c-mb-wGT" kind="presentation" identifier="toNewIngredient" id="67m-1L-Bqh"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HJW-fh-Xqf"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Coc-nX-iCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="446" y="-983"/>
+            <point key="canvasLocation" x="3441" y="-1302"/>
         </scene>
         <!--New Ingredient View Controller-->
         <scene sceneID="TFp-iP-zuI">
@@ -770,11 +765,76 @@
             </objects>
             <point key="canvasLocation" x="-338" y="-2022"/>
         </scene>
+        <!--Ingredients-->
+        <scene sceneID="qZC-mK-RGN">
+            <objects>
+                <viewController id="oZq-3L-z8S" customClass="IngredientsViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iAl-3I-pOf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9j-ii-b8v">
+                                <rect key="frame" x="20" y="64" width="280" height="386"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="386" id="uh4-jj-77c"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" id="Z4k-Z4-sQZ">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z4k-Z4-sQZ" id="xxB-JT-9dw">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoM-cp-OJ4">
+                                <rect key="frame" x="20" y="508" width="280" height="40"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="kli-SB-g8h" kind="show" identifier="toRecipes" id="c4x-sM-uqr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbe-nk-THf">
+                                <rect key="frame" x="20" y="458" width="280" height="40"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <segue destination="K0c-mb-wGT" kind="presentation" id="xKT-vf-920"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NoM-cp-OJ4" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" constant="20" id="3la-Wu-LpY"/>
+                            <constraint firstItem="qbe-nk-THf" firstAttribute="top" secondItem="n9j-ii-b8v" secondAttribute="bottom" constant="8" symbolic="YES" id="8NY-nr-sXI"/>
+                            <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="n9j-ii-b8v" secondAttribute="trailing" constant="20" id="IsF-Mq-Tx0"/>
+                            <constraint firstItem="qbe-nk-THf" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" constant="20" id="Q2h-NI-W5R"/>
+                            <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="NoM-cp-OJ4" secondAttribute="trailing" constant="20" id="X4l-f7-PXB"/>
+                            <constraint firstItem="n9j-ii-b8v" firstAttribute="top" secondItem="pDg-hF-mFB" secondAttribute="top" id="fBX-VB-gJs"/>
+                            <constraint firstItem="n9j-ii-b8v" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" constant="20" id="fLq-0c-r5O"/>
+                            <constraint firstAttribute="bottom" secondItem="NoM-cp-OJ4" secondAttribute="bottom" constant="20" symbolic="YES" id="hyA-19-bIe"/>
+                            <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="qbe-nk-THf" secondAttribute="trailing" constant="20" id="wB8-TB-wDK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pDg-hF-mFB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ingredients" id="YRE-dn-s2D"/>
+                    <connections>
+                        <outlet property="ingredientTableView" destination="n9j-ii-b8v" id="E42-i8-UKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Xa-C0-DJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="-964"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Clock" width="32" height="32"/>
-        <image name="Heart" width="50" height="50"/>
-        <image name="Heart-filled" width="50" height="50"/>
+        <image name="Heart" width="37.5" height="37.5"/>
+        <image name="Heart-filled" width="37.5" height="37.5"/>
         <image name="List" width="215" height="373.5"/>
         <image name="Logo" width="173" height="198"/>
         <image name="Recipe" width="141.5" height="250"/>
