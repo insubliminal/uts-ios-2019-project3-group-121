@@ -419,9 +419,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLl-Cp-bBM">
-                                <rect key="frame" x="267" y="517" width="33" height="31"/>
+                                <rect key="frame" x="270" y="517" width="30" height="31"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
                                     <segue destination="dXN-CO-WBj" kind="unwind" unwindAction="unwindToIngredientsViewControllerWithSegue:" id="GL4-x3-0lH"/>
                                 </connections>
@@ -545,7 +545,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDL-m8-a3a">
                                 <rect key="frame" x="20" y="346" width="280" height="31"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <state key="normal" title="Scan"/>
+                                <state key="normal" title="Scan Ingredients"/>
                                 <connections>
                                     <segue destination="wES-EQ-YsQ" kind="presentation" identifier="toCamera" id="IDh-W0-oRc"/>
                                 </connections>
@@ -800,7 +800,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoM-cp-OJ4">
                                 <rect key="frame" x="20" y="508" width="280" height="40"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Search"/>
                                 <connections>
                                     <segue destination="kli-SB-g8h" kind="show" identifier="toRecipes" id="c4x-sM-uqr"/>
                                 </connections>
