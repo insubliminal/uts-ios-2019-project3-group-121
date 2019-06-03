@@ -42,14 +42,14 @@ class NewIngredientViewController: UIViewController {
             let ingredientViewController = segue.destination as! IngredientsViewController
             
             ingredientViewController.addedIngredients = addedIngredients
-        } else if segue.identifier == "toCamera" {
+        }
+        
+        else if segue.identifier == "toCamera" {
             let cameraViewController = segue.destination as! CameraViewController
             
             cameraViewController.addedIngredients = addedIngredients
         }
     }
-    
-    
 }
 
 

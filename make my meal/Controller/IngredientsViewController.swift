@@ -18,14 +18,15 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ingredientTableView.reloadData()
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -60,6 +61,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
             let matchingRecipeListTableViewController = segue.destination as! MatchingRecipeListTableViewController
             matchingRecipeListTableViewController.addedIngredients = addedIngredients
         }
+        
         if segue.identifier == "toNewIngredient" {
             let newIngredientsViewController = segue.destination as! NewIngredientViewController
             newIngredientsViewController.addedIngredients = addedIngredients
@@ -67,5 +69,4 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func unwindToIngredientsViewController(segue: UIStoryboardSegue) {}
-    
 }

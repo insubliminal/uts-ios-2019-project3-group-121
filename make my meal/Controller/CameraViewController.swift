@@ -20,7 +20,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     
     override func viewWillAppear(_ animated: Bool) {
-
         // Startup of the camera:
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = .photo
@@ -63,7 +62,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         }
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
-        
+    
     @IBAction func cancelBtn(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
@@ -80,6 +79,3 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         self.captureSession.stopRunning()
     }
 }
-
-
-

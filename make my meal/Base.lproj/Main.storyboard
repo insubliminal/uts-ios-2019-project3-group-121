@@ -403,7 +403,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vtb-LI-w8f" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="-165.8450704225352"/>
+            <point key="canvasLocation" x="1935" y="568"/>
         </scene>
         <!--Camera-->
         <scene sceneID="qsa-oZ-lA0">
@@ -769,7 +769,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLJ-CQ-saf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444" y="456"/>
+            <point key="canvasLocation" x="-336" y="569"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="qZC-mK-RGN">
@@ -844,6 +844,6 @@
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="za4-ys-P5f"/>
+        <segue reference="8Ol-HT-x7G"/>
     </inferredMetricsTieBreakers>
 </document>

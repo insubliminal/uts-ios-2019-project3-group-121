@@ -18,6 +18,5 @@ class MatchingRecipeTableViewCell: UITableViewCell {
         recipeImageView.image = UIImage(named: recipe.name)
         recipeName.text = recipe.name
     }
-    
 }
 

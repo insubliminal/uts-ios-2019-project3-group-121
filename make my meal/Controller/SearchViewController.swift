@@ -37,5 +37,4 @@ class SearchViewController: UIViewController {
         
         ingredientsViewController.addedIngredients = addedIngredients
     }
-    
 }

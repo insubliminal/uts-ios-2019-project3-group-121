@@ -53,7 +53,6 @@ class AllRecipesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         let recipeDetailsViewController = segue.destination as! RecipeDetailsViewController
         let indexPath = tableView.indexPathForSelectedRow!
         let selectedRecipe = recipeList[indexPath.row]
