@@ -11,7 +11,7 @@ import UIKit
 class IngredientsTableViewController: UITableViewController {
 
     var addedIngredients: [String] = []
-    let dataStroage = DataRepository()
+    let dataStorage = DataRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +21,16 @@ class IngredientsTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        addedIngredients = try! dataStroage.loadIngredients()
+        if let savedIngredientsList = try? dataStorage.loadIngredients() {
+            addedIngredients = savedIngredientsList
+        }
+        //addedIngredients = try! dataStorage.loadIngredients()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        try? dataStroage.saveIngredients(addedIngredients)
+        try? dataStorage.saveIngredients(addedIngredients)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -55,7 +58,7 @@ class IngredientsTableViewController: UITableViewController {
         if editingStyle == .delete {
             addedIngredients.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            try? dataStroage.saveIngredients(addedIngredients)
+            try? dataStorage.saveIngredients(addedIngredients)
         } 
     }
     
