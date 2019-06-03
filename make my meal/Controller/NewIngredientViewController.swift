@@ -13,18 +13,16 @@ class NewIngredientViewController: UIViewController {
     var addedIngredients: [String] = []
     
     @IBOutlet weak var addBtn: UIButton!
-    @IBOutlet weak var newIngredientLabel: UITextField!
- 
+    @IBOutlet weak var newIngredientTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     @IBAction func addBtn(_ sender: Any) {
-        if newIngredientLabel.text == "" {
-            addBtn.isEnabled = false
-        }
-        guard let newIngredient = newIngredientLabel.text else {return}
+        
+        guard let newIngredient = newIngredientTextField.text else {return}
         addedIngredients.append(newIngredient)
         
     }
