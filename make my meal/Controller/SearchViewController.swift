@@ -25,7 +25,6 @@ class SearchViewController: UIViewController {
         addedIngredients.removeAll()
     }
     
-
     @IBAction func addIngredientBtn(_ sender: Any) {
         addedIngredients.append(searchTf.text!)
     }
@@ -36,7 +35,5 @@ class SearchViewController: UIViewController {
         let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
         
         ingredientsTableViewController.addedIngredients = addedIngredients
-        print(addedIngredients)
     }
-    
 }

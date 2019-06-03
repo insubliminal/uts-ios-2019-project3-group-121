@@ -57,14 +57,12 @@ class IngredientsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRecipes" {
-            
             let matchingRecipeListTableViewController = segue.destination as! MatchingRecipeListTableViewController
             
             matchingRecipeListTableViewController.addedIngredients = addedIngredients
         }
         
         if segue.identifier == "toNewIngredient" {
-            
             let newIngredientsViewController = segue.destination as! NewIngredientViewController
             
             newIngredientsViewController.addedIngredients = addedIngredients
@@ -72,5 +70,4 @@ class IngredientsTableViewController: UITableViewController {
     }
     
     @IBAction func unwindToIngredientsViewController(segue: UIStoryboardSegue) {}
-    
 }

@@ -74,7 +74,6 @@ class MatchingRecipeListTableViewController: UITableViewController {
     }
     
     func isInCurrentList(recipeToAdd: Recipe) -> Bool {
-        
         for recipe in matchingRecipes {
             if recipeToAdd.name == recipe.name {
                 return true
@@ -84,7 +83,6 @@ class MatchingRecipeListTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         let recipeDetailsViewController = segue.destination as! RecipeDetailsViewController
         let indexPath = tableView.indexPathForSelectedRow!
         let selectedRecipe = matchingRecipes[indexPath.row]

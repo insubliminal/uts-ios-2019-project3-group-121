@@ -43,10 +43,9 @@ class RecipeDetailsViewController: UIViewController {
         timeLabel.text = recipe.time 
         
         for recipe in favoriteRecipes {
-            
             guard let recipeFromList = recipeFromList else {return}
             
-            if ( recipe == recipeFromList ) {
+            if recipe == recipeFromList {
                 heartBtn.isHidden = true
                 heartFilledBtn.isHidden = false
             }
