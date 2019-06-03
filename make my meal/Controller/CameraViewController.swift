@@ -57,9 +57,14 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
                 
                 print(firstObservation.identifier)
                 
-                self.identifiedIngredients.append(firstObservation.identifier)
+            self.identifiedIngredients.append(firstObservation.identifier)
                 
-                self.feedbackLabel.text = "Found: \(firstObservation.identifier)"
+                //https://stackoverflow.com/questions/46218270/swift-4-must-be-used-from-main-thread-only-warning
+                DispatchQueue.main.async {
+                    self.feedbackLabel.text = "Found: \(firstObservation.identifier)"
+                }
+                
+                
             }
             
         }
@@ -76,17 +81,14 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         return false
     }
     
-    @IBAction func getList(_ sender: Any) {
-        
+    @IBAction func cancelBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "toAddedIngredientsList" else {return}
         
         let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
         ingredientsTableViewController.addedIngredients = identifiedIngredients
-        
-        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

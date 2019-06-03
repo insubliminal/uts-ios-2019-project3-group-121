@@ -427,13 +427,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLl-Cp-bBM">
-                                <rect key="frame" x="144" y="517" width="33" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLl-Cp-bBM">
+                                <rect key="frame" x="250" y="517" width="33" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="getList:" destination="wES-EQ-YsQ" eventType="touchUpInside" id="dAp-5V-A8E"/>
-                                    <segue destination="pC6-mf-L88" kind="show" identifier="toAddedIngredientsList" id="ROc-Te-gPU"/>
+                                    <segue destination="dXN-CO-WBj" kind="unwind" unwindAction="unwindToIngredientsViewControllerWithSegue:" id="GL4-x3-0lH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9m-yz-txN">
+                                <rect key="frame" x="37" y="517" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="wES-EQ-YsQ" eventType="touchUpInside" id="7El-NW-vDt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -442,9 +452,7 @@
                             <constraint firstItem="jMd-Ij-5I6" firstAttribute="top" secondItem="yuL-9c-QWE" secondAttribute="top" id="0QP-7o-Qu0"/>
                             <constraint firstAttribute="bottom" secondItem="jMd-Ij-5I6" secondAttribute="bottom" constant="122" id="7xD-wG-7ib"/>
                             <constraint firstItem="jMd-Ij-5I6" firstAttribute="centerX" secondItem="D7g-5o-QeD" secondAttribute="centerX" id="BWe-c4-9mC"/>
-                            <constraint firstItem="jMd-Ij-5I6" firstAttribute="centerX" secondItem="OLl-Cp-bBM" secondAttribute="centerX" id="Ffb-Py-zUv"/>
                             <constraint firstItem="D7g-5o-QeD" firstAttribute="top" secondItem="jMd-Ij-5I6" secondAttribute="bottom" constant="28" id="IMF-T9-rep"/>
-                            <constraint firstAttribute="bottom" secondItem="OLl-Cp-bBM" secondAttribute="bottom" constant="20" symbolic="YES" id="P7m-Q8-5Sw"/>
                             <constraint firstItem="D7g-5o-QeD" firstAttribute="leading" secondItem="yuL-9c-QWE" secondAttribute="leading" constant="38" id="PrL-mg-ADI"/>
                             <constraint firstItem="yuL-9c-QWE" firstAttribute="trailing" secondItem="D7g-5o-QeD" secondAttribute="trailing" constant="37" id="qtG-ev-yXK"/>
                             <constraint firstItem="jMd-Ij-5I6" firstAttribute="leading" secondItem="NPL-aq-msP" secondAttribute="leading" id="yVY-Uz-64e"/>
@@ -458,6 +466,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qem-TB-c2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dXN-CO-WBj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2672" y="-983"/>
         </scene>
@@ -568,6 +577,14 @@
                                 </state>
                                 <connections>
                                     <action selector="cancelBtn:" destination="K0c-mb-wGT" eventType="touchUpInside" id="cMu-Xe-o3H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDL-m8-a3a">
+                                <rect key="frame" x="133" y="413" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <segue destination="wES-EQ-YsQ" kind="show" id="IDh-W0-oRc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -735,7 +752,7 @@
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kPU-Sx-D43"/>
+        <segue reference="1b5-8d-AOD"/>
         <segue reference="8Ol-HT-x7G"/>
     </inferredMetricsTieBreakers>
 </document>
