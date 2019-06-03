@@ -716,7 +716,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECIPES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T5o-Fj-6bA">
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL RECIPES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T5o-Fj-6bA">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
@@ -756,6 +756,7 @@
                                 <connections>
                                     <outlet property="recipeImageView" destination="0wy-OS-lqR" id="UIj-Uw-MtV"/>
                                     <outlet property="recipeName" destination="Ofo-3o-3rX" id="Hte-ix-EAV"/>
+                                    <segue destination="twO-If-Jbs" kind="show" id="gmt-jN-LJf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -768,7 +769,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLJ-CQ-saf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-338" y="-2022"/>
+            <point key="canvasLocation" x="444" y="456"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="qZC-mK-RGN">
@@ -843,6 +844,6 @@
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="za4-ys-P5f"/>
+        <segue reference="gmt-jN-LJf"/>
     </inferredMetricsTieBreakers>
 </document>
