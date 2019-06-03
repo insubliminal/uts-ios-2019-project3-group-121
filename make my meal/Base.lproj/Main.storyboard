@@ -674,12 +674,23 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lr4-Ge-Hfw">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="169.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajz-ud-MpN">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Wy-oe-988">
                                                     <rect key="frame" x="160" y="0.0" width="160" height="169.5"/>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajz-ud-MpN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="160" height="149"/>
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaP-x5-zgk">
+                                                            <rect key="frame" x="0.0" y="149" width="160" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -691,6 +702,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="ingredientsHad" destination="GaP-x5-zgk" id="wlP-2B-fwz"/>
                                     <outlet property="recipeImageView" destination="lr4-Ge-Hfw" id="XS1-bu-e1x"/>
                                     <outlet property="recipeName" destination="ajz-ud-MpN" id="Gkm-FP-eKS"/>
                                     <segue destination="twO-If-Jbs" kind="show" identifier="toSelectedRecipe" id="za4-ys-P5f"/>
@@ -844,6 +856,6 @@
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8Ol-HT-x7G"/>
+        <segue reference="za4-ys-P5f"/>
     </inferredMetricsTieBreakers>
 </document>

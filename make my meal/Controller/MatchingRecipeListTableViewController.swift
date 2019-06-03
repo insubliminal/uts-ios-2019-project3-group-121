@@ -55,6 +55,8 @@ class MatchingRecipeListTableViewController: UITableViewController {
         
         cell.update(with: recipe)
         
+        cell.updateIngredientsObtained(recipe: recipe, ingredientsList: addedIngredients)
+        
         return cell
     }
     

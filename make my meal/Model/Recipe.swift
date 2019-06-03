@@ -50,3 +50,17 @@ func isInCurrentList(recipeToAdd: Recipe, recipeList: [Recipe]) -> Bool {
     return false
 }
 
+func calculateNumberOfIngredientsHad(ingredientsInList: [String], recipeList: Recipe) -> Int {
+    
+    var count = 0
+    
+    for requiredIngredient in recipeList.ingredients {
+        for ingredientHad in ingredientsInList {
+            if (ingredientHad == requiredIngredient) {
+                count += 1
+            }
+        }
+    }
+    return count
+}
+
