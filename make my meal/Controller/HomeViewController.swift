@@ -14,6 +14,4 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func unwindToHomeView(segue: UIStoryboardSegue) {}
-
-}
+    @IBAction func unwindToHomeView(segue: UIStoryboardSegue) {}}
