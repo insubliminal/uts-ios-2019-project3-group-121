@@ -10,11 +10,5 @@ import UIKit
 
 class IngredientsTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var ingredientCell: UILabel!
-    
-    func update(with ingredient: String) {
-        ingredientCell.text = ingredient
-    }
-    
 }

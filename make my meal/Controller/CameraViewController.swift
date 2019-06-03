@@ -82,13 +82,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
     
     @IBAction func cancelBtn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-//        let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
-//        ingredientsTableViewController.addedIngredients = identifiedIngredients
+        let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
+        ingredientsTableViewController.addedIngredients = identifiedIngredients
     }
     
     override func viewWillDisappear(_ animated: Bool) {
