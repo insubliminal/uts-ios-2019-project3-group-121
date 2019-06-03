@@ -12,7 +12,7 @@ import CoreData
 class FavoriteRecipeTableViewController: UITableViewController {
     
     var favoriteList: [Recipe] = []
-    let DataStroage = DataRepository()
+    let dataStorage = DataRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class FavoriteRecipeTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let savedFavoriteList = try? DataStroage.loadFavoriteRecipes() {
+        if let savedFavoriteList = try? dataStorage.loadFavoriteRecipes() {
             favoriteList = savedFavoriteList
         }
                 tableView.reloadData()
@@ -51,7 +51,7 @@ class FavoriteRecipeTableViewController: UITableViewController {
         
         favoriteList.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
-        try? DataStroage.saveFavoriteRecipes(favoriteList)
+        try? dataStorage.saveFavoriteRecipes(favoriteList)
             
         }
     }
