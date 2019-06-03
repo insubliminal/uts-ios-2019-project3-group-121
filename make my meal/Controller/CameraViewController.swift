@@ -12,7 +12,7 @@ import Vision
 
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
-    var identifiedIngredients: [String] = []
+    var addedIngredients: [String] = []
     var captureSession: AVCaptureSession!
     
     @IBOutlet weak var cameraView: UIView!
@@ -20,7 +20,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     
     override func viewWillAppear(_ animated: Bool) {
-        identifiedIngredients = []
+        addedIngredients = []
         // Startup of the camera:
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = .photo
@@ -54,7 +54,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             //If the Camera is 80% or more certain that it has detected an object and it isn't in the list to of ingredient, add it to the ingredients list
             if (!firstObservation.confidence.isLessThanOrEqualTo(0.80)) && !self.isInList(identifiedIngredient: firstObservation.identifier) {
-                self.identifiedIngredients.append(firstObservation.identifier)
+                self.addedIngredients.append(firstObservation.identifier)
                 //https://stackoverflow.com/questions/46218270/swift-4-must-be-used-from-main-thread-only-warning
                 DispatchQueue.main.async {
                     self.feedbackLabel.text = "Found: \(firstObservation.identifier)"
@@ -65,7 +65,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
     
     func isInList(identifiedIngredient: String) -> Bool {
-        for ingredient in identifiedIngredients {
+        for ingredient in addedIngredients {
             if identifiedIngredient == ingredient {
                 return true
             }
@@ -80,7 +80,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let ingredientsViewController = segue.destination as! IngredientsViewController
         
-        ingredientsViewController.addedIngredients = identifiedIngredients
+        ingredientsViewController.addedIngredients = addedIngredients
     }
     
     override func viewWillDisappear(_ animated: Bool) {

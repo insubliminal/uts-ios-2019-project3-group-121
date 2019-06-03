@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -322,14 +322,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-hE-qJX">
-                                <rect key="frame" x="266" y="75" width="91" height="37"/>
+                                <rect key="frame" x="253" y="62" width="104" height="50"/>
                                 <state key="normal" title="Button" image="Heart"/>
                                 <connections>
                                     <action selector="heartBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="wpD-Nk-oxw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-ZL-YXH">
-                                <rect key="frame" x="266" y="75" width="91" height="37"/>
+                                <rect key="frame" x="253" y="62" width="104" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="U0T-90-lBH"/>
                                 </constraints>
@@ -464,7 +464,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qem-TB-c2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dXN-CO-WBj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="-983.45070422535207"/>
+            <point key="canvasLocation" x="1935" y="-964"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="nFd-63-uZr">
@@ -547,6 +547,7 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Scan"/>
                                 <connections>
+                                    <action selector="scanBtn:" destination="K0c-mb-wGT" eventType="touchUpInside" id="AGJ-jc-ICS"/>
                                     <segue destination="wES-EQ-YsQ" kind="presentation" id="IDh-W0-oRc"/>
                                 </connections>
                             </button>
@@ -578,7 +579,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kQ-ej-p4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fmf-kJ-7AQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1190.625" y="-983.45070422535207"/>
+            <point key="canvasLocation" x="1191" y="-964"/>
         </scene>
         <!--Favorite Recipe Table View Controller-->
         <scene sceneID="XWG-Ve-XQU">
@@ -791,6 +792,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oZq-3L-z8S" id="QC9-pl-Ssg"/>
+                                    <outlet property="delegate" destination="oZq-3L-z8S" id="7O6-uW-0zj"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoM-cp-OJ4">
                                 <rect key="frame" x="20" y="508" width="280" height="40"/>
@@ -816,7 +821,7 @@
                     <navigationItem key="navigationItem" title="Ingredients" id="YRE-dn-s2D">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="W2N-rA-CEJ">
                             <connections>
-                                <segue destination="K0c-mb-wGT" kind="presentation" id="A9X-ia-Z8s"/>
+                                <segue destination="K0c-mb-wGT" kind="presentation" identifier="toNewIngredient" id="A9X-ia-Z8s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -831,8 +836,8 @@
     </scenes>
     <resources>
         <image name="Clock" width="32" height="32"/>
-        <image name="Heart" width="37.5" height="37.5"/>
-        <image name="Heart-filled" width="37.5" height="37.5"/>
+        <image name="Heart" width="50" height="50"/>
+        <image name="Heart-filled" width="50" height="50"/>
         <image name="List" width="215" height="373.5"/>
         <image name="Logo" width="173" height="198"/>
         <image name="Recipe" width="141.5" height="250"/>

@@ -16,8 +16,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ingredientTableView.delegate = self
-        ingredientTableView.dataSource = self
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,7 +24,6 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        addedIngredients.removeAll()
     }
     
     
