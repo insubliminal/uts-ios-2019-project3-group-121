@@ -13,18 +13,26 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTf: UITextField!
     
     var addedIngredients: [String] = []
-    let dataStorage = DataRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        addedIngredients.removeAll()
     }
     
 
     @IBAction func addIngredientBtn(_ sender: Any) {
         addedIngredients.append(searchTf.text!)
-        try? dataStorage.saveIngredients(addedIngredients)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "toIngredients" else {return}
+        
+        let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
+        ingredientsTableViewController.addedIngredients = addedIngredients
+        print(addedIngredients)
     }
     
 }

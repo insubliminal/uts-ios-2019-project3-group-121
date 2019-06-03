@@ -37,19 +37,4 @@ struct DataRepository: Codable {
         guard let encodedFavoriteRecipes = try? Data(contentsOf: favoriteRecipesURL) else {throw DataError.notFound}
         return try! JSONDecoder().decode([Recipe].self, from: encodedFavoriteRecipes)
     }
-    
-    func saveIngredients(_ ingredients: [String]) throws
-    {
-        if let encodedIngredients = try? JSONEncoder().encode(ingredients)
-        {
-            try? encodedIngredients.write(to: ingredientsURL, options: .noFileProtection)
-        }
-    }
-    
-    func loadIngredients() throws -> [String]
-    {
-        guard let encodedIngredients = try? Data(contentsOf: ingredientsURL) else {throw DataError.notFound}
-        return try! JSONDecoder().decode([String].self, from: encodedIngredients)
-    }
-    
 }

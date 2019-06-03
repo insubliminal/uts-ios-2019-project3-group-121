@@ -255,7 +255,7 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="63"/>
                                 <state key="normal" title="Go"/>
                                 <connections>
-                                    <segue destination="pC6-mf-L88" kind="show" id="1b5-8d-AOD"/>
+                                    <segue destination="pC6-mf-L88" kind="show" identifier="toIngredients" id="1b5-8d-AOD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -482,17 +482,34 @@
                             <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                             <state key="normal" title="Next"/>
                             <connections>
-                                <action selector="nextBtn:" destination="pC6-mf-L88" eventType="touchUpInside" id="Kga-p1-snu"/>
+                                <segue destination="kli-SB-g8h" kind="show" identifier="toRecipes" id="xcJ-Nh-Fsj"/>
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientsCell" id="V3D-rM-uQO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientsCell" id="V3D-rM-uQO" customClass="IngredientsTableViewCell" customModule="make_my_meal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V3D-rM-uQO" id="FsF-fk-uQp">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3h5-oG-GjD">
+                                            <rect key="frame" x="16" y="11" width="288" height="22"/>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3h5-oG-GjD" firstAttribute="top" secondItem="FsF-fk-uQp" secondAttribute="topMargin" id="P8z-aQ-xPI"/>
+                                        <constraint firstItem="3h5-oG-GjD" firstAttribute="leading" secondItem="FsF-fk-uQp" secondAttribute="leadingMargin" id="PYc-2c-Fcq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3h5-oG-GjD" secondAttribute="trailing" id="R8L-4l-4DM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3h5-oG-GjD" secondAttribute="bottom" id="gfN-sf-k31"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ingredientCell" destination="3h5-oG-GjD" id="CFu-QK-cEm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -510,13 +527,14 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
-                    <connections>
-                        <segue destination="kli-SB-g8h" kind="show" identifier="toRecipes" id="cFT-cF-rGW"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Coc-nX-iCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="446" y="-983"/>
+=======
+            <point key="canvasLocation" x="1190.625" y="-983.45070422535207"/>
+>>>>>>> 75763f6f59c83098df27ff21e9c2bf22471d7953
         </scene>
         <!--New Ingredient View Controller-->
         <scene sceneID="TFp-iP-zuI">
@@ -716,7 +734,8 @@
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ROc-Te-gPU"/>
+        <segue reference="B0X-Rf-LUv"/>
+        <segue reference="4If-td-lcs"/>
         <segue reference="8Ol-HT-x7G"/>
     </inferredMetricsTieBreakers>
 </document>

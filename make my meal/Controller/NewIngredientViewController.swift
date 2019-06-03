@@ -11,17 +11,12 @@ import UIKit
 class NewIngredientViewController: UIViewController {
 
     var addedIngredients: [String] = []
-    let dataStorage = DataRepository()
     
     @IBOutlet weak var newIngredientLabel: UITextField!
     @IBOutlet weak var addBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        addedIngredients = try! dataStorage.loadIngredients()
     }
     
     @IBAction func addBtn(_ sender: Any) {
@@ -30,9 +25,12 @@ class NewIngredientViewController: UIViewController {
         }
         guard let newIngredient = newIngredientLabel.text else {return}
         addedIngredients.append(newIngredient)
+<<<<<<< HEAD
         try? dataStorage.saveIngredients(addedIngredients)
         
         
+=======
+>>>>>>> 75763f6f59c83098df27ff21e9c2bf22471d7953
     }
     
     @IBAction func cancelBtn(_ sender: Any) {
@@ -42,7 +40,7 @@ class NewIngredientViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toBack" {
-            
+
             let ingredientListTableViewController = segue.destination as! IngredientsTableViewController
             ingredientListTableViewController.addedIngredients = addedIngredients
             self.dismiss(animated: true, completion: nil)

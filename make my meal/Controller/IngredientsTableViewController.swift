@@ -11,7 +11,6 @@ import UIKit
 class IngredientsTableViewController: UITableViewController {
 
     var addedIngredients: [String] = []
-    let dataStorage = DataRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,17 +19,19 @@ class IngredientsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+<<<<<<< HEAD
         
         if let savedIngredientsList = try? dataStorage.loadIngredients() {
             addedIngredients = savedIngredientsList
         }
+=======
+>>>>>>> 75763f6f59c83098df27ff21e9c2bf22471d7953
         tableView.reloadData()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        try? dataStorage.saveIngredients(addedIngredients)
+        addedIngredients.removeAll()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,10 +43,10 @@ class IngredientsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientsCell", for: indexPath) as! IngredientsTableViewCell
 
         let ingredient = addedIngredients[indexPath.row]
-        cell.textLabel?.text = ingredient
+        cell.update(with: ingredient)
 
         return cell
     }
@@ -58,12 +59,19 @@ class IngredientsTableViewController: UITableViewController {
         if editingStyle == .delete {
             addedIngredients.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            try? dataStorage.saveIngredients(addedIngredients)
-        } 
+        }
     }
     
-    @IBAction func nextBtn(_ sender: Any) {
-        performSegue(withIdentifier: "toRecipes", sender: self)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toRecipes" {
+            let matchingRecipeListTableViewController = segue.destination as! MatchingRecipeListTableViewController
+            matchingRecipeListTableViewController.addedIngredients = addedIngredients
+        }
+        if segue.identifier == "toNewIngredient" {
+            let newIngredientsViewController = segue.destination as! NewIngredientViewController
+            newIngredientsViewController.addedIngredients = addedIngredients
+        }
     }
+    
     
 }

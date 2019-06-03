@@ -16,7 +16,6 @@ class MatchingRecipeListTableViewController: UITableViewController {
     var matchingRecipes: [Recipe] = []
     var addedIngredients: [String] = []
     var recipeToPass: Recipe?
-    let dataStorage = DataRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +36,9 @@ class MatchingRecipeListTableViewController: UITableViewController {
         //Add test data into table.
         recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
         
-        addedIngredients = try! dataStorage.loadIngredients()
-        
         getAllrecipesMatchingIngredients(searchedIngredients: addedIngredients)
-        
-        print(addedIngredients)
-        print(matchingRecipes)
+        tableView.reloadData()
+
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
