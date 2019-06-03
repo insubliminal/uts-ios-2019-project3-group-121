@@ -511,14 +511,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Ujr-MA-Sn4">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="edit" id="YOg-e6-sRY"/>
-                            <barButtonItem systemItem="add" id="Xk9-ig-r7A">
-                                <connections>
-                                    <segue destination="K0c-mb-wGT" kind="presentation" identifier="toNewIngredient" id="B0X-Rf-LUv"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xk9-ig-r7A">
+                            <connections>
+                                <segue destination="K0c-mb-wGT" kind="presentation" identifier="toNewIngredient" id="B0X-Rf-LUv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Coc-nX-iCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
