@@ -24,7 +24,7 @@ class IngredientsTableViewController: UITableViewController {
         if let savedIngredientsList = try? dataStorage.loadIngredients() {
             addedIngredients = savedIngredientsList
         }
-        //addedIngredients = try! dataStorage.loadIngredients()
+        tableView.reloadData()
     }
 
     override func viewWillDisappear(_ animated: Bool) {

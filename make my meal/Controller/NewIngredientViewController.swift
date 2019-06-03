@@ -31,14 +31,23 @@ class NewIngredientViewController: UIViewController {
         guard let newIngredient = newIngredientLabel.text else {return}
         addedIngredients.append(newIngredient)
         try? dataStorage.saveIngredients(addedIngredients)
+        
+        
     }
     
+    @IBAction func cancelBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "toBack" {
             
             let ingredientListTableViewController = segue.destination as! IngredientsTableViewController
             ingredientListTableViewController.addedIngredients = addedIngredients
+            self.dismiss(animated: true, completion: nil)
         }
+        
     }
     
 }
