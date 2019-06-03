@@ -51,4 +51,13 @@ class AllRecipesTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let recipeDetailsViewController = segue.destination as! RecipeDetailsViewController
+        let indexPath = tableView.indexPathForSelectedRow!
+        let selectedRecipe = recipeList[indexPath.row]
+        
+        recipeDetailsViewController.recipeFromList = selectedRecipe
+    }
 }
