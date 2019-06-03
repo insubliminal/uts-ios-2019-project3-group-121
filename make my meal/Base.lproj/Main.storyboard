@@ -421,7 +421,7 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelBtn:" destination="wES-EQ-YsQ" eventType="touchUpInside" id="7El-NW-vDt"/>
+                                    <segue destination="dXN-CO-WBj" kind="unwind" unwindAction="unwindToNewIngredientWithSegue:" id="rFt-ZN-pph"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7g-5o-QeD">
@@ -452,7 +452,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qem-TB-c2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dXN-CO-WBj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="-983"/>
+            <point key="canvasLocation" x="1935" y="-983.45070422535207"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="nFd-63-uZr">

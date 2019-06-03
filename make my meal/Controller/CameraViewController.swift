@@ -87,8 +87,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
-        ingredientsTableViewController.addedIngredients = identifiedIngredients
+//        let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
+//        ingredientsTableViewController.addedIngredients = identifiedIngredients
     }
     
     override func viewWillDisappear(_ animated: Bool) {

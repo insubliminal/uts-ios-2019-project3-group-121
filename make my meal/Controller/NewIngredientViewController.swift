@@ -43,6 +43,8 @@ class NewIngredientViewController: UIViewController {
             ingredientListTableViewController.addedIngredients = addedIngredients
         }
     }
+    
+    @IBAction func unwindToNewIngredient (segue: UIStoryboardSegue) {}
 
 }
 
