@@ -23,6 +23,9 @@ class NewIngredientViewController: UIViewController {
     @IBAction func addBtn(_ sender: Any) {
         
         guard let newIngredient = newIngredientTextField.text else {return}
+        if addedIngredients.contains(newIngredient) {
+            addBtn.isEnabled = false
+        }
         addedIngredients.append(newIngredient)
         
         pressedAdd = true

@@ -38,7 +38,7 @@ class IngredientsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientsCell", for: indexPath) as! IngredientsTableViewCell
 
         let ingredient = addedIngredients[indexPath.row]
-        cell.update(with: ingredient)
+        cell.textLabel?.text = ingredient
 
         return cell
     }
