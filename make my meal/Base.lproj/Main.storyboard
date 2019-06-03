@@ -486,7 +486,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientsCell" id="V3D-rM-uQO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientsCell" id="V3D-rM-uQO" customClass="IngredientsTableViewCell" customModule="make_my_meal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V3D-rM-uQO" id="FsF-fk-uQp" customClass="IngredientsTableViewCell" customModule="make_my_meal" customModuleProvider="target">
@@ -557,8 +557,8 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="addBtn:" destination="K0c-mb-wGT" eventType="touchUpInside" id="A0u-HP-FKU"/>
-                                    <segue destination="pC6-mf-L88" kind="show" identifier="toBack" id="2Vt-GH-6ZK"/>
+                                    <action selector="addBtn:" destination="K0c-mb-wGT" eventType="touchUpInside" id="xms-wk-pvm"/>
+                                    <segue destination="fmf-kJ-7AQ" kind="unwind" unwindAction="unwindToIngredientsViewControllerWithSegue:" id="SEF-3e-gJs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dt-Ip-WJU">
@@ -583,11 +583,12 @@
                         <viewLayoutGuide key="safeArea" id="Kd6-IT-u4t"/>
                     </view>
                     <connections>
-                        <outlet property="addBtn" destination="WD0-2r-eZ7" id="0ZI-IE-n14"/>
+                        <outlet property="addBtn" destination="WD0-2r-eZ7" id="zdC-zp-yxP"/>
                         <outlet property="newIngredientLabel" destination="2ma-Ra-Ccj" id="crK-8S-vVd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kQ-ej-p4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fmf-kJ-7AQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1190.625" y="-983.45070422535207"/>
         </scene>
@@ -730,8 +731,7 @@
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B0X-Rf-LUv"/>
-        <segue reference="2Vt-GH-6ZK"/>
+        <segue reference="1b5-8d-AOD"/>
         <segue reference="8Ol-HT-x7G"/>
     </inferredMetricsTieBreakers>
 </document>

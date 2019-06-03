@@ -25,7 +25,6 @@ class IngredientsTableViewController: UITableViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        addedIngredients.removeAll()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -67,5 +66,6 @@ class IngredientsTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func unwindToIngredientsViewController(segue: UIStoryboardSegue) {}
     
 }

@@ -12,8 +12,9 @@ class NewIngredientViewController: UIViewController {
 
     var addedIngredients: [String] = []
     
-    @IBOutlet weak var newIngredientLabel: UITextField!
     @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var newIngredientLabel: UITextField!
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,21 +26,19 @@ class NewIngredientViewController: UIViewController {
         }
         guard let newIngredient = newIngredientLabel.text else {return}
         addedIngredients.append(newIngredient)
+        
     }
     
     @IBAction func cancelBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-        
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "toBack" {
-
-            let ingredientListTableViewController = segue.destination as! IngredientsTableViewController
-            ingredientListTableViewController.addedIngredients = addedIngredients
-            self.dismiss(animated: true, completion: nil)
-        }
-        
+        let ingredientListTableViewController = segue.destination as! IngredientsTableViewController
+        ingredientListTableViewController.addedIngredients = addedIngredients
     }
-    
+
 }
+
+
