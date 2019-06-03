@@ -45,6 +45,15 @@
                                     <segue destination="ILL-RJ-wBg" kind="show" id="gNt-jh-jWY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-nf-MHh">
+                                <rect key="frame" x="124" y="447" width="76" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="All Recipes"/>
+                                <connections>
+                                    <segue destination="Amj-Bn-1TX" kind="show" id="Bfj-I7-Wdp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -693,11 +702,73 @@
                             <outlet property="delegate" destination="kli-SB-g8h" id="YWX-Ub-nKf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gLJ-5c-cL3"/>
+                    <navigationItem key="navigationItem" id="r5X-iU-8dQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTU-tU-tRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="-165"/>
+            <point key="canvasLocation" x="1119" y="-166"/>
+        </scene>
+        <!--All Recipes Table View Controller-->
+        <scene sceneID="X1E-Ye-8ae">
+            <objects>
+                <tableViewController id="Amj-Bn-1TX" customClass="AllRecipesTableViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GdS-e1-Iux">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECIPES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T5o-Fj-6bA">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="170" id="gHG-si-9UG" customClass="MatchingRecipeTableViewCell" customModule="make_my_meal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="320" height="170"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gHG-si-9UG" id="CDH-dE-NIY">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="K9z-Fb-dzP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0wy-OS-lqR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="169.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofo-3o-3rX">
+                                                    <rect key="frame" x="160" y="0.0" width="160" height="169.5"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="K9z-Fb-dzP" secondAttribute="trailing" id="Deb-1D-zq7"/>
+                                        <constraint firstAttribute="bottom" secondItem="K9z-Fb-dzP" secondAttribute="bottom" id="Hns-hp-AsP"/>
+                                        <constraint firstItem="K9z-Fb-dzP" firstAttribute="top" secondItem="CDH-dE-NIY" secondAttribute="top" id="W4D-40-wQb"/>
+                                        <constraint firstItem="K9z-Fb-dzP" firstAttribute="leading" secondItem="CDH-dE-NIY" secondAttribute="leading" id="n5m-bY-EFq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="recipeImageView" destination="0wy-OS-lqR" id="UIj-Uw-MtV"/>
+                                    <outlet property="recipeName" destination="Ofo-3o-3rX" id="Hte-ix-EAV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Amj-Bn-1TX" id="2ia-mN-CYV"/>
+                            <outlet property="delegate" destination="Amj-Bn-1TX" id="vkF-2v-PXp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="VaV-AL-xUi"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLJ-CQ-saf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="-2022"/>
         </scene>
     </scenes>
     <resources>
