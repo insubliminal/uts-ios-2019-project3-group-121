@@ -12,10 +12,13 @@ import CoreData
 class FavoriteRecipeTableViewController: UITableViewController {
     
     var favoriteList: [Recipe] = []
+    
     let dataStorage = DataRepository()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
@@ -25,7 +28,8 @@ class FavoriteRecipeTableViewController: UITableViewController {
         if let savedFavoriteList = try? dataStorage.loadFavoriteRecipes() {
             favoriteList = savedFavoriteList
         }
-                tableView.reloadData()
+        
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,7 +40,9 @@ class FavoriteRecipeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteRecipeCell", for: indexPath) as! FavoriteRecipeTableViewCell
         
         cell.showsReorderControl = true
+        
         let recipe = favoriteList[indexPath.row]
+        
         cell.update(with: recipe)
         
         return cell
@@ -47,18 +53,17 @@ class FavoriteRecipeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
         
-        favoriteList.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
-        try? dataStorage.saveFavoriteRecipes(favoriteList)
-            
+        if editingStyle == .delete {
+            favoriteList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            try? dataStorage.saveFavoriteRecipes(favoriteList)
         }
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        
         let movedFavoriteRecipe = favoriteList.remove(at: fromIndexPath.row)
+        
         favoriteList.insert(movedFavoriteRecipe, at: to.row)
         tableView.reloadData()
     }
@@ -70,7 +75,7 @@ class FavoriteRecipeTableViewController: UITableViewController {
         let indexPath = tableView.indexPathForSelectedRow!
         let selectedFavoriteRecipe = favoriteList[indexPath.row]
         let recipeDetailsViewController = segue.destination as! RecipeDetailsViewController
+        
         recipeDetailsViewController.recipeFromList = selectedFavoriteRecipe
     }
 }
-

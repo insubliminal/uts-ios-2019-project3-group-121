@@ -12,6 +12,7 @@ class IngredientsTableViewController: UITableViewController {
 
     var addedIngredients: [String] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -36,7 +37,6 @@ class IngredientsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientsCell", for: indexPath) as! IngredientsTableViewCell
-
         let ingredient = addedIngredients[indexPath.row]
         
         cell.textLabel!.text = ingredient
@@ -57,11 +57,16 @@ class IngredientsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRecipes" {
+            
             let matchingRecipeListTableViewController = segue.destination as! MatchingRecipeListTableViewController
+            
             matchingRecipeListTableViewController.addedIngredients = addedIngredients
         }
+        
         if segue.identifier == "toNewIngredient" {
+            
             let newIngredientsViewController = segue.destination as! NewIngredientViewController
+            
             newIngredientsViewController.addedIngredients = addedIngredients
         }
     }

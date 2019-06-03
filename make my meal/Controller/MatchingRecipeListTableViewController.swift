@@ -10,19 +10,20 @@ import UIKit
 
 class MatchingRecipeListTableViewController: UITableViewController {
     
-//    var relevantRecipes: [String] = []
-//    var recipeChosenInTable = ""
     var recipeList: [Recipe] = []
     var matchingRecipes: [Recipe] = []
     var addedIngredients: [String] = []
     var recipeToPass: Recipe?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -38,7 +39,6 @@ class MatchingRecipeListTableViewController: UITableViewController {
         
         getAllrecipesMatchingIngredients(searchedIngredients: addedIngredients)
         tableView.reloadData()
-
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,17 +50,15 @@ class MatchingRecipeListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MatchingRecipeTableViewCell
-        
         let recipe = matchingRecipes[indexPath.row]
+        
         cell.update(with: recipe)
         
         return cell
     }
     
     func getAllrecipesMatchingIngredients(searchedIngredients: [String]) {
-        
         for searchedIngredient in searchedIngredients {
             for recipe in recipeList {
                 for ingredient in recipe.ingredients {
@@ -73,13 +71,11 @@ class MatchingRecipeListTableViewController: UITableViewController {
                 }
             }
         }
-
     }
     
     func isInCurrentList(recipeToAdd: Recipe) -> Bool {
         
         for recipe in matchingRecipes {
-            
             if recipeToAdd.name == recipe.name {
                 return true
             }
@@ -90,9 +86,9 @@ class MatchingRecipeListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let recipeDetailsViewController = segue.destination as! RecipeDetailsViewController
-        
         let indexPath = tableView.indexPathForSelectedRow!
         let selectedRecipe = matchingRecipes[indexPath.row]
+        
         recipeDetailsViewController.recipeFromList = selectedRecipe
     }
 }

@@ -13,8 +13,8 @@ class RecipeDetailsViewController: UIViewController {
     
     var recipeFromList: Recipe?
     var favoriteRecipes: [Recipe] = []
-    let DataStorage = DataRepository()
     
+    let DataStorage = DataRepository()
     
     @IBOutlet weak var heartBtn: UIButton!
     @IBOutlet weak var heartFilledBtn: UIButton!
@@ -36,19 +36,21 @@ class RecipeDetailsViewController: UIViewController {
         }
         
         guard let recipe = recipeFromList else{return}
+        
         recipeNameLabel.text = recipe.name
         recipeImageView.image = UIImage(named: recipe.name)
         recipeDescription.text = recipe.description
         timeLabel.text = recipe.time 
         
         for recipe in favoriteRecipes {
+            
             guard let recipeFromList = recipeFromList else {return}
+            
             if ( recipe == recipeFromList ) {
                 heartBtn.isHidden = true
                 heartFilledBtn.isHidden = false
             }
         }
-        
     }
     
     @IBAction func heartBtnPressed(_ sender: Any) {
@@ -56,19 +58,16 @@ class RecipeDetailsViewController: UIViewController {
         heartFilledBtn.isHidden = false
         
         guard let recipe = recipeFromList else {return}
+        
         favoriteRecipes.append(recipe)
         try? DataStorage.saveFavoriteRecipes(favoriteRecipes)
-        
     }
     
     @IBAction func heartFilledBtnPressed(_ sender: Any) {
         heartFilledBtn.isHidden = true
         heartBtn.isHidden = false
-        
         favoriteRecipes.removeLast()
         try? DataStorage.saveFavoriteRecipes(favoriteRecipes)
-
     }
-    
 }
 

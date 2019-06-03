@@ -12,12 +12,15 @@ class AllRecipesTableViewController: UITableViewController {
 
     var recipeList: [Recipe] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -30,7 +33,6 @@ class AllRecipesTableViewController: UITableViewController {
         
         recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
         tableView.reloadData()
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,10 +44,9 @@ class AllRecipesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MatchingRecipeTableViewCell
-        
         let recipe = recipeList[indexPath.row]
+        
         cell.update(with: recipe)
         
         return cell

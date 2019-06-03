@@ -10,15 +10,18 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    var addedIngredients: [String] = []
+    
     @IBOutlet weak var searchTf: UITextField!
     
-    var addedIngredients: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         addedIngredients.removeAll()
     }
     
@@ -31,6 +34,7 @@ class SearchViewController: UIViewController {
         guard segue.identifier == "toIngredients" else {return}
         
         let ingredientsTableViewController = segue.destination as! IngredientsTableViewController
+        
         ingredientsTableViewController.addedIngredients = addedIngredients
         print(addedIngredients)
     }
