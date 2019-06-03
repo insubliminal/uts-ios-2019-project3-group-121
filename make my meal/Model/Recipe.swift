@@ -10,7 +10,6 @@ import Foundation
 
 
 class Recipe:Codable, Equatable {
-    
     var name: String
     var description: String
     var ingredients: [String]
@@ -26,13 +25,29 @@ class Recipe:Codable, Equatable {
     }
     
     static func == (lhs: Recipe, rhs: Recipe) -> Bool{
-        if ( lhs.name == rhs.name) {
+        if (lhs.name == rhs.name) {
             return true
         } else {
             return false
         }
     }
-
 }
 
+func ingredientIsInCurrentList(ingredient: String, ingredientList: [String]) -> Bool {
+    for existingIngredient in ingredientList {
+        if ingredient == existingIngredient {
+            return true
+        }
+    }
+    return false
+}
+
+func isInCurrentList(recipeToAdd: Recipe, recipeList: [Recipe]) -> Bool {
+    for recipe in recipeList {
+        if recipeToAdd.name == recipe.name {
+            return true
+        }
+    }
+    return false
+}
 

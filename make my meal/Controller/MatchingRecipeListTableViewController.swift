@@ -62,7 +62,7 @@ class MatchingRecipeListTableViewController: UITableViewController {
         for searchedIngredient in searchedIngredients {
             for recipe in recipeList {
                 for ingredient in recipe.ingredients {
-                    if ingredient.contains(searchedIngredient) && !isInCurrentList(recipeToAdd: recipe) {
+                    if ingredient.contains(searchedIngredient) && !isInCurrentList(recipeToAdd: recipe, recipeList: recipeList) {
 
                         matchingRecipes.append(recipe)
                         //Break the loop; do not want to double add a recipe, so we go to the next recipe.
@@ -72,17 +72,7 @@ class MatchingRecipeListTableViewController: UITableViewController {
             }
         }
     }
-    
-    func isInCurrentList(recipeToAdd: Recipe) -> Bool {
         
-        for recipe in matchingRecipes {
-            if recipeToAdd.name == recipe.name {
-                return true
-            }
-        }
-        return false
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let recipeDetailsViewController = segue.destination as! RecipeDetailsViewController

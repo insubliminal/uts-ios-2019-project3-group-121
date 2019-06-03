@@ -53,7 +53,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             guard let firstObservation = results.first else { return }
             
             //If the Camera is 80% or more certain that it has detected an object and it isn't in the list to of ingredient, add it to the ingredients list
-            if (!firstObservation.confidence.isLessThanOrEqualTo(0.80)) && !self.isInList(identifiedIngredient: firstObservation.identifier) {
+            if (!firstObservation.confidence.isLessThanOrEqualTo(0.80)) && !ingredientIsInCurrentList(ingredient: firstObservation.identifier, ingredientList: self.addedIngredients) {
                 self.addedIngredients.append(firstObservation.identifier)
                 //https://stackoverflow.com/questions/46218270/swift-4-must-be-used-from-main-thread-only-warning
                 DispatchQueue.main.async {
@@ -63,16 +63,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         }
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
-    
-    func isInList(identifiedIngredient: String) -> Bool {
-        for ingredient in addedIngredients {
-            if identifiedIngredient == ingredient {
-                return true
-            }
-        }
-        return false
-    }
-    
+        
     @IBAction func cancelBtn(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
