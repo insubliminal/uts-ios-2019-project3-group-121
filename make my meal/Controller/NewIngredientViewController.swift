@@ -24,7 +24,7 @@ class NewIngredientViewController: UIViewController {
     @IBAction func addBtn(_ sender: Any) {
         guard let newIngredient = newIngredientTextField.text else {return}
         
-        if !ingredientIsInCurrentList(ingredient: newIngredient, ingredientList: addedIngredients) {
+        if !ingredientIsInCurrentList(ingredient: newIngredient, ingredientList: addedIngredients) && newIngredientTextField.text != "" {
             addedIngredients.append(newIngredient)
         } 
         
