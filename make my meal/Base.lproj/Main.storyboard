@@ -427,7 +427,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9m-yz-txN">
-                                <rect key="frame" x="20" y="518" width="48" height="30"/>
+                                <rect key="frame" x="20" y="517" width="45" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -436,8 +437,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7g-5o-QeD">
-                                <rect key="frame" x="0.0" y="477" width="320" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="479.5" width="320" height="18.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -523,16 +524,17 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD0-2r-eZ7">
-                                <rect key="frame" x="145" y="307" width="30" height="31"/>
+                                <rect key="frame" x="20" y="307" width="280" height="31"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <state key="normal" title="Add"/>
+                                <state key="normal" title="Manually Add"/>
                                 <connections>
                                     <action selector="addBtn:" destination="K0c-mb-wGT" eventType="touchUpInside" id="xms-wk-pvm"/>
                                     <segue destination="fmf-kJ-7AQ" kind="unwind" unwindAction="unwindToIngredientsViewControllerWithSegue:" id="SEF-3e-gJs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dt-Ip-WJU">
-                                <rect key="frame" x="0.0" y="518" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="517" width="320" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -541,8 +543,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDL-m8-a3a">
-                                <rect key="frame" x="133" y="413" width="54" height="30"/>
-                                <state key="normal" title="Camera"/>
+                                <rect key="frame" x="20" y="346" width="280" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Scan"/>
                                 <connections>
                                     <segue destination="wES-EQ-YsQ" kind="presentation" id="IDh-W0-oRc"/>
                                 </connections>
@@ -550,17 +553,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="RDL-m8-a3a" firstAttribute="centerX" secondItem="4dt-Ip-WJU" secondAttribute="centerX" id="AtN-OO-B4w"/>
+                            <constraint firstItem="WD0-2r-eZ7" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="20" id="3l8-3n-woH"/>
+                            <constraint firstItem="RDL-m8-a3a" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="20" id="6Ye-kW-MiI"/>
                             <constraint firstItem="4dt-Ip-WJU" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" id="CuA-Iu-Ir7"/>
                             <constraint firstItem="2ma-Ra-Ccj" firstAttribute="centerY" secondItem="KoH-Qx-d3Q" secondAttribute="centerY" id="K0h-BJ-IYD"/>
+                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="WD0-2r-eZ7" secondAttribute="trailing" constant="20" id="L0I-TC-2ni"/>
                             <constraint firstItem="2ma-Ra-Ccj" firstAttribute="leading" secondItem="KoH-Qx-d3Q" secondAttribute="leadingMargin" id="Mbf-gB-bFJ"/>
+                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="RDL-m8-a3a" secondAttribute="trailing" constant="20" id="OxD-PR-NYZ"/>
+                            <constraint firstItem="RDL-m8-a3a" firstAttribute="centerX" secondItem="eqO-PW-pvM" secondAttribute="centerX" id="Qvv-mt-ljC"/>
                             <constraint firstItem="2ma-Ra-Ccj" firstAttribute="trailing" secondItem="KoH-Qx-d3Q" secondAttribute="trailingMargin" id="TcH-WY-vlO"/>
                             <constraint firstItem="eqO-PW-pvM" firstAttribute="top" secondItem="Kd6-IT-u4t" secondAttribute="top" id="WbE-fM-mqQ"/>
                             <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="4dt-Ip-WJU" secondAttribute="trailing" id="c83-qO-LBG"/>
                             <constraint firstItem="Kd6-IT-u4t" firstAttribute="bottom" secondItem="4dt-Ip-WJU" secondAttribute="bottom" constant="20" id="ehK-vL-vQw"/>
-                            <constraint firstItem="WD0-2r-eZ7" firstAttribute="centerX" secondItem="eqO-PW-pvM" secondAttribute="centerX" id="mds-dl-HCr"/>
-                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="centerX" secondItem="WD0-2r-eZ7" secondAttribute="centerX" id="pOd-Yx-FHq"/>
-                            <constraint firstItem="RDL-m8-a3a" firstAttribute="top" secondItem="WD0-2r-eZ7" secondAttribute="bottom" constant="75" id="vh2-nf-76n"/>
+                            <constraint firstItem="RDL-m8-a3a" firstAttribute="top" secondItem="WD0-2r-eZ7" secondAttribute="bottom" constant="8" symbolic="YES" id="n50-br-dtg"/>
                             <constraint firstItem="WD0-2r-eZ7" firstAttribute="top" secondItem="2ma-Ra-Ccj" secondAttribute="bottom" constant="8" symbolic="YES" id="wV5-YU-qup"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kd6-IT-u4t"/>
