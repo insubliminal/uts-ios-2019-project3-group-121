@@ -779,11 +779,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9j-ii-b8v">
-                                <rect key="frame" x="20" y="64" width="280" height="386"/>
+                                <rect key="frame" x="20" y="64" width="280" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="386" id="uh4-jj-77c"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" id="Z4k-Z4-sQZ">
                                         <rect key="frame" x="0.0" y="28" width="280" height="44"/>
@@ -803,37 +800,33 @@
                                     <segue destination="kli-SB-g8h" kind="show" identifier="toRecipes" id="c4x-sM-uqr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbe-nk-THf">
-                                <rect key="frame" x="20" y="458" width="280" height="40"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <segue destination="K0c-mb-wGT" kind="presentation" id="xKT-vf-920"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NoM-cp-OJ4" firstAttribute="top" secondItem="n9j-ii-b8v" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ap-3X-g6l"/>
                             <constraint firstItem="NoM-cp-OJ4" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" constant="20" id="3la-Wu-LpY"/>
-                            <constraint firstItem="qbe-nk-THf" firstAttribute="top" secondItem="n9j-ii-b8v" secondAttribute="bottom" constant="8" symbolic="YES" id="8NY-nr-sXI"/>
                             <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="n9j-ii-b8v" secondAttribute="trailing" constant="20" id="IsF-Mq-Tx0"/>
-                            <constraint firstItem="qbe-nk-THf" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" constant="20" id="Q2h-NI-W5R"/>
                             <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="NoM-cp-OJ4" secondAttribute="trailing" constant="20" id="X4l-f7-PXB"/>
                             <constraint firstItem="n9j-ii-b8v" firstAttribute="top" secondItem="pDg-hF-mFB" secondAttribute="top" id="fBX-VB-gJs"/>
                             <constraint firstItem="n9j-ii-b8v" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" constant="20" id="fLq-0c-r5O"/>
                             <constraint firstAttribute="bottom" secondItem="NoM-cp-OJ4" secondAttribute="bottom" constant="20" symbolic="YES" id="hyA-19-bIe"/>
-                            <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="qbe-nk-THf" secondAttribute="trailing" constant="20" id="wB8-TB-wDK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pDg-hF-mFB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ingredients" id="YRE-dn-s2D"/>
+                    <navigationItem key="navigationItem" title="Ingredients" id="YRE-dn-s2D">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="W2N-rA-CEJ">
+                            <connections>
+                                <segue destination="K0c-mb-wGT" kind="presentation" id="A9X-ia-Z8s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ingredientTableView" destination="n9j-ii-b8v" id="E42-i8-UKL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Xa-C0-DJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="446" y="-964"/>
+            <point key="canvasLocation" x="444.375" y="-964.43661971830988"/>
         </scene>
     </scenes>
     <resources>
