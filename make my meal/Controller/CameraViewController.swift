@@ -20,7 +20,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     
     override func viewWillAppear(_ animated: Bool) {
-        addedIngredients = []
+
         // Startup of the camera:
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = .photo

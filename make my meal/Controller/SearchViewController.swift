@@ -36,7 +36,6 @@ class SearchViewController: UIViewController {
         let ingredientsViewController = segue.destination as! IngredientsViewController
         
         ingredientsViewController.addedIngredients = addedIngredients
-        print(addedIngredients)
     }
     
 }

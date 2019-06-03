@@ -547,8 +547,7 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <state key="normal" title="Scan"/>
                                 <connections>
-                                    <action selector="scanBtn:" destination="K0c-mb-wGT" eventType="touchUpInside" id="AGJ-jc-ICS"/>
-                                    <segue destination="wES-EQ-YsQ" kind="presentation" id="IDh-W0-oRc"/>
+                                    <segue destination="wES-EQ-YsQ" kind="presentation" identifier="toCamera" id="IDh-W0-oRc"/>
                                 </connections>
                             </button>
                         </subviews>
