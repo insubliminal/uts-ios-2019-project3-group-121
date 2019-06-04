@@ -726,7 +726,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pDg-hF-mFB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ingredients" id="YRE-dn-s2D">
+                    <navigationItem key="navigationItem" title="Ingredients" largeTitleDisplayMode="always" id="YRE-dn-s2D">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="W2N-rA-CEJ">
                             <connections>
                                 <segue destination="K0c-mb-wGT" kind="presentation" identifier="toNewIngredient" id="A9X-ia-Z8s"/>
