@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -274,14 +274,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-hE-qJX">
-                                <rect key="frame" x="253" y="62" width="104" height="50"/>
+                                <rect key="frame" x="266" y="75" width="91" height="37"/>
                                 <state key="normal" title="Button" image="Heart"/>
                                 <connections>
                                     <action selector="heartBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="wpD-Nk-oxw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-ZL-YXH">
-                                <rect key="frame" x="253" y="62" width="104" height="50"/>
+                                <rect key="frame" x="266" y="75" width="91" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="U0T-90-lBH"/>
                                 </constraints>
@@ -497,7 +497,7 @@
             </objects>
             <point key="canvasLocation" x="1190.625" y="-964.43661971830988"/>
         </scene>
-        <!--Favorite Recipe Table View Controller-->
+        <!--Favorite Recipe-->
         <scene sceneID="XWG-Ve-XQU">
             <objects>
                 <tableViewController id="ILL-RJ-wBg" customClass="FavoriteRecipeTableViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
@@ -505,16 +505,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="88z-A0-jar">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteRecipeCell" rowHeight="170" id="dc3-Er-WC2" customClass="FavoriteRecipeTableViewCell" customModule="make_my_meal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="170"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dc3-Er-WC2" id="LEa-cO-0E3">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
@@ -528,7 +521,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FV-ZY-hTS">
                                                     <rect key="frame" x="160" y="0.0" width="160" height="169.5"/>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -554,7 +547,7 @@
                             <outlet property="delegate" destination="ILL-RJ-wBg" id="2Xv-uz-rxu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="95V-vA-uX0">
+                    <navigationItem key="navigationItem" title="Favorite Recipe" largeTitleDisplayMode="always" id="95V-vA-uX0">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="b9b-zi-aGv"/>
                     </navigationItem>
                 </tableViewController>
@@ -562,7 +555,7 @@
             </objects>
             <point key="canvasLocation" x="-336" y="-166"/>
         </scene>
-        <!--Matching Recipe List Table View Controller-->
+        <!--Recipes-->
         <scene sceneID="uXE-wF-dAB">
             <objects>
                 <tableViewController id="kli-SB-g8h" customClass="MatchingRecipeListTableViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
@@ -570,16 +563,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECIPES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BvX-dx-Qet">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="170" id="8xg-vS-pwd" customClass="MatchingRecipeTableViewCell" customModule="make_my_meal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="170"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8xg-vS-pwd" id="1dL-mZ-PkD">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
@@ -631,13 +617,13 @@
                             <outlet property="delegate" destination="kli-SB-g8h" id="YWX-Ub-nKf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="r5X-iU-8dQ"/>
+                    <navigationItem key="navigationItem" title="Recipes" largeTitleDisplayMode="always" id="r5X-iU-8dQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTU-tU-tRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1119" y="-166"/>
         </scene>
-        <!--All Recipes Table View Controller-->
+        <!--All Recipes-->
         <scene sceneID="X1E-Ye-8ae">
             <objects>
                 <tableViewController id="Amj-Bn-1TX" customClass="AllRecipesTableViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
@@ -645,16 +631,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL RECIPES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T5o-Fj-6bA">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="170" id="gHG-si-9UG" customClass="MatchingRecipeTableViewCell" customModule="make_my_meal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="170"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gHG-si-9UG" id="CDH-dE-NIY">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
@@ -694,7 +673,7 @@
                             <outlet property="delegate" destination="Amj-Bn-1TX" id="vkF-2v-PXp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="VaV-AL-xUi"/>
+                    <navigationItem key="navigationItem" title="All Recipes" largeTitleDisplayMode="always" id="VaV-AL-xUi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLJ-CQ-saf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -766,14 +745,14 @@
     </scenes>
     <resources>
         <image name="Clock" width="32" height="32"/>
-        <image name="Heart" width="50" height="50"/>
-        <image name="Heart-filled" width="50" height="50"/>
+        <image name="Heart" width="37.5" height="37.5"/>
+        <image name="Heart-filled" width="37.5" height="37.5"/>
         <image name="List" width="215" height="373.5"/>
         <image name="Logo" width="173" height="198"/>
         <image name="Recipe" width="141.5" height="250"/>
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8Ol-HT-x7G"/>
+        <segue reference="za4-ys-P5f"/>
     </inferredMetricsTieBreakers>
 </document>
