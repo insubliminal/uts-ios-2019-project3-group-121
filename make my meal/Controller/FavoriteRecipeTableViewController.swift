@@ -42,6 +42,7 @@ class FavoriteRecipeTableViewController: UITableViewController {
         cell.showsReorderControl = true
         
         let recipe = favoriteList[indexPath.row]//
+        
         cell.update(with: recipe)
         
         return cell
@@ -62,6 +63,7 @@ class FavoriteRecipeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         let movedFavoriteRecipe = favoriteList.remove(at: fromIndexPath.row)
+        
         favoriteList.insert(movedFavoriteRecipe, at: to.row)
         tableView.reloadData()
     }
@@ -69,9 +71,11 @@ class FavoriteRecipeTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard segue.identifier == "toDetails" else {return}
+        
         let indexPath = tableView.indexPathForSelectedRow!
         let selectedFavoriteRecipe = favoriteList[indexPath.row]
         let recipeDetailsViewController = segue.destination as! RecipeDetailsViewController
+        
         recipeDetailsViewController.recipeFromList = selectedFavoriteRecipe
     }
 }

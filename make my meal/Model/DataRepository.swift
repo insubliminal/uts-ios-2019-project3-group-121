@@ -43,6 +43,7 @@ struct DataRepository: Codable {
     
     func loadRecipes() throws -> [Recipe] {
         guard let encodedRecipes = try? Data(contentsOf: recipesURL) else {throw DataError.notFound}
+        
         return try! JSONDecoder().decode([Recipe].self, from: encodedRecipes)
     }
 }

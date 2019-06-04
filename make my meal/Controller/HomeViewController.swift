@@ -13,9 +13,11 @@ class HomeViewController: UIViewController {
     let dataStorage = DataRepository()
     var recipeList: [Recipe] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -30,7 +32,7 @@ class HomeViewController: UIViewController {
         recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
         
         try? dataStorage.saveRecipes(recipeList)
-        
     }
     
-    @IBAction func unwindToHomeView(segue: UIStoryboardSegue) {}}
+    @IBAction func unwindToHomeView(segue: UIStoryboardSegue) {}
+}

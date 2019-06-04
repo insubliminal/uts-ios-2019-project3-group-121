@@ -23,6 +23,7 @@ class AllRecipesTableViewController: UITableViewController {
         if let savedRecipes = try? dataStorage.loadRecipes() {
             recipeList = savedRecipes
         }
+        
         tableView.reloadData()
     }
     

@@ -24,11 +24,8 @@ class Recipe: Codable, Equatable {
     }
     
     static func == (lhs: Recipe, rhs: Recipe) -> Bool{
-        if (lhs.name == rhs.name) {
-            return true
-        } else {
-            return false
-        }
+        
+        return lhs.name == rhs.name
     }
 }
 
@@ -43,7 +40,7 @@ func ingredientIsInCurrentList(ingredient: String, ingredientList: [String]) -> 
 
 func isInCurrentList(recipeToAdd: Recipe, recipeList: [Recipe]) -> Bool {
     for recipe in recipeList {
-        if recipeToAdd.name == recipe.name {
+        if recipeToAdd == recipe {
             return true
         }
     }
@@ -63,4 +60,3 @@ func calculateNumberOfIngredientsHad(ingredientsInList: [String], recipeList: Re
     }
     return count
 }
-

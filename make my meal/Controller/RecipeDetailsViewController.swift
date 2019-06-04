@@ -35,7 +35,7 @@ class RecipeDetailsViewController: UIViewController {
             favoriteRecipes = favoriteList
         }
         
-        guard let recipe = recipeFromList else{return}
+        guard let recipe = recipeFromList else {return}
         
         recipeNameLabel.text = recipe.name
         recipeImageView.image = UIImage(named: recipe.name)
@@ -46,7 +46,7 @@ class RecipeDetailsViewController: UIViewController {
             
             guard let recipeFromList = recipeFromList else {return}
             
-            if ( recipe == recipeFromList ) {
+            if recipe == recipeFromList {
                 heartBtn.isHidden = true
                 heartFilledBtn.isHidden = false
             }

@@ -24,4 +24,3 @@ class MatchingRecipeTableViewCell: UITableViewCell {
         ingredientsHad.text = "\(calculateNumberOfIngredientsHad(ingredientsInList: ingredientsList, recipeList: recipe)) / \(recipe.ingredients.count) Ingredients"
     }
 }
-

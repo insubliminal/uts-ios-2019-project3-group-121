@@ -14,6 +14,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var ingredientTableView: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +22,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         ingredientTableView.reloadData()
     }
     
@@ -40,6 +42,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath)
         
         let ingredient = addedIngredients[indexPath.row]
+        
         cell.textLabel?.text = ingredient
         
         return cell
@@ -59,11 +62,13 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRecipes" {
             let matchingRecipeListTableViewController = segue.destination as! MatchingRecipeListTableViewController
+            
             matchingRecipeListTableViewController.addedIngredients = addedIngredients
         }
         
         if segue.identifier == "toNewIngredient" {
             let newIngredientsViewController = segue.destination as! NewIngredientViewController
+            
             newIngredientsViewController.addedIngredients = addedIngredients
         }
     }

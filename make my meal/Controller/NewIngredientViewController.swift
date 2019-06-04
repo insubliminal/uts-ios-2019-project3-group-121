@@ -19,6 +19,7 @@ class NewIngredientViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     @IBAction func addBtn(_ sender: Any) {
@@ -26,7 +27,7 @@ class NewIngredientViewController: UIViewController {
         
         if !ingredientIsInCurrentList(ingredient: newIngredient, ingredientList: addedIngredients) && newIngredientTextField.text != "" {
             addedIngredients.append(newIngredient)
-        } 
+        }
         
         pressedAdd = true
     }
