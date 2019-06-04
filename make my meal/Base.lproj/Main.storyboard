@@ -429,7 +429,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Ingredient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqO-PW-pvM">
-                                <rect key="frame" x="91.5" y="20" width="137" height="26"/>
+                                <rect key="frame" x="0.0" y="40" width="320" height="26"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -475,13 +475,14 @@
                             <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="4dt-Ip-WJU" secondAttribute="trailing" constant="23" id="8hp-zG-ayW"/>
                             <constraint firstItem="4dt-Ip-WJU" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="24" id="8uV-6T-c1v"/>
                             <constraint firstItem="RDL-m8-a3a" firstAttribute="leading" secondItem="2ma-Ra-Ccj" secondAttribute="leading" id="96U-Nw-Qt0"/>
-                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="centerX" secondItem="eqO-PW-pvM" secondAttribute="centerX" id="BVB-KX-awE"/>
-                            <constraint firstItem="eqO-PW-pvM" firstAttribute="top" secondItem="Kd6-IT-u4t" secondAttribute="top" id="WbE-fM-mqQ"/>
+                            <constraint firstItem="eqO-PW-pvM" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" id="KIE-Rr-5Qb"/>
+                            <constraint firstItem="eqO-PW-pvM" firstAttribute="top" secondItem="Kd6-IT-u4t" secondAttribute="top" constant="20" id="S1s-Xe-TcD"/>
                             <constraint firstItem="RDL-m8-a3a" firstAttribute="trailing" secondItem="2ma-Ra-Ccj" secondAttribute="trailing" id="aKH-By-alV"/>
                             <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="2ma-Ra-Ccj" secondAttribute="trailing" constant="20" id="bvP-Wl-3vZ"/>
                             <constraint firstAttribute="bottom" secondItem="4dt-Ip-WJU" secondAttribute="bottom" constant="20" symbolic="YES" id="eKr-f1-O47"/>
                             <constraint firstItem="WD0-2r-eZ7" firstAttribute="top" secondItem="2ma-Ra-Ccj" secondAttribute="bottom" constant="20" id="eRr-gK-452"/>
                             <constraint firstItem="WD0-2r-eZ7" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="108" id="f6c-gO-hwV"/>
+                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="eqO-PW-pvM" secondAttribute="trailing" id="geR-pK-FZS"/>
                             <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="WD0-2r-eZ7" secondAttribute="trailing" constant="107" id="tjB-A0-Svi"/>
                             <constraint firstItem="RDL-m8-a3a" firstAttribute="top" secondItem="WD0-2r-eZ7" secondAttribute="bottom" constant="8" symbolic="YES" id="ySr-Ff-48W"/>
                         </constraints>
