@@ -688,14 +688,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9j-ii-b8v">
-                                <rect key="frame" x="20" y="64" width="280" height="431"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" id="Z4k-Z4-sQZ">
-                                        <rect key="frame" x="0.0" y="28" width="280" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z4k-Z4-sQZ" id="xxB-JT-9dw">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -718,10 +718,10 @@
                         <constraints>
                             <constraint firstItem="NoM-cp-OJ4" firstAttribute="top" secondItem="n9j-ii-b8v" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ap-3X-g6l"/>
                             <constraint firstItem="NoM-cp-OJ4" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" constant="20" id="3la-Wu-LpY"/>
-                            <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="n9j-ii-b8v" secondAttribute="trailing" constant="20" id="IsF-Mq-Tx0"/>
+                            <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="n9j-ii-b8v" secondAttribute="trailing" id="IsF-Mq-Tx0"/>
                             <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="NoM-cp-OJ4" secondAttribute="trailing" constant="20" id="X4l-f7-PXB"/>
                             <constraint firstItem="n9j-ii-b8v" firstAttribute="top" secondItem="pDg-hF-mFB" secondAttribute="top" id="fBX-VB-gJs"/>
-                            <constraint firstItem="n9j-ii-b8v" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" constant="20" id="fLq-0c-r5O"/>
+                            <constraint firstItem="n9j-ii-b8v" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" id="fLq-0c-r5O"/>
                             <constraint firstAttribute="bottom" secondItem="NoM-cp-OJ4" secondAttribute="bottom" constant="20" symbolic="YES" id="hyA-19-bIe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pDg-hF-mFB"/>
