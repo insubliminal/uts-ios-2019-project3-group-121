@@ -38,13 +38,7 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate {
         
         let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
         
-        if !text.isEmpty{
-            addBtn.isEnabled = true
-        }
-        
-        else {
-            addBtn.isEnabled = false
-        }
+        addBtn.isEnabled = !text.isEmpty
         
         return true
     }
