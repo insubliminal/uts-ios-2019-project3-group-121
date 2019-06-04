@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -274,14 +274,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-hE-qJX">
-                                <rect key="frame" x="266" y="75" width="91" height="37"/>
+                                <rect key="frame" x="253" y="62" width="104" height="50"/>
                                 <state key="normal" title="Button" image="Heart"/>
                                 <connections>
                                     <action selector="heartBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="wpD-Nk-oxw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-ZL-YXH">
-                                <rect key="frame" x="266" y="75" width="91" height="37"/>
+                                <rect key="frame" x="253" y="62" width="104" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="U0T-90-lBH"/>
                                 </constraints>
@@ -687,8 +687,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9j-ii-b8v">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9j-ii-b8v">
                                 <rect key="frame" x="0.0" y="64" width="320" height="431"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" id="Z4k-Z4-sQZ">
@@ -716,12 +717,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NoM-cp-OJ4" firstAttribute="top" secondItem="n9j-ii-b8v" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ap-3X-g6l"/>
                             <constraint firstItem="NoM-cp-OJ4" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" constant="20" id="3la-Wu-LpY"/>
-                            <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="n9j-ii-b8v" secondAttribute="trailing" id="IsF-Mq-Tx0"/>
                             <constraint firstItem="pDg-hF-mFB" firstAttribute="trailing" secondItem="NoM-cp-OJ4" secondAttribute="trailing" constant="20" id="X4l-f7-PXB"/>
-                            <constraint firstItem="n9j-ii-b8v" firstAttribute="top" secondItem="pDg-hF-mFB" secondAttribute="top" id="fBX-VB-gJs"/>
-                            <constraint firstItem="n9j-ii-b8v" firstAttribute="leading" secondItem="pDg-hF-mFB" secondAttribute="leading" id="fLq-0c-r5O"/>
                             <constraint firstAttribute="bottom" secondItem="NoM-cp-OJ4" secondAttribute="bottom" constant="20" symbolic="YES" id="hyA-19-bIe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pDg-hF-mFB"/>
@@ -745,8 +742,8 @@
     </scenes>
     <resources>
         <image name="Clock" width="32" height="32"/>
-        <image name="Heart" width="37.5" height="37.5"/>
-        <image name="Heart-filled" width="37.5" height="37.5"/>
+        <image name="Heart" width="50" height="50"/>
+        <image name="Heart-filled" width="50" height="50"/>
         <image name="List" width="215" height="373.5"/>
         <image name="Logo" width="173" height="198"/>
         <image name="Recipe" width="141.5" height="250"/>

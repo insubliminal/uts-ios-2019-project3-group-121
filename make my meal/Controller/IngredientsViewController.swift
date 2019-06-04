@@ -26,6 +26,11 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         ingredientTableView.reloadData()
         
         searchBtn.isEnabled = !addedIngredients.isEmpty
+        
+        //Get rid of left side indent
+        //https://www.hackingwithswift.com/example-code/uikit/how-to-make-uitableviewcell-separators-go-edge-to-edge
+        ingredientTableView.layoutMargins = UIEdgeInsets.zero
+        ingredientTableView.separatorInset = UIEdgeInsets.zero
     }
     
     override func viewWillDisappear(_ animated: Bool) {
