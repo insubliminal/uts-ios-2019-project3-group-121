@@ -183,7 +183,7 @@
             </objects>
             <point key="canvasLocation" x="1935" y="-1664.7887323943662"/>
         </scene>
-        <!--View Controller-->
+        <!--Scanning-->
         <scene sceneID="qOT-YT-Ikb">
             <objects>
                 <viewController id="xzP-tz-LcW" sceneMemberID="viewController">
@@ -191,14 +191,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4D-u9-OjW">
-                                <rect key="frame" x="20" y="64" width="280" height="39"/>
-                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="XdW-gc-dRc">
-                                <rect key="frame" x="40" y="111" width="240" height="437"/>
+                                <rect key="frame" x="40" y="64" width="240" height="437"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="437" id="kXc-1a-cL3"/>
                                 </constraints>
@@ -206,21 +200,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XdW-gc-dRc" firstAttribute="top" secondItem="r4D-u9-OjW" secondAttribute="bottom" constant="8" symbolic="YES" id="K0V-4c-HgE"/>
-                            <constraint firstItem="r4D-u9-OjW" firstAttribute="leading" secondItem="zxK-aE-ntU" secondAttribute="leading" constant="20" id="R59-Hd-8W3"/>
-                            <constraint firstItem="r4D-u9-OjW" firstAttribute="top" secondItem="zxK-aE-ntU" secondAttribute="top" id="TQX-6x-l5V"/>
                             <constraint firstItem="zxK-aE-ntU" firstAttribute="trailing" secondItem="XdW-gc-dRc" secondAttribute="trailing" constant="40" id="aRE-OR-R0h"/>
                             <constraint firstItem="XdW-gc-dRc" firstAttribute="leading" secondItem="zxK-aE-ntU" secondAttribute="leading" constant="40" id="fPo-67-7xd"/>
-                            <constraint firstItem="zxK-aE-ntU" firstAttribute="trailing" secondItem="r4D-u9-OjW" secondAttribute="trailing" constant="20" id="ocW-Et-nim"/>
+                            <constraint firstItem="XdW-gc-dRc" firstAttribute="top" secondItem="zxK-aE-ntU" secondAttribute="top" id="hqw-62-9f7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zxK-aE-ntU"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Scanning" id="DJy-ft-bc5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Shm-xf-ekJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="58.125" y="-2508.8028169014083"/>
         </scene>
-        <!--View Controller-->
+        <!--Adding manually-->
         <scene sceneID="Sge-sT-dSW">
             <objects>
                 <viewController id="hMl-lt-AWZ" sceneMemberID="viewController">
@@ -228,14 +220,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adding manually" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM3-5A-Fvy">
-                                <rect key="frame" x="20" y="64" width="280" height="39"/>
-                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New ingredient" translatesAutoresizingMaskIntoConstraints="NO" id="Ik6-NG-Shh">
-                                <rect key="frame" x="46" y="111" width="240" height="437"/>
+                                <rect key="frame" x="46" y="64" width="240" height="437"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="437" id="spO-BQ-7VT"/>
                                 </constraints>
@@ -243,15 +229,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZDm-ld-5BB" firstAttribute="trailing" secondItem="YM3-5A-Fvy" secondAttribute="trailing" constant="20" id="4x2-9X-k3J"/>
+                            <constraint firstItem="Ik6-NG-Shh" firstAttribute="top" secondItem="ZDm-ld-5BB" secondAttribute="top" id="59f-mv-SOg"/>
                             <constraint firstItem="ZDm-ld-5BB" firstAttribute="trailing" secondItem="Ik6-NG-Shh" secondAttribute="trailing" constant="34" id="LXh-Ue-8Y2"/>
-                            <constraint firstItem="YM3-5A-Fvy" firstAttribute="top" secondItem="ZDm-ld-5BB" secondAttribute="top" id="bf7-aM-ebY"/>
                             <constraint firstItem="Ik6-NG-Shh" firstAttribute="leading" secondItem="ZDm-ld-5BB" secondAttribute="leading" constant="46" id="evg-21-h4n"/>
-                            <constraint firstItem="Ik6-NG-Shh" firstAttribute="top" secondItem="YM3-5A-Fvy" secondAttribute="bottom" constant="8" symbolic="YES" id="kBW-sB-gIJ"/>
-                            <constraint firstItem="YM3-5A-Fvy" firstAttribute="leading" secondItem="ZDm-ld-5BB" secondAttribute="leading" constant="20" id="z7E-Wt-8id"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZDm-ld-5BB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Adding manually" id="cmE-G4-Phy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwi-Tw-Rl7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
