@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewIngredientViewController: UIViewController {
+class NewIngredientViewController: UIViewController, UITextFieldDelegate {
 
     var addedIngredients: [String] = []
     var pressedAdd = false
@@ -20,6 +20,13 @@ class NewIngredientViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
     }
 
     @IBAction func addBtn(_ sender: Any) {
