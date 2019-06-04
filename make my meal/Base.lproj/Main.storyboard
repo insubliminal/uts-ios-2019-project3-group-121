@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTM-8W-k1H">
-                                <rect key="frame" x="142" y="323" width="36" height="34"/>
+                                <rect key="frame" x="20" y="323" width="280" height="34"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -30,7 +30,7 @@
                                 <rect key="frame" x="74" y="105" width="173" height="198"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xid-KO-3w6">
-                                <rect key="frame" x="133" y="377" width="54" height="34"/>
+                                <rect key="frame" x="20" y="377" width="280" height="34"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="How-to"/>
                                 <connections>
@@ -46,9 +46,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4s-xH-pBx">
-                                <rect key="frame" x="99" y="485" width="122" height="34"/>
+                                <rect key="frame" x="0.0" y="485" width="320" height="34"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
-                                <state key="normal" title="Favorite Recipe"/>
+                                <state key="normal" title="Favorite Recipes"/>
                                 <connections>
                                     <segue destination="ILL-RJ-wBg" kind="show" id="gNt-jh-jWY"/>
                                 </connections>
@@ -57,19 +57,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="top" secondItem="mD6-lo-gyA" secondAttribute="top" constant="41" id="21T-yk-8Ng"/>
-                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="Z4s-xH-pBx" secondAttribute="trailing" constant="99" id="H0D-iB-nDp"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="top" secondItem="fQ6-lc-9a1" secondAttribute="bottom" constant="20" id="HXy-nB-tZV"/>
-                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="99" id="J8X-2L-qah"/>
-                            <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="142" id="Lj5-77-WFd"/>
-                            <constraint firstItem="xid-KO-3w6" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="133" id="MmS-qW-Vbf"/>
-                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="mTM-8W-k1H" secondAttribute="trailing" constant="142" id="OKb-dP-Xci"/>
-                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="top" secondItem="IWg-nf-MHh" secondAttribute="bottom" constant="20" id="Rhb-M9-Yuq"/>
+                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" id="KDJ-ye-0U5"/>
+                            <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="20" id="Lj5-77-WFd"/>
+                            <constraint firstItem="xid-KO-3w6" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="20" id="MmS-qW-Vbf"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="Z4s-xH-pBx" secondAttribute="trailing" id="Npe-4G-3ZN"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="mTM-8W-k1H" secondAttribute="trailing" constant="20" id="OKb-dP-Xci"/>
+                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="top" secondItem="IWg-nf-MHh" secondAttribute="bottom" constant="20" id="PL2-Cb-9Uw"/>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="74" id="TeR-nm-cTC"/>
                             <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="IWg-nf-MHh" secondAttribute="trailing" constant="20" id="UhX-3w-QeE"/>
                             <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="fQ6-lc-9a1" secondAttribute="trailing" constant="73" id="ZIc-Ty-bIR"/>
                             <constraint firstItem="IWg-nf-MHh" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="20" id="Zzi-ER-snz"/>
                             <constraint firstItem="xid-KO-3w6" firstAttribute="top" secondItem="mTM-8W-k1H" secondAttribute="bottom" constant="20" id="apg-GF-YuE"/>
-                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="xid-KO-3w6" secondAttribute="trailing" constant="133" id="dPM-QY-0P3"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="xid-KO-3w6" secondAttribute="trailing" constant="20" id="dPM-QY-0P3"/>
                             <constraint firstItem="IWg-nf-MHh" firstAttribute="top" secondItem="xid-KO-3w6" secondAttribute="bottom" constant="20" id="nX6-rt-zwX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mD6-lo-gyA"/>
