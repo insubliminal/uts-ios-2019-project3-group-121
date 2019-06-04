@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -93,7 +93,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="U6x-6g-l4R"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -144,7 +144,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="4Yh-JV-jhQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -184,6 +184,80 @@
             <point key="canvasLocation" x="1935" y="-1664.7887323943662"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="qOT-YT-Ikb">
+            <objects>
+                <viewController id="xzP-tz-LcW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R4E-PL-Md9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4D-u9-OjW">
+                                <rect key="frame" x="20" y="64" width="280" height="39"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="XdW-gc-dRc">
+                                <rect key="frame" x="40" y="111" width="240" height="437"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="437" id="kXc-1a-cL3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XdW-gc-dRc" firstAttribute="top" secondItem="r4D-u9-OjW" secondAttribute="bottom" constant="8" symbolic="YES" id="K0V-4c-HgE"/>
+                            <constraint firstItem="r4D-u9-OjW" firstAttribute="leading" secondItem="zxK-aE-ntU" secondAttribute="leading" constant="20" id="R59-Hd-8W3"/>
+                            <constraint firstItem="r4D-u9-OjW" firstAttribute="top" secondItem="zxK-aE-ntU" secondAttribute="top" id="TQX-6x-l5V"/>
+                            <constraint firstItem="zxK-aE-ntU" firstAttribute="trailing" secondItem="XdW-gc-dRc" secondAttribute="trailing" constant="40" id="aRE-OR-R0h"/>
+                            <constraint firstItem="XdW-gc-dRc" firstAttribute="leading" secondItem="zxK-aE-ntU" secondAttribute="leading" constant="40" id="fPo-67-7xd"/>
+                            <constraint firstItem="zxK-aE-ntU" firstAttribute="trailing" secondItem="r4D-u9-OjW" secondAttribute="trailing" constant="20" id="ocW-Et-nim"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zxK-aE-ntU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Shm-xf-ekJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58.125" y="-2508.8028169014083"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Sge-sT-dSW">
+            <objects>
+                <viewController id="hMl-lt-AWZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GXb-P9-cf6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adding manually" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM3-5A-Fvy">
+                                <rect key="frame" x="20" y="64" width="280" height="39"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New ingredient" translatesAutoresizingMaskIntoConstraints="NO" id="Ik6-NG-Shh">
+                                <rect key="frame" x="46" y="111" width="240" height="437"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="437" id="spO-BQ-7VT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZDm-ld-5BB" firstAttribute="trailing" secondItem="YM3-5A-Fvy" secondAttribute="trailing" constant="20" id="4x2-9X-k3J"/>
+                            <constraint firstItem="ZDm-ld-5BB" firstAttribute="trailing" secondItem="Ik6-NG-Shh" secondAttribute="trailing" constant="34" id="LXh-Ue-8Y2"/>
+                            <constraint firstItem="YM3-5A-Fvy" firstAttribute="top" secondItem="ZDm-ld-5BB" secondAttribute="top" id="bf7-aM-ebY"/>
+                            <constraint firstItem="Ik6-NG-Shh" firstAttribute="leading" secondItem="ZDm-ld-5BB" secondAttribute="leading" constant="46" id="evg-21-h4n"/>
+                            <constraint firstItem="Ik6-NG-Shh" firstAttribute="top" secondItem="YM3-5A-Fvy" secondAttribute="bottom" constant="8" symbolic="YES" id="kBW-sB-gIJ"/>
+                            <constraint firstItem="YM3-5A-Fvy" firstAttribute="leading" secondItem="ZDm-ld-5BB" secondAttribute="leading" constant="20" id="z7E-Wt-8id"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZDm-ld-5BB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwi-Tw-Rl7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894.375" y="-2509.8591549295775"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="65G-EN-09K">
             <objects>
                 <viewController storyboardIdentifier="ScanInstructions" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sHE-fd-ld7" sceneMemberID="viewController">
@@ -191,12 +265,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scan" translatesAutoresizingMaskIntoConstraints="NO" id="Mdk-Wv-9Nf">
-                                <rect key="frame" x="16" y="223.5" width="288" height="121"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan your ingredients with your camera" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm7-pJ-K1u">
-                                <rect key="frame" x="20" y="64" width="280" height="151.5"/>
-                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add ingredients through scanning or manually" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm7-pJ-K1u">
+                                <rect key="frame" x="20" y="64" width="280" height="116.5"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -211,18 +282,45 @@
                                     <segue destination="qO8-1B-0f3" kind="show" id="PAH-xI-Gco"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Ingredients list" translatesAutoresizingMaskIntoConstraints="NO" id="Mdk-Wv-9Nf">
+                                <rect key="frame" x="16" y="188.5" width="288" height="210.5"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8js-8p-Vv5">
+                                <rect key="frame" x="20" y="407" width="280" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9P-ig-xPt">
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="30"/>
+                                        <state key="normal" title="Scanning"/>
+                                        <connections>
+                                            <segue destination="xzP-tz-LcW" kind="show" id="AvX-L2-IRA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slw-gq-G0G">
+                                        <rect key="frame" x="144" y="0.0" width="136" height="30"/>
+                                        <state key="normal" title="Manually"/>
+                                        <connections>
+                                            <segue destination="hMl-lt-AWZ" kind="show" id="Ydz-Pt-bF1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Pm7-pJ-K1u" secondAttribute="trailing" constant="20" id="0gq-qf-gZU"/>
-                            <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="top" secondItem="Pm7-pJ-K1u" secondAttribute="bottom" constant="8" symbolic="YES" id="MY4-7g-kvk"/>
+                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="8js-8p-Vv5" secondAttribute="trailing" constant="20" id="8MD-dV-dOi"/>
+                            <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="top" secondItem="Pm7-pJ-K1u" secondAttribute="bottom" constant="8" symbolic="YES" id="DpQ-Up-cQb"/>
                             <constraint firstItem="LUj-W1-zuZ" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="16" id="Njb-Nu-gF1"/>
                             <constraint firstAttribute="bottom" secondItem="LUj-W1-zuZ" secondAttribute="bottom" constant="20" symbolic="YES" id="RC5-yB-8VB"/>
+                            <constraint firstItem="8js-8p-Vv5" firstAttribute="top" secondItem="Mdk-Wv-9Nf" secondAttribute="bottom" constant="8" id="aTc-Uk-grf"/>
+                            <constraint firstItem="8js-8p-Vv5" firstAttribute="top" secondItem="Mdk-Wv-9Nf" secondAttribute="bottom" constant="8" symbolic="YES" id="eRI-R6-mli"/>
                             <constraint firstItem="Pm7-pJ-K1u" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="20" id="fNk-M1-Bk3"/>
+                            <constraint firstItem="8js-8p-Vv5" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="20" id="hTl-4A-M9S"/>
                             <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="16" id="hXZ-FZ-6qM"/>
                             <constraint firstItem="Pm7-pJ-K1u" firstAttribute="top" secondItem="R0N-Vo-BVl" secondAttribute="top" id="mKI-H0-BOD"/>
                             <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Mdk-Wv-9Nf" secondAttribute="trailing" constant="16" id="rnb-6R-7EA"/>
                             <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="LUj-W1-zuZ" secondAttribute="trailing" constant="20" id="uBd-J2-B9b"/>
+                            <constraint firstItem="LUj-W1-zuZ" firstAttribute="top" secondItem="8js-8p-Vv5" secondAttribute="bottom" constant="85" id="zml-zU-3HJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R0N-Vo-BVl"/>
                     </view>
@@ -274,14 +372,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-hE-qJX">
-                                <rect key="frame" x="253" y="62" width="104" height="50"/>
+                                <rect key="frame" x="266" y="75" width="91" height="37"/>
                                 <state key="normal" title="Button" image="Heart"/>
                                 <connections>
                                     <action selector="heartBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="wpD-Nk-oxw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-ZL-YXH">
-                                <rect key="frame" x="253" y="62" width="104" height="50"/>
+                                <rect key="frame" x="266" y="75" width="91" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="U0T-90-lBH"/>
                                 </constraints>
@@ -742,13 +840,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Camera" width="640" height="1136"/>
         <image name="Clock" width="32" height="32"/>
-        <image name="Heart" width="50" height="50"/>
-        <image name="Heart-filled" width="50" height="50"/>
+        <image name="Heart" width="37.5" height="37.5"/>
+        <image name="Heart-filled" width="37.5" height="37.5"/>
+        <image name="Ingredients list" width="640" height="1136"/>
         <image name="List" width="215" height="373.5"/>
         <image name="Logo" width="173" height="198"/>
+        <image name="New ingredient" width="640" height="1136"/>
         <image name="Recipe" width="141.5" height="250"/>
-        <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="za4-ys-P5f"/>
