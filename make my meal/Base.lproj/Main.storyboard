@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMh-1p-x9r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,8 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTM-8W-k1H">
-                                <rect key="frame" x="16" y="320" width="288" height="31"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <rect key="frame" x="16" y="320" width="288" height="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <segue destination="oZq-3L-z8S" kind="show" id="tsX-k4-dLM"/>
@@ -30,24 +30,24 @@
                                 <rect key="frame" x="68" y="93" width="184" height="198"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xid-KO-3w6">
-                                <rect key="frame" x="16" y="367" width="288" height="31"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <rect key="frame" x="16" y="354" width="288" height="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="How-to"/>
                                 <connections>
                                     <segue destination="sHE-fd-ld7" kind="show" id="w6m-gh-d4o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4s-xH-pBx">
-                                <rect key="frame" x="106" y="406" width="108" height="31"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <rect key="frame" x="99" y="388" width="122" height="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Favorite Recipe"/>
                                 <connections>
                                     <segue destination="ILL-RJ-wBg" kind="show" id="gNt-jh-jWY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-nf-MHh">
-                                <rect key="frame" x="124" y="447" width="76" height="31"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <rect key="frame" x="20" y="422" width="280" height="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="All Recipes"/>
                                 <connections>
                                     <segue destination="Amj-Bn-1TX" kind="show" id="Bfj-I7-Wdp"/>
@@ -56,20 +56,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IWg-nf-MHh" firstAttribute="top" secondItem="Z4s-xH-pBx" secondAttribute="bottom" constant="10" id="5cf-Vx-GxI"/>
+                            <constraint firstItem="IWg-nf-MHh" firstAttribute="top" secondItem="Z4s-xH-pBx" secondAttribute="bottom" id="5cf-Vx-GxI"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="7vQ-gA-A0C" secondAttribute="leadingMargin" id="JyC-h0-LU6"/>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="68" id="OTA-5V-lmm"/>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="centerX" secondItem="mTM-8W-k1H" secondAttribute="centerX" id="bHO-Ev-VgO"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="trailing" secondItem="xid-KO-3w6" secondAttribute="trailing" id="cqt-Ee-c6W"/>
-                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="top" secondItem="xid-KO-3w6" secondAttribute="bottom" constant="8" symbolic="YES" id="dF8-hS-nnm"/>
+                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="top" secondItem="xid-KO-3w6" secondAttribute="bottom" id="dF8-hS-nnm"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="xid-KO-3w6" secondAttribute="leading" id="fmK-Hd-sPT"/>
-                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="IWg-nf-MHh" secondAttribute="trailing" constant="120" id="hfw-3a-VVV"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="IWg-nf-MHh" secondAttribute="trailing" constant="20" id="hfw-3a-VVV"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="top" secondItem="fQ6-lc-9a1" secondAttribute="bottom" constant="29" id="mYT-BQ-7gK"/>
-                            <constraint firstItem="xid-KO-3w6" firstAttribute="top" secondItem="mTM-8W-k1H" secondAttribute="bottom" constant="16" id="nLk-fO-FDE"/>
+                            <constraint firstItem="xid-KO-3w6" firstAttribute="top" secondItem="mTM-8W-k1H" secondAttribute="bottom" id="nLk-fO-FDE"/>
                             <constraint firstItem="mTM-8W-k1H" firstAttribute="trailing" secondItem="7vQ-gA-A0C" secondAttribute="trailingMargin" id="oOp-Vz-0sQ"/>
                             <constraint firstItem="fQ6-lc-9a1" firstAttribute="top" secondItem="mD6-lo-gyA" secondAttribute="top" constant="29" id="qfY-E0-tjF"/>
                             <constraint firstItem="xid-KO-3w6" firstAttribute="centerX" secondItem="Z4s-xH-pBx" secondAttribute="centerX" id="xXu-4T-PhD"/>
-                            <constraint firstItem="IWg-nf-MHh" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="124" id="yqL-MT-YBg"/>
+                            <constraint firstItem="IWg-nf-MHh" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="20" id="yqL-MT-YBg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mD6-lo-gyA"/>
                     </view>
@@ -87,12 +87,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a recipe you like" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COM-bH-d6K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a recipe you like" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COM-bH-d6K">
                                 <rect key="frame" x="16" y="64" width="288" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="U6x-6g-l4R"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="41"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -103,8 +103,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJF-KP-nGg">
-                                <rect key="frame" x="16" y="508" width="288" height="40"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <rect key="frame" x="16" y="503" width="288" height="45"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="C3I-yh-iFY" kind="show" id="KHy-cf-nhZ"/>
@@ -143,16 +143,19 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="4Yh-JV-jhQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="41"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recipe" translatesAutoresizingMaskIntoConstraints="NO" id="Lby-AI-cKO">
                                 <rect key="frame" x="55" y="161" width="210" height="250"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSc-Ba-ABI">
-                                <rect key="frame" x="131" y="508" width="59" height="40"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSc-Ba-ABI">
+                                <rect key="frame" x="20" y="508" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Tiv-hU-Lvn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="Evw-8i-8DJ" kind="unwind" unwindAction="unwindToHomeViewWithSegue:" id="oAP-Yr-pFT"/>
@@ -161,11 +164,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bSc-Ba-ABI" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="131" id="4zU-xn-AFS"/>
+                            <constraint firstItem="bSc-Ba-ABI" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="20" id="05n-jZ-Zda"/>
                             <constraint firstItem="5cU-NU-n3O" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="16" id="IoS-8u-bP2"/>
+                            <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="bSc-Ba-ABI" secondAttribute="trailing" constant="20" id="L9M-aF-UJU"/>
                             <constraint firstItem="Lby-AI-cKO" firstAttribute="top" secondItem="5cU-NU-n3O" secondAttribute="bottom" constant="7" id="N1s-1i-iXq"/>
-                            <constraint firstAttribute="bottom" secondItem="bSc-Ba-ABI" secondAttribute="bottom" constant="20" symbolic="YES" id="QGc-tF-c1H"/>
-                            <constraint firstItem="bSc-Ba-ABI" firstAttribute="centerX" secondItem="Lby-AI-cKO" secondAttribute="centerX" id="lfB-kc-kFH"/>
+                            <constraint firstAttribute="bottom" secondItem="bSc-Ba-ABI" secondAttribute="bottom" constant="20" symbolic="YES" id="OP6-5Y-Ybc"/>
                             <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="Lby-AI-cKO" secondAttribute="trailing" constant="55" id="qAd-6B-reu"/>
                             <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="5cU-NU-n3O" secondAttribute="trailing" constant="16" id="qWs-fo-3vR"/>
                             <constraint firstItem="Lby-AI-cKO" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="55" id="s4z-xu-lrU"/>
@@ -188,11 +191,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scan" translatesAutoresizingMaskIntoConstraints="NO" id="Mdk-Wv-9Nf">
-                                <rect key="frame" x="16" y="206" width="288" height="121"/>
+                                <rect key="frame" x="16" y="223.5" width="288" height="121"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan your ingredients with your camera" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm7-pJ-K1u">
-                                <rect key="frame" x="23" y="64" width="281" height="134"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan your ingredients with your camera" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm7-pJ-K1u">
+                                <rect key="frame" x="20" y="64" width="280" height="151.5"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -201,7 +204,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="6dR-vh-bwq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="qO8-1B-0f3" kind="show" id="PAH-xI-Gco"/>
@@ -210,11 +213,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Pm7-pJ-K1u" secondAttribute="trailing" constant="16" id="0gq-qf-gZU"/>
+                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Pm7-pJ-K1u" secondAttribute="trailing" constant="20" id="0gq-qf-gZU"/>
                             <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="top" secondItem="Pm7-pJ-K1u" secondAttribute="bottom" constant="8" symbolic="YES" id="MY4-7g-kvk"/>
                             <constraint firstItem="LUj-W1-zuZ" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="16" id="Njb-Nu-gF1"/>
                             <constraint firstAttribute="bottom" secondItem="LUj-W1-zuZ" secondAttribute="bottom" constant="20" symbolic="YES" id="RC5-yB-8VB"/>
-                            <constraint firstItem="Pm7-pJ-K1u" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="23" id="fNk-M1-Bk3"/>
+                            <constraint firstItem="Pm7-pJ-K1u" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="20" id="fNk-M1-Bk3"/>
                             <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="16" id="hXZ-FZ-6qM"/>
                             <constraint firstItem="Pm7-pJ-K1u" firstAttribute="top" secondItem="R0N-Vo-BVl" secondAttribute="top" id="mKI-H0-BOD"/>
                             <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Mdk-Wv-9Nf" secondAttribute="trailing" constant="16" id="rnb-6R-7EA"/>
@@ -304,8 +307,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u9-Vb-4BK">
-                                <rect key="frame" x="20" y="73" width="141" height="33"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                <rect key="frame" x="20" y="73" width="160" height="33"/>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -322,14 +325,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-hE-qJX">
-                                <rect key="frame" x="253" y="62" width="104" height="50"/>
+                                <rect key="frame" x="266" y="75" width="91" height="37"/>
                                 <state key="normal" title="Button" image="Heart"/>
                                 <connections>
                                     <action selector="heartBtnPressed:" destination="twO-If-Jbs" eventType="touchUpInside" id="wpD-Nk-oxw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-ZL-YXH">
-                                <rect key="frame" x="253" y="62" width="104" height="50"/>
+                                <rect key="frame" x="266" y="75" width="91" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="U0T-90-lBH"/>
                                 </constraints>
@@ -342,8 +345,8 @@
                                 <rect key="frame" x="20" y="405" width="280" height="113"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRH-FT-MEd">
-                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="16.5"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -419,16 +422,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLl-Cp-bBM">
-                                <rect key="frame" x="270" y="517" width="30" height="31"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <rect key="frame" x="269" y="514" width="31" height="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <segue destination="dXN-CO-WBj" kind="unwind" unwindAction="unwindToIngredientsViewControllerWithSegue:" id="GL4-x3-0lH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9m-yz-txN">
-                                <rect key="frame" x="20" y="517" width="45" height="31"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <rect key="frame" x="20" y="514" width="53" height="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -437,8 +440,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7g-5o-QeD">
-                                <rect key="frame" x="0.0" y="479.5" width="320" height="18.5"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="476" width="320" height="22"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -512,8 +515,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Ingredient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqO-PW-pvM">
-                                <rect key="frame" x="97" y="20" width="126" height="22"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <rect key="frame" x="91.5" y="20" width="137" height="26"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -524,8 +527,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD0-2r-eZ7">
-                                <rect key="frame" x="20" y="307" width="280" height="31"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <rect key="frame" x="20" y="307" width="280" height="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Manually Add"/>
                                 <connections>
                                     <action selector="addBtn:" destination="K0c-mb-wGT" eventType="touchUpInside" id="xms-wk-pvm"/>
@@ -533,8 +536,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dt-Ip-WJU">
-                                <rect key="frame" x="0.0" y="517" width="320" height="31"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="514" width="320" height="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -543,8 +546,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDL-m8-a3a">
-                                <rect key="frame" x="20" y="346" width="280" height="31"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <rect key="frame" x="20" y="349" width="280" height="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Scan Ingredients"/>
                                 <connections>
                                     <segue destination="wES-EQ-YsQ" kind="presentation" identifier="toCamera" id="IDh-W0-oRc"/>
@@ -656,7 +659,7 @@
                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECIPES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BvX-dx-Qet">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                            <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -679,7 +682,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajz-ud-MpN">
                                                             <rect key="frame" x="0.0" y="0.0" width="160" height="149"/>
-                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -731,7 +734,7 @@
                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL RECIPES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T5o-Fj-6bA">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                            <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -751,7 +754,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofo-3o-3rX">
                                                     <rect key="frame" x="160" y="0.0" width="160" height="169.5"/>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -792,7 +795,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9j-ii-b8v">
-                                <rect key="frame" x="20" y="64" width="280" height="436"/>
+                                <rect key="frame" x="20" y="64" width="280" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" id="Z4k-Z4-sQZ">
@@ -810,8 +813,8 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoM-cp-OJ4">
-                                <rect key="frame" x="20" y="508" width="280" height="40"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <rect key="frame" x="20" y="503" width="280" height="45"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <segue destination="kli-SB-g8h" kind="show" identifier="toRecipes" id="c4x-sM-uqr"/>
@@ -848,14 +851,14 @@
     </scenes>
     <resources>
         <image name="Clock" width="32" height="32"/>
-        <image name="Heart" width="50" height="50"/>
-        <image name="Heart-filled" width="50" height="50"/>
+        <image name="Heart" width="37.5" height="37.5"/>
+        <image name="Heart-filled" width="37.5" height="37.5"/>
         <image name="List" width="215" height="373.5"/>
         <image name="Logo" width="173" height="198"/>
         <image name="Recipe" width="141.5" height="250"/>
         <image name="Scan" width="222.5" height="121.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="za4-ys-P5f"/>
+        <segue reference="gmt-jN-LJf"/>
     </inferredMetricsTieBreakers>
 </document>
