@@ -60,7 +60,7 @@ class MatchingRecipeListTableViewController: UITableViewController {
                     if ingredient.contains(searchedIngredient) && !isInCurrentList(recipeToAdd: recipe, recipeList: matchingRecipes) {
 
                         matchingRecipes.append(recipe)
-                        //Break the loop; do not want to double add a recipe, so we go to the next recipe.
+                        //Break the loop; do not need to check for another ingredient of an already added recipe, so we go to the next recipe.
                         break
                     }
                 }

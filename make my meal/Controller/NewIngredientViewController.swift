@@ -23,7 +23,6 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate {
         newIngredientTextField.delegate = self
         
         if newIngredientTextField.text!.isEmpty{
-            //addBtn.isUserInteractionEnabled = false
             addBtn.isEnabled = false
         }
     }
@@ -80,5 +79,3 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate {
         }
     }
 }
-
-

@@ -13,7 +13,6 @@ class RecipeDetailsViewController: UIViewController {
     
     var recipeFromList: Recipe?
     var favoriteRecipes: [Recipe] = []
-    
     let DataStorage = DataRepository()
     
     @IBOutlet weak var heartBtn: UIButton!
@@ -70,4 +69,3 @@ class RecipeDetailsViewController: UIViewController {
         try? DataStorage.saveFavoriteRecipes(favoriteRecipes)
     }
 }
-

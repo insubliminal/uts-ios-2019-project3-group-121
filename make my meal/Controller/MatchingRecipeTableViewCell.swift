@@ -20,6 +20,7 @@ class MatchingRecipeTableViewCell: UITableViewCell {
         recipeName.text = recipe.name
     }
     
+    //Shows how many ingredients the user has out of the total amount of ingredients in the recipe
     func updateIngredientsObtained(recipe: Recipe, ingredientsList: [String]) {
         ingredientsHad.text = "\(calculateNumberOfIngredientsHad(ingredientsInList: ingredientsList, recipeList: recipe)) / \(recipe.ingredients.count) Ingredients"
     }

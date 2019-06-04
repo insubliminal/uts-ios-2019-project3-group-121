@@ -13,17 +13,19 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     var addedIngredients: [String] = []
     
     @IBOutlet weak var ingredientTableView: UITableView!
+    @IBOutlet weak var searchBtn: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         ingredientTableView.reloadData()
+        
+        searchBtn.isEnabled = !addedIngredients.isEmpty
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,6 +51,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        
         return .delete
     }
     
@@ -56,6 +59,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         if editingStyle == .delete {
             addedIngredients.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            searchBtn.isEnabled = !addedIngredients.isEmpty
         }
     }
     

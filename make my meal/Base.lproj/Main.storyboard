@@ -460,7 +460,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDL-m8-a3a">
-                                <rect key="frame" x="17" y="373" width="280" height="34"/>
+                                <rect key="frame" x="20" y="361" width="280" height="34"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Scan Ingredients"/>
                                 <connections>
@@ -471,19 +471,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2ma-Ra-Ccj" firstAttribute="centerY" secondItem="KoH-Qx-d3Q" secondAttribute="centerY" id="1wV-dS-vL1"/>
-                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="RDL-m8-a3a" secondAttribute="trailing" constant="23" id="3ZD-F0-1Ch"/>
                             <constraint firstItem="2ma-Ra-Ccj" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="20" id="5rx-HG-qXq"/>
                             <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="4dt-Ip-WJU" secondAttribute="trailing" constant="23" id="8hp-zG-ayW"/>
                             <constraint firstItem="4dt-Ip-WJU" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="24" id="8uV-6T-c1v"/>
+                            <constraint firstItem="RDL-m8-a3a" firstAttribute="leading" secondItem="2ma-Ra-Ccj" secondAttribute="leading" id="96U-Nw-Qt0"/>
                             <constraint firstItem="2ma-Ra-Ccj" firstAttribute="centerX" secondItem="eqO-PW-pvM" secondAttribute="centerX" id="BVB-KX-awE"/>
                             <constraint firstItem="eqO-PW-pvM" firstAttribute="top" secondItem="Kd6-IT-u4t" secondAttribute="top" id="WbE-fM-mqQ"/>
+                            <constraint firstItem="RDL-m8-a3a" firstAttribute="trailing" secondItem="2ma-Ra-Ccj" secondAttribute="trailing" id="aKH-By-alV"/>
                             <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="2ma-Ra-Ccj" secondAttribute="trailing" constant="20" id="bvP-Wl-3vZ"/>
                             <constraint firstAttribute="bottom" secondItem="4dt-Ip-WJU" secondAttribute="bottom" constant="20" symbolic="YES" id="eKr-f1-O47"/>
                             <constraint firstItem="WD0-2r-eZ7" firstAttribute="top" secondItem="2ma-Ra-Ccj" secondAttribute="bottom" constant="20" id="eRr-gK-452"/>
                             <constraint firstItem="WD0-2r-eZ7" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="108" id="f6c-gO-hwV"/>
-                            <constraint firstItem="RDL-m8-a3a" firstAttribute="top" secondItem="WD0-2r-eZ7" secondAttribute="bottom" constant="20" id="sq1-kU-4la"/>
                             <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="WD0-2r-eZ7" secondAttribute="trailing" constant="107" id="tjB-A0-Svi"/>
-                            <constraint firstItem="RDL-m8-a3a" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="17" id="yhc-Bk-0il"/>
+                            <constraint firstItem="RDL-m8-a3a" firstAttribute="top" secondItem="WD0-2r-eZ7" secondAttribute="bottom" constant="8" symbolic="YES" id="ySr-Ff-48W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kd6-IT-u4t"/>
                     </view>
@@ -756,6 +756,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ingredientTableView" destination="n9j-ii-b8v" id="E42-i8-UKL"/>
+                        <outlet property="searchBtn" destination="NoM-cp-OJ4" id="pgJ-1s-Ric"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Xa-C0-DJi" userLabel="First Responder" sceneMemberID="firstResponder"/>

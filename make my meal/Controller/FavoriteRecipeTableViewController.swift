@@ -12,7 +12,6 @@ import CoreData
 class FavoriteRecipeTableViewController: UITableViewController {
     
     var favoriteList: [Recipe] = []
-    
     let dataStorage = DataRepository()
     
     
@@ -41,7 +40,7 @@ class FavoriteRecipeTableViewController: UITableViewController {
         
         cell.showsReorderControl = true
         
-        let recipe = favoriteList[indexPath.row]//
+        let recipe = favoriteList[indexPath.row]
         
         cell.update(with: recipe)
         

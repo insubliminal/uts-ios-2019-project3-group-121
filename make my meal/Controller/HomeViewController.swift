@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         let fruitSalad = Recipe(name: "Fruit Salad", description: "Step 1:\n\tWash Fruits\nStep 2:\n\tCut Fruits to mouth-sized chunks", ingredients: ["apple", "banana", "orange"], time: "10 minutes")
         let bbqChicken = Recipe(name: "BBQ Chicken", description: "Step 1:\n\tCut up chicken\nStep 2:\n\tMarinate chicken", ingredients: ["rotisserie", "bbq sauce", "saltshaker"], time: "30 minutes")
         
-        //Add test data into table.
+        //Add test data into Array to be used for the table.
         recipeList = [pizza, pasta, salad, fruitSalad, bbqChicken]
         
         try? dataStorage.saveRecipes(recipeList)
