@@ -20,11 +20,32 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        newIngredientTextField.delegate = self
+        
+        if newIngredientTextField.text!.isEmpty{
+            //addBtn.isUserInteractionEnabled = false
+            addBtn.isEnabled = false
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    //https://stackoverflow.com/questions/34206648/how-to-disable-a-button-if-a-text-field-is-empty
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        
+        if !text.isEmpty{
+            addBtn.isEnabled = true
+        }
+        
+        else {
+            addBtn.isEnabled = false
+        }
         
         return true
     }
