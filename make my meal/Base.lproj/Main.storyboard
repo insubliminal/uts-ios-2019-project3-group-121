@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTM-8W-k1H">
-                                <rect key="frame" x="16" y="320" width="288" height="34"/>
+                                <rect key="frame" x="142" y="323" width="36" height="34"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -27,49 +27,50 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fQ6-lc-9a1">
-                                <rect key="frame" x="68" y="93" width="184" height="198"/>
+                                <rect key="frame" x="74" y="105" width="173" height="198"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xid-KO-3w6">
-                                <rect key="frame" x="16" y="354" width="288" height="34"/>
+                                <rect key="frame" x="133" y="377" width="54" height="34"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="How-to"/>
                                 <connections>
                                     <segue destination="sHE-fd-ld7" kind="show" id="w6m-gh-d4o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4s-xH-pBx">
-                                <rect key="frame" x="99" y="388" width="122" height="34"/>
-                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
-                                <state key="normal" title="Favorite Recipe"/>
-                                <connections>
-                                    <segue destination="ILL-RJ-wBg" kind="show" id="gNt-jh-jWY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-nf-MHh">
-                                <rect key="frame" x="20" y="422" width="280" height="34"/>
+                                <rect key="frame" x="20" y="431" width="280" height="34"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="All Recipes"/>
                                 <connections>
                                     <segue destination="Amj-Bn-1TX" kind="show" id="Bfj-I7-Wdp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4s-xH-pBx">
+                                <rect key="frame" x="99" y="485" width="122" height="34"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
+                                <state key="normal" title="Favorite Recipe"/>
+                                <connections>
+                                    <segue destination="ILL-RJ-wBg" kind="show" id="gNt-jh-jWY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IWg-nf-MHh" firstAttribute="top" secondItem="Z4s-xH-pBx" secondAttribute="bottom" id="5cf-Vx-GxI"/>
-                            <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="7vQ-gA-A0C" secondAttribute="leadingMargin" id="JyC-h0-LU6"/>
-                            <constraint firstItem="fQ6-lc-9a1" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="68" id="OTA-5V-lmm"/>
-                            <constraint firstItem="fQ6-lc-9a1" firstAttribute="centerX" secondItem="mTM-8W-k1H" secondAttribute="centerX" id="bHO-Ev-VgO"/>
-                            <constraint firstItem="mTM-8W-k1H" firstAttribute="trailing" secondItem="xid-KO-3w6" secondAttribute="trailing" id="cqt-Ee-c6W"/>
-                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="top" secondItem="xid-KO-3w6" secondAttribute="bottom" id="dF8-hS-nnm"/>
-                            <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="xid-KO-3w6" secondAttribute="leading" id="fmK-Hd-sPT"/>
-                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="IWg-nf-MHh" secondAttribute="trailing" constant="20" id="hfw-3a-VVV"/>
-                            <constraint firstItem="mTM-8W-k1H" firstAttribute="top" secondItem="fQ6-lc-9a1" secondAttribute="bottom" constant="29" id="mYT-BQ-7gK"/>
-                            <constraint firstItem="xid-KO-3w6" firstAttribute="top" secondItem="mTM-8W-k1H" secondAttribute="bottom" id="nLk-fO-FDE"/>
-                            <constraint firstItem="mTM-8W-k1H" firstAttribute="trailing" secondItem="7vQ-gA-A0C" secondAttribute="trailingMargin" id="oOp-Vz-0sQ"/>
-                            <constraint firstItem="fQ6-lc-9a1" firstAttribute="top" secondItem="mD6-lo-gyA" secondAttribute="top" constant="29" id="qfY-E0-tjF"/>
-                            <constraint firstItem="xid-KO-3w6" firstAttribute="centerX" secondItem="Z4s-xH-pBx" secondAttribute="centerX" id="xXu-4T-PhD"/>
-                            <constraint firstItem="IWg-nf-MHh" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="20" id="yqL-MT-YBg"/>
+                            <constraint firstItem="fQ6-lc-9a1" firstAttribute="top" secondItem="mD6-lo-gyA" secondAttribute="top" constant="41" id="21T-yk-8Ng"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="Z4s-xH-pBx" secondAttribute="trailing" constant="99" id="H0D-iB-nDp"/>
+                            <constraint firstItem="mTM-8W-k1H" firstAttribute="top" secondItem="fQ6-lc-9a1" secondAttribute="bottom" constant="20" id="HXy-nB-tZV"/>
+                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="99" id="J8X-2L-qah"/>
+                            <constraint firstItem="mTM-8W-k1H" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="142" id="Lj5-77-WFd"/>
+                            <constraint firstItem="xid-KO-3w6" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="133" id="MmS-qW-Vbf"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="mTM-8W-k1H" secondAttribute="trailing" constant="142" id="OKb-dP-Xci"/>
+                            <constraint firstItem="Z4s-xH-pBx" firstAttribute="top" secondItem="IWg-nf-MHh" secondAttribute="bottom" constant="20" id="Rhb-M9-Yuq"/>
+                            <constraint firstItem="fQ6-lc-9a1" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="74" id="TeR-nm-cTC"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="IWg-nf-MHh" secondAttribute="trailing" constant="20" id="UhX-3w-QeE"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="fQ6-lc-9a1" secondAttribute="trailing" constant="73" id="ZIc-Ty-bIR"/>
+                            <constraint firstItem="IWg-nf-MHh" firstAttribute="leading" secondItem="mD6-lo-gyA" secondAttribute="leading" constant="20" id="Zzi-ER-snz"/>
+                            <constraint firstItem="xid-KO-3w6" firstAttribute="top" secondItem="mTM-8W-k1H" secondAttribute="bottom" constant="20" id="apg-GF-YuE"/>
+                            <constraint firstItem="mD6-lo-gyA" firstAttribute="trailing" secondItem="xid-KO-3w6" secondAttribute="trailing" constant="133" id="dPM-QY-0P3"/>
+                            <constraint firstItem="IWg-nf-MHh" firstAttribute="top" secondItem="xid-KO-3w6" secondAttribute="bottom" constant="20" id="nX6-rt-zwX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mD6-lo-gyA"/>
                     </view>
@@ -87,7 +88,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a recipe you like" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COM-bH-d6K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a recipe you like" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COM-bH-d6K">
                                 <rect key="frame" x="16" y="64" width="288" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="U6x-6g-l4R"/>
@@ -193,7 +194,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scan" translatesAutoresizingMaskIntoConstraints="NO" id="Mdk-Wv-9Nf">
                                 <rect key="frame" x="16" y="223.5" width="288" height="121"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan your ingredients with your camera" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm7-pJ-K1u">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan your ingredients with your camera" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm7-pJ-K1u">
                                 <rect key="frame" x="20" y="64" width="280" height="151.5"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="39"/>
                                 <nil key="textColor"/>
@@ -229,58 +230,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWJ-H7-pGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="446.25" y="-1664.7887323943662"/>
-        </scene>
-        <!--Manual Entry-->
-        <scene sceneID="WPi-yD-XJX">
-            <objects>
-                <viewController id="IVt-uB-H6g" customClass="SearchViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AHh-4Y-R0z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87g-7c-dRF">
-                                <rect key="frame" x="16" y="269" width="288" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-Qy-ywq">
-                                <rect key="frame" x="20" y="307" width="280" height="31"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <state key="normal" title="Add Ingredient"/>
-                                <connections>
-                                    <action selector="addIngredientBtn:" destination="IVt-uB-H6g" eventType="touchUpInside" id="4Lt-La-xnn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsI-Gy-7f2">
-                                <rect key="frame" x="16" y="347" width="288" height="81"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="63"/>
-                                <state key="normal" title="Go"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="87g-7c-dRF" firstAttribute="leading" secondItem="AHh-4Y-R0z" secondAttribute="leadingMargin" id="A7I-Ba-d1T"/>
-                            <constraint firstItem="YJe-H7-pSn" firstAttribute="trailing" secondItem="bCy-Qy-ywq" secondAttribute="trailing" constant="20" id="FkL-AZ-SZ0"/>
-                            <constraint firstItem="87g-7c-dRF" firstAttribute="trailing" secondItem="AHh-4Y-R0z" secondAttribute="trailingMargin" id="MQY-hw-h8j"/>
-                            <constraint firstItem="87g-7c-dRF" firstAttribute="centerY" secondItem="AHh-4Y-R0z" secondAttribute="centerY" id="RdN-ze-14x"/>
-                            <constraint firstItem="QsI-Gy-7f2" firstAttribute="leading" secondItem="87g-7c-dRF" secondAttribute="leading" id="Sg3-J6-Vjq"/>
-                            <constraint firstItem="bCy-Qy-ywq" firstAttribute="top" secondItem="87g-7c-dRF" secondAttribute="bottom" constant="8" id="hv4-Y4-urI"/>
-                            <constraint firstItem="QsI-Gy-7f2" firstAttribute="trailing" secondItem="87g-7c-dRF" secondAttribute="trailing" id="mss-Bz-qIf"/>
-                            <constraint firstItem="bCy-Qy-ywq" firstAttribute="leading" secondItem="YJe-H7-pSn" secondAttribute="leading" constant="20" id="pJC-el-WVe"/>
-                            <constraint firstItem="87g-7c-dRF" firstAttribute="centerX" secondItem="AHh-4Y-R0z" secondAttribute="centerX" id="phx-kd-rQ7"/>
-                            <constraint firstItem="YJe-H7-pSn" firstAttribute="bottom" secondItem="QsI-Gy-7f2" secondAttribute="bottom" constant="140" id="u6o-xW-fTV"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="YJe-H7-pSn"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Manual Entry" id="ch6-QC-KoH"/>
-                    <connections>
-                        <outlet property="searchTf" destination="87g-7c-dRF" id="shW-h3-kc2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrm-rL-HSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3514" y="-571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g4W-pz-Ez7">
@@ -375,6 +324,7 @@
                             <constraint firstItem="agX-ZL-YXH" firstAttribute="top" secondItem="sXl-hE-qJX" secondAttribute="top" id="COq-hR-SZe"/>
                             <constraint firstItem="IOY-Wv-7CX" firstAttribute="trailing" secondItem="l4o-Zg-GQY" secondAttribute="trailing" constant="20" id="Jfm-sn-y7H"/>
                             <constraint firstItem="l4o-Zg-GQY" firstAttribute="top" secondItem="4u9-Vb-4BK" secondAttribute="bottom" constant="12" id="LVN-fu-Rph"/>
+                            <constraint firstItem="IOY-Wv-7CX" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WIp-IY-hPQ" secondAttribute="trailing" symbolic="YES" id="MMH-oO-w7J"/>
                             <constraint firstItem="l4o-Zg-GQY" firstAttribute="top" secondItem="agX-ZL-YXH" secondAttribute="bottom" constant="6" id="OWF-cC-NJD"/>
                             <constraint firstItem="bft-9S-dg6" firstAttribute="bottom" secondItem="WIp-IY-hPQ" secondAttribute="bottom" id="PjH-kV-BTW"/>
                             <constraint firstItem="agX-ZL-YXH" firstAttribute="baseline" secondItem="4u9-Vb-4BK" secondAttribute="baseline" id="RBc-l8-QtX"/>
@@ -450,6 +400,7 @@
                         <constraints>
                             <constraint firstItem="D7g-5o-QeD" firstAttribute="leading" secondItem="yuL-9c-QWE" secondAttribute="leading" id="1ac-Pb-16M"/>
                             <constraint firstItem="V9m-yz-txN" firstAttribute="leading" secondItem="yuL-9c-QWE" secondAttribute="leading" constant="20" id="4Vx-Nz-fdv"/>
+                            <constraint firstItem="OLl-Cp-bBM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="V9m-yz-txN" secondAttribute="trailing" constant="8" symbolic="YES" id="EOB-hS-Q0Y"/>
                             <constraint firstItem="yuL-9c-QWE" firstAttribute="trailing" secondItem="D7g-5o-QeD" secondAttribute="trailing" id="HjA-ZA-2OM"/>
                             <constraint firstItem="yuL-9c-QWE" firstAttribute="bottom" secondItem="D7g-5o-QeD" secondAttribute="bottom" constant="70" id="TAS-0e-eIR"/>
                             <constraint firstItem="yuL-9c-QWE" firstAttribute="trailing" secondItem="OLl-Cp-bBM" secondAttribute="trailing" constant="20" id="ZgV-pt-7Sd"/>
@@ -469,43 +420,6 @@
             </objects>
             <point key="canvasLocation" x="1935" y="-964"/>
         </scene>
-        <!--Ingredients-->
-        <scene sceneID="nFd-63-uZr">
-            <objects>
-                <tableViewController id="pC6-mf-L88" customClass="IngredientsTableViewController" customModule="make_my_meal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IVo-kq-gAV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ta6-kv-jUW">
-                            <rect key="frame" x="0.0" y="72" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                            <state key="normal" title="Next"/>
-                        </button>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientsCell" id="V3D-rM-uQO" customClass="IngredientsTableViewCell" customModule="make_my_meal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V3D-rM-uQO" id="FsF-fk-uQp" customClass="IngredientsTableViewCell" customModule="make_my_meal" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="pC6-mf-L88" id="1j0-Th-TyW"/>
-                            <outlet property="delegate" destination="pC6-mf-L88" id="8h2-tR-tFI"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Ingredients" id="CwK-wE-rqD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HJW-fh-Xqf"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Coc-nX-iCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3441" y="-1302"/>
-        </scene>
         <!--New Ingredient View Controller-->
         <scene sceneID="TFp-iP-zuI">
             <objects>
@@ -521,13 +435,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ma-Ra-Ccj">
-                                <rect key="frame" x="16" y="269" width="288" height="30"/>
+                                <rect key="frame" x="20" y="269" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD0-2r-eZ7">
-                                <rect key="frame" x="20" y="307" width="280" height="34"/>
+                                <rect key="frame" x="108" y="319" width="105" height="34"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Manually Add"/>
                                 <connections>
@@ -536,7 +450,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dt-Ip-WJU">
-                                <rect key="frame" x="0.0" y="514" width="320" height="34"/>
+                                <rect key="frame" x="24" y="514" width="273" height="34"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -546,7 +460,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDL-m8-a3a">
-                                <rect key="frame" x="20" y="349" width="280" height="34"/>
+                                <rect key="frame" x="17" y="373" width="280" height="34"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                 <state key="normal" title="Scan Ingredients"/>
                                 <connections>
@@ -556,20 +470,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WD0-2r-eZ7" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="20" id="3l8-3n-woH"/>
-                            <constraint firstItem="RDL-m8-a3a" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="20" id="6Ye-kW-MiI"/>
-                            <constraint firstItem="4dt-Ip-WJU" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" id="CuA-Iu-Ir7"/>
-                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="centerY" secondItem="KoH-Qx-d3Q" secondAttribute="centerY" id="K0h-BJ-IYD"/>
-                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="WD0-2r-eZ7" secondAttribute="trailing" constant="20" id="L0I-TC-2ni"/>
-                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="leading" secondItem="KoH-Qx-d3Q" secondAttribute="leadingMargin" id="Mbf-gB-bFJ"/>
-                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="RDL-m8-a3a" secondAttribute="trailing" constant="20" id="OxD-PR-NYZ"/>
-                            <constraint firstItem="RDL-m8-a3a" firstAttribute="centerX" secondItem="eqO-PW-pvM" secondAttribute="centerX" id="Qvv-mt-ljC"/>
-                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="trailing" secondItem="KoH-Qx-d3Q" secondAttribute="trailingMargin" id="TcH-WY-vlO"/>
+                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="centerY" secondItem="KoH-Qx-d3Q" secondAttribute="centerY" id="1wV-dS-vL1"/>
+                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="RDL-m8-a3a" secondAttribute="trailing" constant="23" id="3ZD-F0-1Ch"/>
+                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="20" id="5rx-HG-qXq"/>
+                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="4dt-Ip-WJU" secondAttribute="trailing" constant="23" id="8hp-zG-ayW"/>
+                            <constraint firstItem="4dt-Ip-WJU" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="24" id="8uV-6T-c1v"/>
+                            <constraint firstItem="2ma-Ra-Ccj" firstAttribute="centerX" secondItem="eqO-PW-pvM" secondAttribute="centerX" id="BVB-KX-awE"/>
                             <constraint firstItem="eqO-PW-pvM" firstAttribute="top" secondItem="Kd6-IT-u4t" secondAttribute="top" id="WbE-fM-mqQ"/>
-                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="4dt-Ip-WJU" secondAttribute="trailing" id="c83-qO-LBG"/>
-                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="bottom" secondItem="4dt-Ip-WJU" secondAttribute="bottom" constant="20" id="ehK-vL-vQw"/>
-                            <constraint firstItem="RDL-m8-a3a" firstAttribute="top" secondItem="WD0-2r-eZ7" secondAttribute="bottom" constant="8" symbolic="YES" id="n50-br-dtg"/>
-                            <constraint firstItem="WD0-2r-eZ7" firstAttribute="top" secondItem="2ma-Ra-Ccj" secondAttribute="bottom" constant="8" symbolic="YES" id="wV5-YU-qup"/>
+                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="2ma-Ra-Ccj" secondAttribute="trailing" constant="20" id="bvP-Wl-3vZ"/>
+                            <constraint firstAttribute="bottom" secondItem="4dt-Ip-WJU" secondAttribute="bottom" constant="20" symbolic="YES" id="eKr-f1-O47"/>
+                            <constraint firstItem="WD0-2r-eZ7" firstAttribute="top" secondItem="2ma-Ra-Ccj" secondAttribute="bottom" constant="20" id="eRr-gK-452"/>
+                            <constraint firstItem="WD0-2r-eZ7" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="108" id="f6c-gO-hwV"/>
+                            <constraint firstItem="RDL-m8-a3a" firstAttribute="top" secondItem="WD0-2r-eZ7" secondAttribute="bottom" constant="20" id="sq1-kU-4la"/>
+                            <constraint firstItem="Kd6-IT-u4t" firstAttribute="trailing" secondItem="WD0-2r-eZ7" secondAttribute="trailing" constant="107" id="tjB-A0-Svi"/>
+                            <constraint firstItem="RDL-m8-a3a" firstAttribute="leading" secondItem="Kd6-IT-u4t" secondAttribute="leading" constant="17" id="yhc-Bk-0il"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kd6-IT-u4t"/>
                     </view>
@@ -581,7 +495,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kQ-ej-p4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fmf-kJ-7AQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="-964"/>
+            <point key="canvasLocation" x="1190.625" y="-964.43661971830988"/>
         </scene>
         <!--Favorite Recipe Table View Controller-->
         <scene sceneID="XWG-Ve-XQU">
