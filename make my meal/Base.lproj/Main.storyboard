@@ -89,17 +89,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a recipe you like" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COM-bH-d6K">
-                                <rect key="frame" x="16" y="20" width="288" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="nYa-AV-f6r"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="20" width="280" height="78"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="List" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-5y-9e9">
-                                <rect key="frame" x="16" y="117" width="288" height="373.5"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="List" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-5y-9e9">
+                                <rect key="frame" x="53" y="108" width="214" height="373"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="czW-j9-kZy">
@@ -110,12 +106,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="COM-bH-d6K" firstAttribute="leading" secondItem="tHX-kM-0nL" secondAttribute="leadingMargin" id="6Sj-5t-DFM"/>
                             <constraint firstItem="czW-j9-kZy" firstAttribute="leading" secondItem="8jd-EV-buc" secondAttribute="leading" constant="20" id="89I-PG-pvF"/>
-                            <constraint firstItem="COM-bH-d6K" firstAttribute="trailing" secondItem="tHX-kM-0nL" secondAttribute="trailingMargin" id="PG9-pd-3Dl"/>
                             <constraint firstItem="8jd-EV-buc" firstAttribute="trailing" secondItem="czW-j9-kZy" secondAttribute="trailing" constant="20" id="UNu-TO-Ooz"/>
+                            <constraint firstItem="COM-bH-d6K" firstAttribute="leading" secondItem="8jd-EV-buc" secondAttribute="leading" constant="20" id="ipe-DH-cWb"/>
+                            <constraint firstItem="5DM-5y-9e9" firstAttribute="centerX" secondItem="czW-j9-kZy" secondAttribute="centerX" id="jlA-pt-DJd"/>
                             <constraint firstItem="8jd-EV-buc" firstAttribute="bottom" secondItem="czW-j9-kZy" secondAttribute="bottom" constant="20" id="o5O-ts-inA"/>
-                            <constraint firstItem="COM-bH-d6K" firstAttribute="top" secondItem="8jd-EV-buc" secondAttribute="top" id="tiE-fK-WPJ"/>
+                            <constraint firstItem="5DM-5y-9e9" firstAttribute="top" secondItem="COM-bH-d6K" secondAttribute="bottom" constant="10" id="rEW-x9-spl"/>
+                            <constraint firstItem="COM-bH-d6K" firstAttribute="top" secondItem="8jd-EV-buc" secondAttribute="top" id="ufr-HU-mBr"/>
+                            <constraint firstItem="5DM-5y-9e9" firstAttribute="leading" secondItem="8jd-EV-buc" secondAttribute="leading" constant="53" id="v9r-xy-41T"/>
+                            <constraint firstAttribute="trailing" secondItem="COM-bH-d6K" secondAttribute="trailing" constant="20" id="ylt-hI-tCC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8jd-EV-buc"/>
                     </view>
@@ -133,33 +132,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow the steps and enjoy!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cU-NU-n3O">
-                                <rect key="frame" x="16" y="20" width="288" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="g9s-Ea-dwc"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="20" width="280" height="78"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Recipe" translatesAutoresizingMaskIntoConstraints="NO" id="Lby-AI-cKO">
-                                <rect key="frame" x="16" y="117" width="288" height="386"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-Du-e7u">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="FCQ-Cl-wUs">
                                 <rect key="frame" x="20" y="511" width="280" height="37"/>
                                 <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.23921568630000001" green="0.54117647059999996" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recipe" translatesAutoresizingMaskIntoConstraints="NO" id="0X8-s5-8Gr">
+                                <rect key="frame" x="20" y="106" width="280" height="397"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="397" id="5km-Zz-KNq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5cU-NU-n3O" firstAttribute="leading" secondItem="yWq-PA-PjL" secondAttribute="leadingMargin" id="Fp0-LG-V12"/>
-                            <constraint firstItem="5cU-NU-n3O" firstAttribute="top" secondItem="WUX-1D-80A" secondAttribute="top" id="NaM-xJ-FfN"/>
-                            <constraint firstItem="5cU-NU-n3O" firstAttribute="trailing" secondItem="yWq-PA-PjL" secondAttribute="trailingMargin" id="UvB-GS-6Gu"/>
-                            <constraint firstItem="WUX-1D-80A" firstAttribute="bottom" secondItem="Db5-Du-e7u" secondAttribute="bottom" constant="20" id="maY-CJ-sKu"/>
-                            <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="Db5-Du-e7u" secondAttribute="trailing" constant="20" id="nrT-KV-5uz"/>
-                            <constraint firstItem="Db5-Du-e7u" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="20" id="uv4-0P-7m0"/>
+                            <constraint firstItem="0X8-s5-8Gr" firstAttribute="trailing" secondItem="FCQ-Cl-wUs" secondAttribute="trailing" id="2tC-fn-3hR"/>
+                            <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="FCQ-Cl-wUs" secondAttribute="trailing" constant="20" id="7Pb-Yj-TAI"/>
+                            <constraint firstItem="WUX-1D-80A" firstAttribute="trailing" secondItem="5cU-NU-n3O" secondAttribute="trailing" constant="20" id="BPh-wn-psQ"/>
+                            <constraint firstItem="FCQ-Cl-wUs" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="20" id="Dpr-Az-e1V"/>
+                            <constraint firstItem="5cU-NU-n3O" firstAttribute="top" secondItem="WUX-1D-80A" secondAttribute="top" id="Qa6-yP-2ja"/>
+                            <constraint firstItem="0X8-s5-8Gr" firstAttribute="leading" secondItem="FCQ-Cl-wUs" secondAttribute="leading" id="Rej-wK-D7y"/>
+                            <constraint firstItem="0X8-s5-8Gr" firstAttribute="top" secondItem="5cU-NU-n3O" secondAttribute="bottom" constant="8" symbolic="YES" id="cIX-5r-MmE"/>
+                            <constraint firstItem="WUX-1D-80A" firstAttribute="bottom" secondItem="FCQ-Cl-wUs" secondAttribute="bottom" constant="20" id="nd2-l6-CgZ"/>
+                            <constraint firstItem="5cU-NU-n3O" firstAttribute="leading" secondItem="WUX-1D-80A" secondAttribute="leading" constant="20" id="zKk-SW-I59"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WUX-1D-80A"/>
                     </view>
@@ -250,13 +251,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" image="Ingredients list" translatesAutoresizingMaskIntoConstraints="NO" id="Mdk-Wv-9Nf">
-                                <rect key="frame" x="16" y="189" width="288" height="266"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Ingredients list" translatesAutoresizingMaskIntoConstraints="NO" id="Mdk-Wv-9Nf">
+                                <rect key="frame" x="20" y="142" width="280" height="323"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="w60-ea-dba">
+                                <rect key="frame" x="20" y="511" width="280" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.23921568630000001" green="0.54117647059999996" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="152" translatesAutoresizingMaskIntoConstraints="NO" id="8js-8p-Vv5">
-                                <rect key="frame" x="20" y="463" width="280" height="30"/>
+                                <rect key="frame" x="20" y="473" width="280" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9P-ig-xPt">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="30"/>
@@ -274,21 +279,20 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="w60-ea-dba">
-                                <rect key="frame" x="20" y="511" width="280" height="37"/>
-                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="currentPageIndicatorTintColor" red="0.23921568630000001" green="0.54117647059999996" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="w60-ea-dba" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="20" id="9Oo-JP-Q4b"/>
-                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="bottom" secondItem="8js-8p-Vv5" secondAttribute="bottom" constant="75" id="CnU-pS-FAh"/>
-                            <constraint firstItem="8js-8p-Vv5" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="20" id="HZL-R9-beU"/>
+                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="8js-8p-Vv5" secondAttribute="trailing" constant="20" id="BMf-4F-r02"/>
                             <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="w60-ea-dba" secondAttribute="trailing" constant="20" id="Kcd-ff-n8j"/>
+                            <constraint firstItem="8js-8p-Vv5" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="20" id="NiW-IV-21f"/>
+                            <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="20" id="OEf-Xz-a3C"/>
+                            <constraint firstItem="Mdk-Wv-9Nf" firstAttribute="top" secondItem="Pm7-pJ-K1u" secondAttribute="bottom" constant="8" id="YFx-8i-urD"/>
+                            <constraint firstItem="8js-8p-Vv5" firstAttribute="top" secondItem="Mdk-Wv-9Nf" secondAttribute="bottom" constant="8" id="j1I-fr-5Hv"/>
                             <constraint firstItem="Pm7-pJ-K1u" firstAttribute="top" secondItem="R0N-Vo-BVl" secondAttribute="top" id="lGb-Rj-IH8"/>
-                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="8js-8p-Vv5" secondAttribute="trailing" constant="20" id="lvt-Hu-vRP"/>
+                            <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Mdk-Wv-9Nf" secondAttribute="trailing" constant="20" id="o00-Gx-oPL"/>
                             <constraint firstItem="R0N-Vo-BVl" firstAttribute="trailing" secondItem="Pm7-pJ-K1u" secondAttribute="trailing" constant="20" id="tm8-hd-vKz"/>
+                            <constraint firstItem="w60-ea-dba" firstAttribute="top" secondItem="8js-8p-Vv5" secondAttribute="bottom" constant="8" id="vVZ-z7-4QI"/>
                             <constraint firstItem="Pm7-pJ-K1u" firstAttribute="leading" secondItem="R0N-Vo-BVl" secondAttribute="leading" constant="20" id="vXX-jN-aSV"/>
                             <constraint firstItem="R0N-Vo-BVl" firstAttribute="bottom" secondItem="w60-ea-dba" secondAttribute="bottom" constant="20" id="xNe-Gg-mD7"/>
                         </constraints>
