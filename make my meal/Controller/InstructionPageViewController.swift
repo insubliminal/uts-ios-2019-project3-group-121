@@ -12,13 +12,13 @@ class InstructionPageViewController: UIPageViewController, UIPageViewControllerD
     
     lazy var viewControllerList: [UIViewController] = {
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         
-        let vc = sb.instantiateViewController(withIdentifier: "ScanInstructions")
-        let vc2 = sb.instantiateViewController(withIdentifier: "ListIntructions")
-        let vc3 = sb.instantiateViewController(withIdentifier: "RecipeIntructions")
+        let scanInstructionsViewController = storyBoard.instantiateViewController(withIdentifier: "ScanInstructions")
+        let listInstructionsViewController = storyBoard.instantiateViewController(withIdentifier: "ListIntructions")
+        let recipeInstructionsViewController = storyBoard.instantiateViewController(withIdentifier: "RecipeIntructions")
         
-        return [vc, vc2, vc3]
+        return [scanInstructionsViewController, listInstructionsViewController, recipeInstructionsViewController]
     }()
     
     override func viewDidLoad() {
@@ -34,31 +34,37 @@ class InstructionPageViewController: UIPageViewController, UIPageViewControllerD
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        guard let vcIndex = viewControllerList.index(of: viewController) else {
+        //Make sure there is a viewController in the view controller list we can use
+        guard let viewControllerIndex = viewControllerList.index(of: viewController) else {
             return nil
         }
         
-        let previousIndex = vcIndex - 1
+        let previousIndex = viewControllerIndex - 1
         
+        //Make sure we are not going past the array bounds
         guard previousIndex >= 0 else {
             return nil
         }
         
+        //Make sure we are not going over array bounds
         guard viewControllerList.count > previousIndex else {
             return nil
         }
         
+        //Return the previous view controller we are going back to
         return viewControllerList[previousIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        guard let vcIndex = viewControllerList.index(of: viewController) else {
+        //Make sure there is a viewController in the view controller list we can use
+        guard let viewControllerIndex = viewControllerList.index(of: viewController) else {
             return nil
         }
         
-        let nextIndex = vcIndex + 1
+        let nextIndex = viewControllerIndex + 1
         
+        //Make sure we are not going past array bounds
         guard viewControllerList.count != nextIndex else {
             return nil
         }
@@ -67,6 +73,7 @@ class InstructionPageViewController: UIPageViewController, UIPageViewControllerD
             return nil
         }
         
+        //Return next view controller in line
         return viewControllerList[nextIndex]
     }
 }
