@@ -10,8 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    let dataStorage = DataRepository()
     var recipeList: [Recipe] = []
+    let dataStorage = DataRepository()
     
     
     override func viewDidLoad() {
