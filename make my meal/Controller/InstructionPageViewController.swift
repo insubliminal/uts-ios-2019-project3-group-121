@@ -10,16 +10,20 @@ import UIKit
 
 class InstructionPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
+    //Lazy variable allows it to only be created if it is called upon. Allows for saving processing time.
     lazy var viewControllerList: [UIViewController] = {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         
+        //Our 3 view controllers involved in the page view scrolling feature.
         let scanInstructionsViewController = storyBoard.instantiateViewController(withIdentifier: "ScanInstructions")
         let listInstructionsViewController = storyBoard.instantiateViewController(withIdentifier: "ListIntructions")
         let recipeInstructionsViewController = storyBoard.instantiateViewController(withIdentifier: "RecipeIntructions")
         
+        //Add them into our view controller list to be used to move between the view controllers.
         return [scanInstructionsViewController, listInstructionsViewController, recipeInstructionsViewController]
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,7 @@ class InstructionPageViewController: UIPageViewController, UIPageViewControllerD
         self.dataSource = self
         
         if let firstViewController = viewControllerList.first {
+            //Show the first view controller that the user should see.
             self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
         // Do any additional setup after loading the view.
