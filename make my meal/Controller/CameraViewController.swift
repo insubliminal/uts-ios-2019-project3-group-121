@@ -51,8 +51,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             guard let results = finishedReq.results as? [VNClassificationObservation] else { return }
             guard let firstObservation = results.first else { return }
             
-            //If the Camera is 80% or more certain that it has detected an object and it isn't in the list to of ingredient, add it to the ingredients list
-            if (!firstObservation.confidence.isLessThanOrEqualTo(0.80)) && !ingredientIsInCurrentList(ingredient: firstObservation.identifier, ingredientList: self.addedIngredients) {
+            //If the Camera is strictly (80%) or more certain that it has detected an object and it isn't in the list to of ingredient, add it to the ingredients list
+            if !firstObservation.confidence.isLessThanOrEqualTo(Confidence.strict.rawValue) && !ingredientIsInCurrentList(ingredient: firstObservation.identifier, ingredientList: self.addedIngredients) {
                 self.addedIngredients.append(firstObservation.identifier)
                 //https://stackoverflow.com/questions/46218270/swift-4-must-be-used-from-main-thread-only-warning
                 DispatchQueue.main.async {
