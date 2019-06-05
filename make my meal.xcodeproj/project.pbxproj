@@ -15,13 +15,13 @@
 		3B8DD5DF229FEE8E00A128A6 /* MatchingRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD5DE229FEE8E00A128A6 /* MatchingRecipeTableViewCell.swift */; };
 		3B8DD5E3229FEF0100A128A6 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD5E2229FEF0100A128A6 /* RecipeDetailsViewController.swift */; };
 		3B8DD5E8229FEF3800A128A6 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD5E7229FEF3800A128A6 /* Recipe.swift */; };
+		3B9F372B22A7B08100FE2CC1 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F372A22A7B08100FE2CC1 /* Resnet50.mlmodel */; };
 		3BA70D0B22A40C1B0051073E /* NewIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA70D0A22A40C1B0051073E /* NewIngredientViewController.swift */; };
 		3BB5A00922A445F8006256BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB5A00822A445F8006256BD /* HomeViewController.swift */; };
 		3BD21E0822A4FEF6006848B8 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21E0722A4FEF6006848B8 /* IngredientsViewController.swift */; };
 		F37B4F3322A4E8D500FBCDE0 /* AllRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B4F3222A4E8D500FBCDE0 /* AllRecipesTableViewController.swift */; };
 		FB24AC8722A7480F006D09E5 /* Scanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24AC8622A7480F006D09E5 /* Scanning.swift */; };
 		FB24AC8922A75007006D09E5 /* InstructionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24AC8822A75007006D09E5 /* InstructionPageViewController.swift */; };
-		FB685A1F22A69C4300DAA939 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FB685A1E22A69C4300DAA939 /* Resnet50.mlmodel */; };
 		FB959288229CE6A000ABEC7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB959287229CE6A000ABEC7D /* Default-568h@2x.png */; };
 		FBBB92742294D708000EEDBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBB92732294D708000EEDBF /* AppDelegate.swift */; };
 		FBBB92792294D708000EEDBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBB92772294D708000EEDBF /* Main.storyboard */; };
@@ -38,13 +38,13 @@
 		3B8DD5DE229FEE8E00A128A6 /* MatchingRecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingRecipeTableViewCell.swift; sourceTree = "<group>"; };
 		3B8DD5E2229FEF0100A128A6 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		3B8DD5E7229FEF3800A128A6 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		3B9F372A22A7B08100FE2CC1 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../Desktop/Resnet50.mlmodel; sourceTree = "<group>"; };
 		3BA70D0A22A40C1B0051073E /* NewIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIngredientViewController.swift; sourceTree = "<group>"; };
 		3BB5A00822A445F8006256BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3BD21E0722A4FEF6006848B8 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		F37B4F3222A4E8D500FBCDE0 /* AllRecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipesTableViewController.swift; sourceTree = "<group>"; };
 		FB24AC8622A7480F006D09E5 /* Scanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanning.swift; sourceTree = "<group>"; };
 		FB24AC8822A75007006D09E5 /* InstructionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionPageViewController.swift; sourceTree = "<group>"; };
-		FB685A1E22A69C4300DAA939 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		FB959287229CE6A000ABEC7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FBBB92702294D708000EEDBF /* make my meal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "make my meal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBB92732294D708000EEDBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		3B81FE5A22A687160014F7F4 /* Core ML */ = {
 			isa = PBXGroup;
 			children = (
-				FB685A1E22A69C4300DAA939 /* Resnet50.mlmodel */,
+				3B9F372A22A7B08100FE2CC1 /* Resnet50.mlmodel */,
 			);
 			path = "Core ML";
 			sourceTree = "<group>";
@@ -207,12 +207,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB685A1F22A69C4300DAA939 /* Resnet50.mlmodel in Sources */,
 				3BD21E0822A4FEF6006848B8 /* IngredientsViewController.swift in Sources */,
 				F37B4F3322A4E8D500FBCDE0 /* AllRecipesTableViewController.swift in Sources */,
 				FB24AC8722A7480F006D09E5 /* Scanning.swift in Sources */,
 				3B8DD5DD229FEE7400A128A6 /* MatchingRecipeListTableViewController.swift in Sources */,
 				3B8DD5D9229FEE3500A128A6 /* FavoriteRecipeTableViewCell.swift in Sources */,
+				3B9F372B22A7B08100FE2CC1 /* Resnet50.mlmodel in Sources */,
 				3B8DD5E3229FEF0100A128A6 /* RecipeDetailsViewController.swift in Sources */,
 				3B8DD5DF229FEE8E00A128A6 /* MatchingRecipeTableViewCell.swift in Sources */,
 				3BB5A00922A445F8006256BD /* HomeViewController.swift in Sources */,
