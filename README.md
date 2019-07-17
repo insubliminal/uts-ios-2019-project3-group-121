@@ -1,5 +1,9 @@
 # Project 3
 
+Make My Meal
+
+How to set up the project:
+
 1. Download the Resnet50.mlmodel file.
 
 The Resnet50 File can be downloaded here:
